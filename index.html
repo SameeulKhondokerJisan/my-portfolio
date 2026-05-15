@@ -383,12 +383,16 @@
       .contact-body{grid-template-columns:1fr;gap:2rem;}
       .nav-links,.nav-cta{display:none;}
       .hamburger{display:flex;}
+      /* Tuck badges inside the card at bottom corners — face stays clear */
+      .badge-cgpa{left:8px;bottom:16px;top:auto;}
+      .badge-ibm{right:8px;bottom:16px;top:auto;left:auto;}
     }
     @media(max-width:600px){
       .section-wrap{padding:4rem 0;}
       .hero-img-wrap{width:210px;height:265px;}
-      .badge-cgpa{left:-10px;}
-      .badge-ibm{right:-10px;}
+      /* Move both badges to bottom corners so they never cover the face */
+      .badge-cgpa{bottom:10px;left:8px;top:auto;}
+      .badge-ibm{bottom:10px;right:8px;top:auto;left:auto;}
     }
     /* ── Skip to content (accessibility) ── */
     .skip-link{position:absolute;top:-100px;left:1rem;z-index:9999;background:var(--emerald);color:#030d08;padding:0.5rem 1rem;border-radius:0 0 8px 8px;font-weight:700;font-size:0.85rem;transition:top 0.2s ease;}
@@ -761,7 +765,7 @@
             <div class="project-title">Finzy — AI-Powered Finance System</div>
             <div class="project-problem">Problem: Manual expense tracking is tedious and lacks intelligent spending insights.</div>
             <div class="project-desc">Full-stack AI-powered personal finance system with smart receipt scanning via Google Gemini AI, automated expense categorization, budget tracking, analytics dashboards, and real-time notifications.</div>
-            <div class="project-outcome">End-to-end intelligent financial management with Gemini AI</div>
+            <div class="project-outcome">Replaced manual tracking with AI-driven receipt scanning, auto-categorization & live budget alerts</div>
             <div class="project-tags"><span class="project-tag">Next.js</span><span class="project-tag">Prisma</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Supabase</span><span class="project-tag">Google Gemini AI</span></div>
             <div class="project-footer"><a href="https://github.com/jisan23051365" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Featured</div></div>
           </div>
@@ -789,7 +793,7 @@
             <div class="project-title">LLM-Powered Code Review Assistant</div>
             <div class="project-problem">Problem: Manual code reviews are slow, inconsistent, and miss subtle anti-patterns.</div>
             <div class="project-desc">ML-powered code review assistant using CodeLlama to analyze pull request diffs, detect bug patterns, identify code anti-patterns, and automate intelligent first-pass software quality reviews.</div>
-            <div class="project-outcome">High detection accuracy with low false-positive rates</div>
+            <div class="project-outcome">Automated structured first-pass reviews: bug patterns, anti-patterns & severity labels per PR diff</div>
             <div class="project-tags"><span class="project-tag">CodeLlama</span><span class="project-tag">Python</span><span class="project-tag">LLM</span><span class="project-tag">ML</span></div>
             <div class="project-footer"><a href="https://github.com/jisan23051365" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Featured</div></div>
           </div>
@@ -817,7 +821,7 @@
             <div class="project-title">AI Carbon Footprint Prediction</div>
             <div class="project-problem">Problem: Individual carbon emissions are poorly quantified due to behavioral complexity.</div>
             <div class="project-desc">Developed and compared Random Forest, XGBoost, and MLP Regressor models to predict individual carbon footprints from behavioral and energy data. Used SHAP for explainable AI analysis of key factors.</div>
-            <div class="project-outcome">Identified key behavioral factors driving carbon emissions via SHAP</div>
+            <div class="project-outcome">XGBoost outperformed RF & MLP; SHAP revealed transport mode & diet as the dominant emission drivers</div>
             <div class="project-tags"><span class="project-tag">Random Forest</span><span class="project-tag">XGBoost</span><span class="project-tag">MLP Regressor</span><span class="project-tag">SHAP</span><span class="project-tag">Feature Engineering</span></div>
             <div class="project-footer"><a href="https://github.com/jisan23051365" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Research</div></div>
           </div>
@@ -847,7 +851,7 @@
             <div class="project-title">Core Banking & Digital Wallet System</div>
             <div class="project-problem">Problem: Legacy banking systems lack modern digital wallet and transaction tracking.</div>
             <div class="project-desc">Enterprise-level fintech backend with customer/account management, digital wallet integration, secure transaction processing, financial ledger tracking, and layered enterprise architecture.</div>
-            <div class="project-outcome">Production-grade fintech backend following modern banking standards</div>
+            <div class="project-outcome">Full-stack fintech backend: multi-account management, digital wallets & auditable transaction ledgers</div>
             <div class="project-tags"><span class="project-tag">Spring Boot</span><span class="project-tag">MySQL</span><span class="project-tag">RESTful APIs</span><span class="project-tag">Hibernate</span></div>
             <div class="project-footer"><a href="https://github.com/jisan23051365" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
           </div>
@@ -876,7 +880,7 @@
             <div class="project-title">ML Performance on Incomplete Data</div>
             <div class="project-problem">Problem: Real-world datasets are often incomplete — how badly does this hurt ML models?</div>
             <div class="project-desc">Research study evaluating Logistic Regression, Decision Trees, and KNN under varying levels of data incompleteness to quantify prediction degradation and identify data quality risk thresholds.</div>
-            <div class="project-outcome">Quantified prediction degradation curves for 3 ML algorithms</div>
+            <div class="project-outcome">Decision Tree showed steepest degradation vs KNN across 5 missing-data levels; thresholds documented</div>
             <div class="project-tags"><span class="project-tag">Logistic Regression</span><span class="project-tag">Decision Tree</span><span class="project-tag">KNN</span><span class="project-tag">Python</span></div>
             <div class="project-footer"><a href="https://github.com/jisan23051365" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Research</div></div>
           </div>
@@ -909,7 +913,7 @@
             <div class="project-title">AI Public Transport Delay Prediction</div>
             <div class="project-problem">Problem: Unpredictable transit delays disrupt urban mobility and commuter planning.</div>
             <div class="project-desc">ML-based transportation analytics system predicting public transport delays using weather conditions, traffic patterns, and event-based data to improve transit forecasting and urban mobility analysis.</div>
-            <div class="project-outcome">Improved transit forecasting accuracy using multi-factor modeling</div>
+            <div class="project-outcome">Multi-factor model (weather + traffic + events) outperformed single-feature baselines on delay prediction</div>
             <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Pandas</span><span class="project-tag">Feature Eng.</span></div>
             <div class="project-footer"><a href="https://github.com/jisan23051365" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
           </div>
@@ -1285,17 +1289,27 @@
 
     let succeeded = false;
     try {
-      const res = await fetch(`https://formsubmit.co/${ep}`, {
+      /* FormSubmit AJAX endpoint — supports CORS, returns JSON.
+         IMPORTANT: on the very first submission, FormSubmit sends a
+         one-time activation email to your inbox. Click that link once
+         and all future messages will be delivered. */
+      const res = await fetch(`https://formsubmit.co/ajax/${ep}`, {
         method : 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body   : new URLSearchParams({
-          name, email, message,
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept'       : 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
           _subject : `Portfolio Contact: ${subject}`,
           _template: 'table',
           _replyto : email
-        }).toString()
+        })
       });
-      succeeded = res.ok || res.type === 'opaque';
+      const json = await res.json();
+      succeeded = json.success === 'true' || json.success === true;
     } catch(_) { succeeded = false; }
 
     if (succeeded) {
