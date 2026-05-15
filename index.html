@@ -376,9 +376,9 @@
     .exp-subsection{display:flex;flex-direction:column;gap:0.6rem;}
 
     @media(max-width:900px){
-      .hero-container{grid-template-columns:1fr;gap:2.5rem;text-align:center;}
+      .hero-container{grid-template-columns:1fr;gap:2rem;text-align:center;}
       .hero-right{order:-1;}
-      .hero-img-wrap{width:250px;height:310px;}
+      .hero-img-wrap{width:240px;height:295px;}
       .hero-btns,.hero-stats{justify-content:center;}
       .hero-tagline{margin:0 auto 2rem;}
       .about-grid{grid-template-columns:1fr;}
@@ -387,46 +387,123 @@
       .contact-body{grid-template-columns:1fr;gap:2rem;}
       .nav-links,.nav-cta{display:none;}
       .hamburger{display:flex;}
-      /* Scroll hint overlaps buttons when hero stacks — hide it */
       .scroll-ind{display:none;}
-      /* Badges: both bottom corners — face stays fully clear */
+      /* Badges: both bottom corners */
       .badge-cgpa{left:8px;bottom:14px;top:auto;right:auto;min-width:0;padding:0.35rem 0.6rem;}
       .badge-ibm{right:8px;bottom:14px;top:auto;left:auto;min-width:0;padding:0.35rem 0.6rem;}
       .badge-cgpa .bv,.badge-ibm .bv{font-size:0.88rem;}
       .badge-label{font-size:0.6rem;}
+      /* Tighten section padding on tablets */
+      .section-wrap{padding:4.5rem 0;}
+      .projects-grid{grid-template-columns:1fr;}
+      .milestones-grid{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));}
     }
     @media(max-width:600px){
-      .section-wrap{padding:3.5rem 0;}
-      .section-inner{padding:0 1.1rem;}
-      /* Hero image: pull badges out below image using hero-img-wrap as grid */
+      /* ── Section base ── */
+      .section-wrap{padding:2.75rem 0;}
+      .section-inner{padding:0 1rem;}
+      .section-title{font-size:clamp(1.6rem,7vw,2.1rem);}
+      .section-sub{margin-bottom:1.75rem;font-size:0.9rem;}
+
+      /* ── Hero ── */
       .hero-img-wrap{display:grid;grid-template-columns:1fr 1fr;width:100%;height:auto;gap:0.5rem;}
       .hero-img-bg{display:none;}
-      .hero-avatar{grid-column:1 / -1;width:100%;height:255px;border-radius:20px;}
-      .hero-badge{position:static;min-width:0;padding:0.45rem 0.65rem;left:auto;right:auto;top:auto;bottom:auto;}
-      .badge-cgpa .bv,.badge-ibm .bv{font-size:0.82rem;}
-      .badge-label{font-size:0.6rem;}
-      /* Hero text overflow fix */
-      .hero-eyebrow{font-size:0.68rem;padding:0.28rem 0.7rem;max-width:100%;}
-      .hero-stats{gap:1rem;flex-wrap:wrap;}
-      .hero-title{font-size:clamp(2rem,8vw,2.8rem);}
-      /* Cards tighter on mobile */
-      .contact-form{padding:1.25rem;}
-      .skill-category{padding:1.25rem;}
-      .timeline-content{padding:0.85rem 1rem;}
-      .about-img-card{padding:1.25rem;}
-      /* Skills grid single column */
+      .hero-avatar{grid-column:1 / -1;width:100%;height:210px;border-radius:18px;}
+      .hero-badge{position:static;min-width:0;padding:0.38rem 0.6rem;left:auto;right:auto;top:auto;bottom:auto;}
+      .badge-cgpa .bv,.badge-ibm .bv{font-size:0.8rem;}
+      .badge-label{font-size:0.58rem;}
+      .hero-eyebrow{font-size:0.65rem;padding:0.26rem 0.65rem;max-width:100%;}
+      .hero-title{font-size:clamp(1.85rem,7.5vw,2.55rem);}
+      .hero-tagline{font-size:0.91rem;}
+      .hero-stats{gap:0.75rem;flex-wrap:wrap;}
+      .stat .stat-num{font-size:1.35rem;}
+      .stat .stat-label{font-size:0.69rem;}
+      .hero-btns{gap:0.6rem;}
+      .btn-primary,.btn-secondary{padding:0.68rem 1.35rem;font-size:0.83rem;}
+
+      /* ── About ── */
+      .about-img-card{padding:1.1rem;}
+      .about-text{font-size:0.9rem;}
+      .about-highlight{padding:0.9rem 1.1rem;font-size:0.86rem;}
+      .edu-card{padding:0.9rem 1.1rem;}
+      .edu-degree{font-size:0.88rem;}
+
+      /* ── Skills ── */
       .skills-grid{grid-template-columns:1fr;}
-      /* Skill tags: prevent overflow */
-      .skill-tags{gap:0.35rem;}
-      .skill-tag{font-size:0.7rem;padding:0.24rem 0.55rem;}
-      /* Timeline spacing */
+      .skill-category{padding:1.1rem;}
+      .skill-tags{gap:0.3rem;}
+      .skill-tag{font-size:0.68rem;padding:0.21rem 0.5rem;}
+      .skills-legend{gap:0.6rem;margin-bottom:1.25rem;}
+
+      /* ── Projects ── */
+      .project-visual{height:145px;}
+      .project-body{padding:1rem 1.1rem;}
+      .project-title{font-size:0.95rem;}
+      .project-problem{font-size:0.77rem;}
+      .project-desc{font-size:0.82rem;}
+      .project-outcome{font-size:0.74rem;padding:0.38rem 0.6rem;gap:0.35rem;margin-bottom:0.75rem;}
+      .project-tags{gap:0.28rem;margin-bottom:0.7rem;}
+      .project-tag{font-size:0.63rem;padding:0.14rem 0.42rem;}
+      .project-footer{padding-top:0.7rem;}
+      .project-link{font-size:0.77rem;}
+
+      /* ── Roadmap ── */
+      .milestones-grid{grid-template-columns:1fr 1fr;}
+      .milestone-card{padding:1rem;}
+      .milestone-title{font-size:0.84rem;}
+      .milestone-desc{font-size:0.71rem;}
+
+      /* ── Experience ── */
+      .timeline-content{padding:0.85rem 1rem;}
       .timeline::before{left:14px;}
       .timeline-dot{width:28px;height:28px;}
       .timeline-dot svg{width:13px;height:13px;}
-      /* Awards: single column */
+      .timeline-title{font-size:0.86rem;}
+      .timeline-desc{font-size:0.77rem;}
+      .cert-card{padding:0.75rem 0.9rem;}
+      .cert-title{font-size:0.8rem;}
+      .cert-issuer{font-size:0.7rem;}
+      .pub-card{padding:0.85rem 1rem;}
+      .pub-title{font-size:0.82rem;}
+      .pub-desc{font-size:0.74rem;}
       .awards-grid{grid-template-columns:1fr;}
-      /* Contact form: ensure full width */
+      .award-chip{font-size:0.74rem;padding:0.5rem 0.75rem;}
+
+      /* ── Contact ── */
+      .contact-form{padding:1.1rem;}
       .form-input,.form-textarea{font-size:0.85rem;}
+      .contact-link{padding:0.8rem 0.95rem;gap:0.75rem;}
+      .contact-link-title{font-size:0.83rem;}
+      .contact-link-val{font-size:0.75rem;}
+
+      /* ── Footer ── */
+      footer{padding:1.75rem 1.25rem;}
+      .footer-socials{gap:0.55rem;flex-wrap:wrap;}
+      .social-btn{width:36px;height:36px;}
+      .footer-tagline{font-size:0.78rem;margin-bottom:1.1rem;}
+      .footer-copy{font-size:0.7rem;}
+    }
+
+    /* ── Very small phones (≤ 420px): full-width CTA buttons ── */
+    @media(max-width:420px){
+      .hero-btns{flex-direction:column;align-items:stretch;}
+      .btn-primary,.btn-secondary{width:100%;justify-content:center;}
+      .hero-stats{justify-content:space-evenly;}
+      .milestones-grid{grid-template-columns:1fr;}
+      .footer-socials{justify-content:center;}
+    }
+
+    /* ── Disable sticky hover transforms on touch devices ── */
+    @media(hover:none){
+      .project-card:hover{transform:none;box-shadow:none;}
+      .skill-category:hover{transform:none;box-shadow:none;}
+      .milestone-card:hover{transform:none;box-shadow:none;}
+      .edu-card:hover{transform:none;}
+      .cert-card:hover{transform:none;}
+      .pub-card:hover{transform:none;}
+      .contact-link:hover{transform:none;box-shadow:none;}
+      .btn-primary:hover,.btn-secondary:hover{transform:none;box-shadow:none;}
+      .awards-grid:hover .award-chip{transform:none;border-color:var(--card-border);color:var(--text-muted);box-shadow:none;}
     }
 
     /* ── Currently Exploring ── */
