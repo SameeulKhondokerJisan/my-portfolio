@@ -620,6 +620,20 @@
     /* ── Blob enhancement ── */
     .blob{animation:blobFloat 9s ease-in-out infinite alternate,blobPulse 6s ease-in-out infinite alternate;}
     @keyframes blobPulse{0%{opacity:0.07}50%{opacity:0.13}100%{opacity:0.07}}
+
+    /* ── Light mode overrides for premium visual features ── */
+    [data-theme="light"] #scrollProgress{background:linear-gradient(135deg,#059669 0%,#0d9488 100%);box-shadow:0 0 8px rgba(5,150,105,0.45);}
+    [data-theme="light"] #cursorGlow{background:radial-gradient(circle,rgba(13,110,85,0.05) 0%,transparent 70%);}
+    [data-theme="light"] #home::before{background-image:radial-gradient(rgba(13,110,85,0.1) 1px,transparent 1px);}
+    [data-theme="light"] .exploring-card::before{background:conic-gradient(from var(--angle,0deg),transparent 70%,rgba(5,150,105,0.4) 80%,rgba(180,83,9,0.3) 90%,transparent 100%);}
+    [data-theme="light"] .project-card .card-inner-glow{background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(13,110,85,0.06) 0%,transparent 65%);}
+    [data-theme="light"] .tl-item:hover .tl-dot{box-shadow:0 0 0 6px rgba(13,110,85,0.12),0 0 18px rgba(13,110,85,0.22);transform:scale(1.25);}
+    [data-theme="light"] .blob{animation:blobFloat 9s ease-in-out infinite alternate,blobPulseLight 6s ease-in-out infinite alternate;}
+    @keyframes blobPulseLight{0%{opacity:0.03}50%{opacity:0.07}100%{opacity:0.03}}
+    [data-theme="light"] .section-heading::after{background:linear-gradient(135deg,#059669 0%,#0284c7 100%);}
+    [data-theme="light"] .project-card:hover{box-shadow:0 28px 56px rgba(0,0,0,0.12),0 0 0 1px rgba(13,110,85,0.12),0 0 40px rgba(13,110,85,0.06);}
+    [data-theme="light"] .skill-category:hover{box-shadow:0 20px 40px rgba(0,0,0,0.08),0 0 30px rgba(13,110,85,0.06);}
+    [data-theme="light"] .line-accent{background:linear-gradient(90deg,#059669 0%,#b45309 30%,#0891b2 60%,#059669 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;}
   </style>
   <!-- Respect OS dark/light preference on first load -->
   <script>
