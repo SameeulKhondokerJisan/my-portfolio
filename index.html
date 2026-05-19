@@ -807,6 +807,33 @@
     [data-theme="light"] .cert-card:hover{box-shadow:0 8px 24px rgba(13,110,85,0.08);}
     [data-theme="light"] .contact-link:hover{box-shadow:0 8px 28px rgba(13,110,85,0.1);}
     [data-theme="light"] .project-card:hover .project-outcome{background:rgba(13,110,85,0.08);}
+
+    /* ═══ MOTION + MOBILE QUALITY PASS ═══ */
+    /* Noise: reduce film grain, sparser dot grid, softer text glow */
+    body::before{opacity:0.35;}
+    .line-accent{filter:drop-shadow(0 0 10px rgba(52,211,153,0.12));}
+    #home::before{background-size:40px 40px;}
+    /* Project role label */
+    .project-role{font-size:0.7rem;font-weight:700;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.42rem;}
+    @media(max-width:600px){.project-role{font-size:0.65rem;}}
+    /* Touch optimization: eliminate 300ms tap delay */
+    .btn-primary,.btn-secondary,.project-link,.contact-link,
+    .social-btn,.nav-cta,.theme-btn,.form-submit,.award-chip,.exp-tag,.about-info-row{touch-action:manipulation;}
+    /* Mobile: free up GPU layers, disable CPU-heavy animations */
+    @media(hover:none){
+      .btn-primary,.btn-secondary,.project-card{will-change:auto;}
+      .exploring-card::before{opacity:0!important;animation:none!important;}
+      .line-accent{animation:none!important;}
+    }
+    /* Tablet: remove stagger delays (handled via JS on desktop only) */
+    @media(max-width:900px){
+      .skills-grid .skill-category,.projects-grid .project-card{transition-delay:0ms!important;}
+    }
+    /* Extra-small phones: tighter hero text */
+    @media(max-width:360px){
+      .hero-title{font-size:clamp(1.6rem,8.5vw,2rem)!important;}
+      .btn-primary,.btn-secondary{font-size:0.8rem!important;padding:0.65rem 1.15rem!important;}
+    }
   </style>
   <!-- Respect OS dark/light preference on first load -->
   <script>
@@ -1219,9 +1246,10 @@
           </div>
           <div class="project-body">
             <div class="project-title">Finzy — AI-Powered Finance System</div>
-            <div class="project-problem">Problem: Manual expense tracking is tedious and lacks intelligent spending insights.</div>
-            <div class="project-desc">Full-stack AI-powered personal finance system with smart receipt scanning via Google Gemini AI, automated expense categorization, budget tracking, analytics dashboards, and real-time notifications.</div>
-            <div class="project-outcome">Replaced manual tracking with AI-driven receipt scanning, auto-categorization & live budget alerts</div>
+            <div class="project-problem">Problem: Manual expense tracking is error-prone and gives no intelligent insight into spending patterns.</div>
+            <div class="project-role">Solo Full-Stack Build · Next.js + Gemini AI · 2024</div>
+            <div class="project-desc">Built end-to-end as a solo project. Chose Google Gemini AI over regex-based OCR for its ability to parse unstructured receipt images and return structured JSON — far more reliable at scale. Budget alert logic runs on Supabase database triggers so notifications fire the instant a threshold is crossed.</div>
+            <div class="project-outcome">Replaced manual tracking with AI receipt scanning, smart auto-categorization & real-time budget alerts</div>
             <div class="project-tags"><span class="project-tag">Next.js</span><span class="project-tag">Prisma</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Supabase</span><span class="project-tag">Google Gemini AI</span></div>
             <div class="project-footer"><a href="https://github.com/mrkhondoker/finzyy_ai-assisted_expense_management_system" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Featured</div></div>
           </div>
@@ -1259,9 +1287,10 @@
           </div>
           <div class="project-body">
             <div class="project-title">Movie Recommendation System</div>
-            <div class="project-problem">Problem: Discovering relevant movies from vast catalogs is slow and imprecise without personalization.</div>
-            <div class="project-desc">End-to-end content-based and collaborative-filtering recommendation engine deployed as a live Flask web application, using TMDB API for real-time movie metadata and Scikit-learn for similarity modelling.</div>
-            <div class="project-outcome">Hybrid content + collaborative filtering outperformed single-method baselines; deployed as live web app</div>
+            <div class="project-problem">Problem: Discovering relevant movies from vast catalogs is slow without personalized, intelligent filtering.</div>
+            <div class="project-role">Sole Developer · Hybrid Filtering · Flask Deployment</div>
+            <div class="project-desc">Built a hybrid recommender combining TF-IDF content similarity with collaborative filtering — chosen over a single-method approach to handle the cold-start problem for new users. Deployed as a live Flask web app with TMDB API for real-time poster and metadata retrieval.</div>
+            <div class="project-outcome">Hybrid model outperformed single-method baselines; live Flask app serving personalized recommendations</div>
             <div class="project-tags"><span class="project-tag">Flask</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Pandas</span><span class="project-tag">NumPy</span><span class="project-tag">TMDB API</span></div>
             <div class="project-footer"><a href="https://github.com/mrkhondoker/movie-recommender-system" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Featured</div></div>
           </div>
@@ -1295,9 +1324,10 @@
           </div>
           <div class="project-body">
             <div class="project-title">Heart Failure Prediction</div>
-            <div class="project-problem">Problem: Early prediction of heart failure risk from clinical data can save lives through timely intervention.</div>
-            <div class="project-desc">Logistic Regression model trained on 12 clinical features achieving 84% test accuracy. Includes full exploratory data analysis, confusion matrix visualization, classification report, and statistical feature importance.</div>
-            <div class="project-outcome">84% test accuracy on 12 clinical features; EDA revealed ejection fraction & serum creatinine as top predictors</div>
+            <div class="project-problem">Problem: Early, data-driven prediction of heart failure risk can enable timely clinical intervention and save lives.</div>
+            <div class="project-role">Solo Researcher · Healthcare ML · EDA + SHAP Analysis</div>
+            <div class="project-desc">Chose Logistic Regression over higher-accuracy black-box models deliberately — in clinical settings, understanding WHICH features drive predictions matters as much as accuracy itself. Applied SHAP analysis across 12 clinical features to identify ejection fraction and serum creatinine as the two strongest risk predictors.</div>
+            <div class="project-outcome">84% accuracy; SHAP confirmed ejection fraction + serum creatinine as the top clinical risk predictors</div>
             <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Pandas</span><span class="project-tag">Matplotlib</span><span class="project-tag">Seaborn</span></div>
             <div class="project-footer"><a href="https://github.com/mrkhondoker/heart-failure-prediction" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
           </div>
@@ -1332,11 +1362,105 @@
           </div>
           <div class="project-body">
             <div class="project-title">Student Performance Prediction</div>
-            <div class="project-problem">Problem: Identifying at-risk students early requires reliable ML-driven academic outcome forecasting.</div>
-            <div class="project-desc">End-to-end ML pipeline using CatBoost to predict student academic outcomes. Dockerized and published on DockerHub with a REST API interface built with Flask for real-world deployment.</div>
-            <div class="project-outcome">CatBoost pipeline Dockerized and deployed via REST API on DockerHub; production-ready ML system</div>
+            <div class="project-problem">Problem: Schools need reliable early-warning systems to identify at-risk students before outcomes deteriorate.</div>
+            <div class="project-role">End-to-End ML Pipeline · CatBoost · Docker Deployment</div>
+            <div class="project-desc">Selected CatBoost for its native handling of categorical student features — no manual one-hot encoding needed. Packaged the complete training-to-inference pipeline into a Docker container on DockerHub with a Flask REST API, treating production deployment as a first-class requirement from day one.</div>
+            <div class="project-outcome">Production-ready: full pipeline containerized on DockerHub, serving real-time predictions via REST API</div>
             <div class="project-tags"><span class="project-tag">CatBoost</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Flask</span><span class="project-tag">Docker</span><span class="project-tag">REST API</span></div>
             <div class="project-footer"><a href="https://github.com/mrkhondoker/student-performance-prediction" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
+          </div>
+        </div>
+
+        <!-- AI Carbon Footprint Predictor -->
+        <div class="project-card fade-in-up">
+          <div class="card-inner-glow"></div>
+          <div class="project-visual" style="background:linear-gradient(135deg,#061208,#0c1c0e);">
+            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
+              <defs><radialGradient id="proj-g7" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#34d399" stop-opacity="0.18"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+              <rect width="320" height="175" fill="url(#proj-g7)"/>
+              <!-- SHAP horizontal importance bars -->
+              <text x="22" y="30" fill="#34d399" font-size="8" font-family="Arial" font-weight="700" opacity="0.6">SHAP Feature Importance</text>
+              <rect x="22" y="38" width="112" height="9" rx="2" fill="rgba(52,211,153,0.72)"/>
+              <text x="140" y="46" fill="#34d399" font-size="8" font-family="Arial" opacity="0.7">Diet</text>
+              <rect x="22" y="53" width="88" height="9" rx="2" fill="rgba(52,211,153,0.55)"/>
+              <text x="116" y="61" fill="#34d399" font-size="8" font-family="Arial" opacity="0.6">Transport</text>
+              <rect x="22" y="68" width="64" height="9" rx="2" fill="rgba(251,191,36,0.62)"/>
+              <text x="92" y="76" fill="#fbbf24" font-size="8" font-family="Arial" opacity="0.65">Energy</text>
+              <rect x="22" y="83" width="44" height="9" rx="2" fill="rgba(52,211,153,0.32)"/>
+              <text x="72" y="91" fill="#34d399" font-size="8" font-family="Arial" opacity="0.5">Shopping</text>
+              <rect x="22" y="98" width="26" height="9" rx="2" fill="rgba(52,211,153,0.22)"/>
+              <text x="54" y="106" fill="#34d399" font-size="8" font-family="Arial" opacity="0.42">Other</text>
+              <!-- CO2 circle -->
+              <circle cx="232" cy="85" r="52" fill="none" stroke="#34d399" stroke-width="1.2" opacity="0.18"/>
+              <circle cx="232" cy="85" r="36" fill="none" stroke="#34d399" stroke-width="0.8" opacity="0.12"/>
+              <text x="232" y="80" text-anchor="middle" fill="#34d399" font-size="17" font-family="Arial" font-weight="900" opacity="0.38">CO₂</text>
+              <text x="232" y="96" text-anchor="middle" fill="#34d399" font-size="9" font-family="Arial" opacity="0.3">Predictor</text>
+              <!-- Model badges -->
+              <rect x="194" y="132" width="44" height="18" rx="3" fill="rgba(52,211,153,0.07)" stroke="#34d399" stroke-width="1" opacity="0.5"/>
+              <text x="216" y="145" text-anchor="middle" fill="#34d399" font-size="8" font-family="Arial" font-weight="700" opacity="0.55">XGBoost</text>
+              <rect x="244" y="132" width="44" height="18" rx="3" fill="rgba(52,211,153,0.06)" stroke="#34d399" stroke-width="1" opacity="0.45"/>
+              <text x="266" y="145" text-anchor="middle" fill="#34d399" font-size="8" font-family="Arial" font-weight="700" opacity="0.5">RF + MLP</text>
+              <polygon points="286,22 288,30 296,32 288,34 286,42 284,34 276,32 284,30" fill="#34d399" opacity="0.32"/>
+            </svg>
+            <div class="project-badge badge-ds">AI · Research</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">AI Carbon Footprint Predictor</div>
+            <div class="project-problem">Problem: Individuals have no personalized, data-driven feedback on which daily habits most impact their carbon output.</div>
+            <div class="project-role">Lead Researcher · Ensemble ML · Explainable AI (XAI)</div>
+            <div class="project-desc">Built an ensemble model (RF + XGBoost + MLP Regressor) on behavioral and energy consumption datasets. Applied SHAP for explainability — translating black-box ensemble predictions into ranked, actionable lifestyle insights. Results form the basis of an ongoing research paper.</div>
+            <div class="project-outcome">SHAP revealed diet and transportation as the top-2 carbon drivers; paper in progress</div>
+            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">XGBoost</span><span class="project-tag">Random Forest</span><span class="project-tag">SHAP</span><span class="project-tag">Matplotlib</span></div>
+            <div class="project-footer"><a href="https://github.com/mrkhondoker" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Research</div></div>
+          </div>
+        </div>
+
+        <!-- ML Under Incomplete Data -->
+        <div class="project-card fade-in-up">
+          <div class="card-inner-glow"></div>
+          <div class="project-visual" style="background:linear-gradient(135deg,#140810,#1a0c1a);">
+            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
+              <defs><radialGradient id="proj-g8" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#fb7185" stop-opacity="0.14"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/></radialGradient></defs>
+              <rect width="320" height="175" fill="url(#proj-g8)"/>
+              <text x="22" y="24" fill="#94a3b8" font-size="8" font-family="Arial" font-weight="700" opacity="0.6">Accuracy Degradation by Missingness Rate</text>
+              <!-- Axes -->
+              <line x1="38" y1="130" x2="220" y2="130" stroke="#94a3b8" stroke-width="0.8" opacity="0.28"/>
+              <line x1="38" y1="35" x2="38" y2="130" stroke="#94a3b8" stroke-width="0.8" opacity="0.28"/>
+              <!-- LR curve (blue) — degrades slowest -->
+              <polyline points="38,40 72,43 106,50 140,62 174,80 208,108 220,122" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.72"/>
+              <!-- DT curve (amber) -->
+              <polyline points="38,46 72,52 106,64 140,80 174,100 208,120 220,127" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.65"/>
+              <!-- KNN curve (rose) — degrades fastest -->
+              <polyline points="38,52 72,62 106,78 140,97 174,113 208,126 220,129" fill="none" stroke="#fb7185" stroke-width="2" opacity="0.62"/>
+              <!-- Safe threshold -->
+              <line x1="128" y1="35" x2="128" y2="130" stroke="#34d399" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.55"/>
+              <text x="131" y="46" fill="#34d399" font-size="7" font-family="Arial" font-weight="700" opacity="0.7">Safe</text>
+              <!-- Danger zone shading -->
+              <rect x="158" y="35" width="62" height="95" fill="rgba(251,113,133,0.04)"/>
+              <text x="174" y="55" fill="#fb7185" font-size="7" font-family="Arial" opacity="0.45">⚠ Risky</text>
+              <!-- Legend -->
+              <rect x="240" y="52" width="9" height="3" rx="1" fill="#60a5fa" opacity="0.72"/>
+              <text x="254" y="57" fill="#60a5fa" font-size="7.5" font-family="Arial" opacity="0.72">LR</text>
+              <rect x="240" y="65" width="9" height="3" rx="1" fill="#fbbf24" opacity="0.65"/>
+              <text x="254" y="70" fill="#fbbf24" font-size="7.5" font-family="Arial" opacity="0.65">DT</text>
+              <rect x="240" y="78" width="9" height="3" rx="1" fill="#fb7185" opacity="0.62"/>
+              <text x="254" y="83" fill="#fb7185" font-size="7.5" font-family="Arial" opacity="0.62">KNN</text>
+              <!-- X-axis labels -->
+              <text x="35" y="142" fill="#94a3b8" font-size="6.5" font-family="Arial" opacity="0.4">0%</text>
+              <text x="122" y="142" fill="#34d399" font-size="6.5" font-family="Arial" opacity="0.55">25%</text>
+              <text x="210" y="142" fill="#fb7185" font-size="6.5" font-family="Arial" opacity="0.55">50%</text>
+              <text x="88" y="155" fill="#94a3b8" font-size="7" font-family="Arial" opacity="0.38">Missing Data Rate →</text>
+            </svg>
+            <div class="project-badge badge-llm">Research · ML Theory</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">ML Performance under Incomplete Data</div>
+            <div class="project-problem">Problem: ML models silently degrade on incomplete real-world data — a deployment risk most teams never quantify.</div>
+            <div class="project-role">Lead Researcher · 3-Classifier Study · Risk Analysis</div>
+            <div class="project-desc">Systematically studied how missing data patterns degrade Logistic Regression, Decision Tree, and KNN classifiers across varying missingness rates. Defined degradation curves and safe deployment thresholds — turning a poorly-understood risk into a measurable, actionable guideline for production teams.</div>
+            <div class="project-outcome">Quantified safe deployment thresholds for 3 classifier families; practical ML risk guide in progress</div>
+            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Logistic Regression</span><span class="project-tag">Decision Tree</span><span class="project-tag">KNN</span></div>
+            <div class="project-footer"><a href="https://github.com/mrkhondoker" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Research</div></div>
           </div>
         </div>
 
@@ -1655,19 +1779,31 @@
     document.getElementById('navbar').style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.5)' : '';
   });
 
-  /* Role typewriter */
-  const roles = ['Data Scientist', 'AI Engineer', 'ML Researcher', 'AI Researcher', 'Python Developer'];
-  let ri = 0;
-  const roleEl = document.getElementById('heroRole');
-  setInterval(() => {
-    roleEl.style.opacity = '0';
-    setTimeout(() => {
-      ri = (ri + 1) % roles.length;
-      roleEl.textContent = roles[ri];
-      roleEl.style.transition = 'opacity 0.4s';
-      roleEl.style.opacity = '1';
-    }, 300);
-  }, 3000);
+  /* Role typewriter — spring fade with vertical shift */
+  (function(){
+    const roles = ['Data Scientist','AI Engineer','ML Researcher','AI Researcher','Python Developer'];
+    let ri = 0;
+    const roleEl = document.getElementById('heroRole');
+    if (!roleEl) return;
+    roleEl.style.display = 'inline-block';
+    function cycle(){
+      roleEl.style.transition = 'opacity 0.32s cubic-bezier(0.4,0,0.2,1),transform 0.32s cubic-bezier(0.4,0,0.2,1)';
+      roleEl.style.opacity = '0';
+      roleEl.style.transform = 'translateY(6px)';
+      setTimeout(() => {
+        ri = (ri + 1) % roles.length;
+        roleEl.textContent = roles[ri];
+        roleEl.style.transition = 'none';
+        roleEl.style.transform = 'translateY(-6px)';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          roleEl.style.transition = 'opacity 0.44s cubic-bezier(0.16,1,0.3,1),transform 0.44s cubic-bezier(0.16,1,0.3,1)';
+          roleEl.style.opacity = '1';
+          roleEl.style.transform = 'translateY(0)';
+        }));
+      }, 360);
+    }
+    setInterval(cycle, 3200);
+  })();
 
   /* Roadmap train loop — JS-driven to guarantee seamless 50% translate */
   (function () {
@@ -1953,19 +2089,25 @@
     window.addEventListener('scroll', update, {passive:true});
   })();
 
-  /* ── Hero parallax on scroll ── */
+  /* ── Hero parallax — lerped for butter-smooth scroll ── */
   (function(){
     if (window.matchMedia('(hover:none)').matches) return;
     const heroLeft  = document.querySelector('.hero-left');
     const heroRight = document.querySelector('.hero-right');
     if (!heroLeft || !heroRight) return;
     const home = document.getElementById('home');
+    function lerp(a,b,t){ return a + (b - a) * t; }
+    let tY = 0, lY = 0;
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
-      if (!home || y > home.offsetHeight) return;
-      heroLeft.style.transform  = `translateY(${y * 0.13}px)`;
-      heroRight.style.transform = `translateY(${y * 0.09}px)`;
+      tY = (home && y <= home.offsetHeight) ? y : 0;
     }, {passive:true});
+    (function tick(){
+      lY = lerp(lY, tY, 0.1);
+      heroLeft.style.transform  = `translateY(${lY * 0.13}px)`;
+      heroRight.style.transform = `translateY(${lY * 0.09}px)`;
+      requestAnimationFrame(tick);
+    })();
   })();
 
   /* ── Scroll Progress Bar ── */
@@ -2023,7 +2165,7 @@
     });
   })();
 
-  /* ── Magnetic Primary Button ── */
+  /* ── Magnetic Primary Button — instant track, spring snap-back ── */
   (function(){
     if (window.matchMedia('(hover:none)').matches) return;
     document.querySelectorAll('.btn-primary').forEach(btn => {
@@ -2031,18 +2173,21 @@
         const r = btn.getBoundingClientRect();
         const x = (e.clientX - r.left - r.width / 2) * 0.18;
         const y = (e.clientY - r.top  - r.height / 2) * 0.18;
+        btn.style.transition = 'none';
         btn.style.transform = `translateY(-2px) translate(${x}px,${y}px)`;
       });
       btn.addEventListener('mouseleave', () => {
+        btn.style.transition = 'transform 0.42s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.4,0,0.2,1)';
         btn.style.transform = '';
       });
     });
   })();
 
-  /* ── Stagger children in view ── */
+  /* ── Stagger children in view — no delay on touch devices ── */
   (function(){
     const targets = document.querySelectorAll('.skills-grid .skill-category, .projects-grid .project-card');
-    targets.forEach((el, i) => { el.style.transitionDelay = (i % 6) * 80 + 'ms'; });
+    const isTouch = window.matchMedia('(hover:none)').matches;
+    targets.forEach((el, i) => { el.style.transitionDelay = isTouch ? '0ms' : ((i % 6) * 75 + 'ms'); });
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
     }, {threshold: 0.1});
