@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sameeul Khondoker Jisan — Data Scientist & AI Engineer</title>
   <meta name="description" content="Portfolio of Sameeul Khondoker Jisan — IBM-Certified Data Scientist and aspiring AI Engineer & Researcher based in Dhaka, Bangladesh." />
-  <link rel="canonical" href="https://jisan23051365.github.io/" />
+  <link rel="canonical" href="https://mrkhondoker.github.io/my-portfolio/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jisan23051365.github.io/" />
-  <meta property="og:title" content="Sameeul Khondoker Jisan — Data Scientist & AI Engineer" />
-  <meta property="og:description" content="Portfolio of Sameeul Khondoker Jisan — IBM-Certified Data Scientist and aspiring AI Engineer & Researcher based in Dhaka, Bangladesh." />
+  <meta property="og:url" content="https://mrkhondoker.github.io/my-portfolio/" />
+  <meta property="og:title" content="Sameeul Khondoker Jisan — Data Scientist & AI Researcher" />
+  <meta property="og:description" content="Portfolio of Sameeul Khondoker Jisan — IBM-Certified Data Scientist, active researcher with 2 in-progress publications, aspiring AI Engineer & Researcher based in Dhaka, Bangladesh." />
   <meta property="og:image" content="jisan_portfolio.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@Mr_Khondokar502" />
-  <meta name="twitter:title" content="Sameeul Khondoker Jisan — Data Scientist & AI Engineer" />
-  <meta name="twitter:description" content="Portfolio of Sameeul Khondoker Jisan — IBM-Certified Data Scientist and aspiring AI Engineer & Researcher based in Dhaka, Bangladesh." />
+  <meta name="twitter:title" content="Sameeul Khondoker Jisan — Data Scientist & AI Researcher" />
+  <meta name="twitter:description" content="Portfolio of Sameeul Khondoker Jisan — IBM-Certified Data Scientist, active researcher with 2 in-progress publications, aspiring AI Engineer & Researcher based in Dhaka, Bangladesh." />
   <meta name="twitter:image" content="jisan_portfolio.png" />
 
   <!-- JSON-LD Structured Data -->
@@ -27,9 +27,9 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sameeul Khondoker Jisan",
-    "jobTitle": "Data Scientist & AI Engineer",
-    "description": "IBM-Certified Data Scientist and aspiring AI Engineer & Researcher.",
-    "url": "https://jisan23051365.github.io/",
+    "jobTitle": "Data Scientist & AI Researcher",
+    "description": "IBM-Certified Data Scientist, active researcher with 2 in-progress ML publications, aspiring AI Engineer & Researcher.",
+    "url": "https://mrkhondoker.github.io/my-portfolio/",
     "email": "mrkhondokar.prof@gmail.com",
     "telephone": "+8801767766680",
     "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
@@ -815,12 +815,25 @@
     #home::before{background-size:40px 40px;}
     /* Fix: avail-pill dot was invisible (only .hero-eyebrow .dot had styling) */
     .avail-pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0;animation:pulse 2s infinite;}
-    /* Nav Resume quick-access button */
+    /* Nav Resume quick-access button + dropdown */
+    .nav-resume-wrap{position:relative;display:inline-flex;}
     .nav-resume-btn{font-size:0.8rem;font-weight:700;font-family:'Outfit',sans-serif;color:var(--text-muted);border:1px solid var(--card-border);padding:0.34rem 0.82rem;border-radius:50px;transition:var(--t);display:inline-flex;align-items:center;gap:0.3rem;letter-spacing:0.01em;}
     .nav-resume-btn svg{width:13px;height:13px;flex-shrink:0;}
-    .nav-resume-btn:hover{color:var(--amber);border-color:rgba(251,191,36,0.45);background:rgba(251,191,36,0.06);transform:translateY(-1px);}
-    [data-theme="light"] .nav-resume-btn:hover{color:var(--amber);border-color:rgba(180,83,9,0.38);background:rgba(180,83,9,0.05);}
-    @media(max-width:900px){.nav-resume-btn{display:none;}}
+    .nav-resume-btn:hover,.nav-resume-wrap:hover .nav-resume-btn{color:var(--amber);border-color:rgba(251,191,36,0.45);background:rgba(251,191,36,0.06);}
+    [data-theme="light"] .nav-resume-btn:hover,[data-theme="light"] .nav-resume-wrap:hover .nav-resume-btn{color:var(--amber);border-color:rgba(180,83,9,0.38);background:rgba(180,83,9,0.05);}
+    .resume-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--nav-bg);backdrop-filter:blur(24px);border:1px solid var(--card-border);border-radius:12px;padding:0.4rem;min-width:210px;z-index:1100;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity 0.2s ease,transform 0.2s ease,visibility 0s 0.2s;box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+    .nav-resume-wrap:hover .resume-dropdown,.resume-dropdown:hover{opacity:1;visibility:visible;transform:translateY(0);transition:opacity 0.2s ease,transform 0.2s ease,visibility 0s 0s;}
+    .resume-dropdown-item{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.85rem;border-radius:8px;font-size:0.79rem;font-weight:600;color:var(--text-muted);transition:var(--t);white-space:nowrap;}
+    .resume-dropdown-item:hover{background:rgba(251,191,36,0.08);color:var(--amber);}
+    .resume-dropdown-item svg{width:13px;height:13px;flex-shrink:0;color:var(--amber);}
+    .resume-dropdown-label{font-size:0.67rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dim);padding:0.45rem 0.85rem 0.25rem;display:block;}
+    .resume-dropdown-divider{height:1px;background:var(--card-border);margin:0.3rem 0.5rem;}
+    @media(max-width:900px){.nav-resume-wrap{display:none;}}
+    /* Hero resume dropdown */
+    .hero-resume-wrap{position:relative;display:inline-flex;}
+    .hero-resume-dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--nav-bg);backdrop-filter:blur(24px);border:1px solid var(--card-border);border-radius:12px;padding:0.4rem;min-width:220px;z-index:100;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity 0.2s ease,transform 0.2s ease,visibility 0s 0.2s;box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+    .hero-resume-wrap:hover .hero-resume-dropdown,.hero-resume-dropdown:hover{opacity:1;visibility:visible;transform:translateY(0);transition:opacity 0.2s ease,transform 0.2s ease,visibility 0s 0s;}
+    .hero-resume-dropdown .resume-dropdown-item:hover{background:rgba(251,191,36,0.1);color:var(--amber);}
     /* Project role label */
     .project-role{font-size:0.7rem;font-weight:700;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.42rem;}
     @media(max-width:600px){.project-role{font-size:0.65rem;}}
@@ -875,10 +888,23 @@
   </ul>
   <div class="nav-right">
     <button class="theme-btn" id="themeToggle" aria-label="Switch to light mode">Light</button>
-    <a href="resume.pdf" download="Resume-Sameeul-Khondoker-Jisan.pdf" class="nav-resume-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Resume
-    </a>
+    <div class="nav-resume-wrap">
+      <button class="nav-resume-btn" aria-haspopup="true" aria-label="Download Resume">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume ▾
+      </button>
+      <div class="resume-dropdown" role="menu">
+        <span class="resume-dropdown-label">Choose Version</span>
+        <a href="resume-v2.pdf" download="Resume-V2-Sameeul-Khondoker-Jisan.pdf" class="resume-dropdown-item" role="menuitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Research Profile (V2)
+        </a>
+        <a href="resume-v1.pdf" download="Resume-V1-Sameeul-Khondoker-Jisan.pdf" class="resume-dropdown-item" role="menuitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Analyst Profile (V1)
+        </a>
+      </div>
+    </div>
     <a href="#contact" class="nav-cta">Hire Me</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -905,7 +931,7 @@
         <span class="line-accent" id="heroRole">AI Engineer</span><br>
         in the Making
       </h1>
-      <p class="hero-tagline">Building ML pipelines and AI-powered applications from data to deployment — currently interning at TecVix, with real-world projects and a deliberate path to AI Engineering.</p>
+      <p class="hero-tagline">Active researcher with two in-progress ML publications — building end-to-end pipelines, applying SHAP-based explainable AI, and pursuing research assistant positions and graduate study in Data Science &amp; AI.</p>
       <div class="hero-stats">
         <div class="stat"><div class="stat-num" data-count="3.55" data-decimals="2">3.55</div><div class="stat-label">CGPA / 4.0</div></div>
         <div class="stat"><div class="stat-num" data-count="6" data-suffix="+">6+</div><div class="stat-label">Projects</div></div>
@@ -917,10 +943,23 @@
           View Projects
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="resume.pdf" download="Resume-Sameeul-Khondoker-Jisan.pdf" class="btn-secondary btn-download">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Resume
-        </a>
+        <div class="hero-resume-wrap">
+          <button class="btn-secondary btn-download" aria-haspopup="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume ▾
+          </button>
+          <div class="hero-resume-dropdown" role="menu">
+            <span class="resume-dropdown-label">Choose Version</span>
+            <a href="resume-v2.pdf" download="Resume-V2-Sameeul-Khondoker-Jisan.pdf" class="resume-dropdown-item" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Research Profile (V2)
+            </a>
+            <a href="resume-v1.pdf" download="Resume-V1-Sameeul-Khondoker-Jisan.pdf" class="resume-dropdown-item" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Analyst Profile (V1)
+            </a>
+          </div>
+        </div>
         <a href="#contact" class="btn-secondary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           Contact Me
@@ -998,7 +1037,7 @@
           <div class="section-eyebrow">About Me</div>
           <h2 class="section-title">Turning Complex Data Into <span class="line-accent">Intelligent Insight</span></h2>
           <p class="about-text">I'm a Data Scientist and software engineering student at Daffodil International University (CGPA 3.55/4.00), majoring in Data Science. My work spans the full data lifecycle — from preprocessing and statistical modeling to deploying AI-powered applications and building intelligent ML systems.</p>
-          <p class="about-text">Currently interning at TecVix as a Data Science Intern, building ML pipelines and applying predictive modelling to real-world datasets. Previously interned at SaiKet Systems, where I processed 50K+ records and deployed 3 ML models via REST API. I've also conducted research on <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">AI-based carbon footprint prediction</a> and the <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">effects of incomplete data on ML model performance</a>.</p>
+          <p class="about-text">Currently interning at TecVix as a Data Science Intern, developing production ML pipelines with feature selection, predictive modelling, and statistical analysis to support data-driven product and BI research decisions. Previously interned at SaiKet Systems, processing 50K+ records and deploying 3 ML models via REST API. Actively pursuing research assistant positions, advanced internships, and graduate study in Data Science &amp; AI — with two in-progress publications on <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">AI-based carbon footprint prediction</a> and the <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">effects of incomplete data on ML model performance</a>.</p>
           <div class="about-highlight">"My goal is clear: become an AI Engineer and researcher who doesn't just use AI tools — but builds and studies the intelligent systems that power them. Every project, internship, and certification is a deliberate step toward that future."</div>
           <h4 style="font-family:'Outfit',sans-serif;margin-bottom:1rem;font-weight:800;">Education</h4>
           <div class="edu-timeline">
@@ -1053,9 +1092,20 @@
           <div class="skill-tags">
             <span class="skill-tag hot">Scikit-learn</span><span class="skill-tag hot">XGBoost</span>
             <span class="skill-tag hot">CatBoost</span><span class="skill-tag hot">Random Forest</span>
-            <span class="skill-tag hot">Predictive Modeling</span><span class="skill-tag">NLP</span>
-            <span class="skill-tag">SHAP</span><span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag hot">Predictive Modeling</span><span class="skill-tag hot">MLP Regressor</span>
+            <span class="skill-tag">NLP</span><span class="skill-tag">SHAP</span>
+            <span class="skill-tag">Deep Learning</span><span class="skill-tag">Generative AI</span>
             <span class="skill-tag learning">PyTorch</span><span class="skill-tag learning">TensorFlow</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in-up">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="skill-cat-title">Model Evaluation & Explainability</div>
+          <div class="skill-tags">
+            <span class="skill-tag hot">SHAP (XAI)</span><span class="skill-tag hot">Cross-Validation</span>
+            <span class="skill-tag hot">Confusion Matrix</span><span class="skill-tag hot">Regression Metrics</span>
+            <span class="skill-tag hot">Classification Reports</span>
+            <span class="skill-tag">Hyperparameter Tuning</span>
           </div>
         </div>
         <div class="skill-category fade-in-up">
@@ -1092,7 +1142,8 @@
           <div class="skill-tags">
             <span class="skill-tag hot">Git / GitHub</span><span class="skill-tag hot">Jupyter Notebook</span>
             <span class="skill-tag hot">Google Colab</span><span class="skill-tag hot">VS Code</span>
-            <span class="skill-tag">Postman</span><span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Postman</span><span class="skill-tag">Docker</span>
+            <span class="skill-tag">Google Cloud</span><span class="skill-tag">Next.js</span>
             <span class="skill-tag learning">PyCharm</span>
           </div>
         </div>
@@ -1497,7 +1548,7 @@
                 <div class="timeline-title">Data Science Intern</div>
                 <div class="timeline-org">TecVix</div>
                 <div class="timeline-date">May 2026 – Present · Dhaka, Bangladesh</div>
-                <div class="timeline-desc">Building ML pipelines and applying predictive modelling to real-world datasets to support data-driven product decisions and business intelligence initiatives.</div>
+                <div class="timeline-desc">Developing production ML pipelines incorporating data preprocessing, feature selection, and predictive modelling; applying statistical analysis to extract actionable insights from real-world datasets to support data-driven product and BI research decisions.</div>
               </div>
             </div>
             <div class="timeline-item">
@@ -1554,13 +1605,13 @@
             <div class="pub-cards">
               <div class="pub-card">
                 <div class="pub-tag">Research Paper</div>
-                <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" class="pub-title" style="text-decoration:none;color:inherit;">AI-Based Predictive Modeling of Individual Carbon Footprints</a>
+                <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" class="pub-title" style="text-decoration:none;color:inherit;">AI-Based Predictive Modeling of Individual Carbon Footprints Using Behavioral and Energy Consumption Data</a>
                 <div class="pub-desc">RF, XGBoost, MLP Regressor · SHAP-based explainable AI · Behavioral & energy consumption datasets</div>
                 <div class="pub-status">Research in Progress</div>
               </div>
               <div class="pub-card">
                 <div class="pub-tag">Research Paper</div>
-                <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" class="pub-title" style="text-decoration:none;color:inherit;">When ML Models Should Not Predict: Effect of Incomplete Data on Performance</a>
+                <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" class="pub-title" style="text-decoration:none;color:inherit;">When Machine Learning Models Should Not Predict: A Study on the Effect of Incomplete Data on Machine Learning Performance</a>
                 <div class="pub-desc">Logistic Regression, Decision Tree, KNN · Prediction degradation analysis · Data quality risk study</div>
                 <div class="pub-status">Research in Progress</div>
               </div>
