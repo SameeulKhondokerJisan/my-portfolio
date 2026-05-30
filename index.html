@@ -591,7 +591,6 @@
     .contact-link:focus-visible,.social-btn:focus-visible,.project-link:focus-visible{outline:2px solid var(--emerald);outline-offset:3px;}
 
     /* ── Scroll Progress Bar ── */
-    #scrollProgress{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--grad);z-index:2000;transition:width 0.1s linear;border-radius:0 2px 2px 0;box-shadow:0 0 8px rgba(52,211,153,0.6);}
 
     /* ── Cursor Glow ── */
     #cursorGlow{position:fixed;pointer-events:none;z-index:9998;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,0.055) 0%,transparent 70%);transform:translate(-50%,-50%);transition:opacity 0.4s ease;opacity:0;will-change:transform;}
@@ -634,7 +633,6 @@
     @keyframes blobPulse{0%{opacity:0.07}50%{opacity:0.13}100%{opacity:0.07}}
 
     /* ── Light mode overrides for premium visual features ── */
-    [data-theme="light"] #scrollProgress{background:linear-gradient(135deg,#059669 0%,#0d9488 100%);box-shadow:0 0 8px rgba(5,150,105,0.45);}
     [data-theme="light"] #cursorGlow{background:radial-gradient(circle,rgba(13,110,85,0.05) 0%,transparent 70%);}
     [data-theme="light"] #home::before{background-image:radial-gradient(rgba(13,110,85,0.065) 1px,transparent 1px);}
     [data-theme="light"] .exploring-card::before{background:conic-gradient(from var(--angle,0deg),transparent 70%,rgba(5,150,105,0.4) 80%,rgba(180,83,9,0.3) 90%,transparent 100%);}
@@ -829,6 +827,22 @@
     [data-theme="light"] .exp-tag:hover{background:rgba(13,110,85,0.12);border-color:rgba(13,110,85,0.38);}
     [data-theme="light"] .project-tag{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.1);color:var(--text-muted);}
     [data-theme="light"] .track-label{border-bottom-color:rgba(0,0,0,0.1);}
+    /* Remove blurry frosted-glass on all cards in light mode */
+    [data-theme="light"] .project-card,[data-theme="light"] .skill-category,
+    [data-theme="light"] .timeline-content,[data-theme="light"] .contact-link,
+    [data-theme="light"] .contact-form,[data-theme="light"] .cert-card,
+    [data-theme="light"] .pub-card,[data-theme="light"] .about-img-card,
+    [data-theme="light"] .edu-card,[data-theme="light"] .about-highlight,
+    [data-theme="light"] .exploring-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,0.96);}
+    [data-theme="light"] .project-card{background:rgba(255,255,255,0.98);}
+    [data-theme="light"] .form-input,[data-theme="light"] .form-textarea{background:rgba(255,255,255,0.9);border-color:rgba(13,110,85,0.18);}
+    [data-theme="light"] .form-input:focus,[data-theme="light"] .form-textarea:focus{background:#ffffff;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(13,110,85,0.08);}
+    [data-theme="light"] .exploring-card{background:linear-gradient(135deg,rgba(13,110,85,0.04) 0%,rgba(180,83,9,0.02) 100%);}
+    [data-theme="light"] .about-info-row{background:rgba(13,110,85,0.03);}
+    [data-theme="light"] .about-info-row:hover{background:rgba(13,110,85,0.07);border-color:rgba(13,110,85,0.18);}
+    [data-theme="light"] .node-circle.future{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.12);}
+    [data-theme="light"] .status-soon{background:rgba(0,0,0,0.05);color:var(--text-dim);}
+    [data-theme="light"] .project-badge{backdrop-filter:none;-webkit-backdrop-filter:none;}
 
     /* ═══ FINAL PROFESSIONAL REFINEMENT PASS ═══ */
     /* Noise: reduce film grain, sparser dot grid, softer text glow */
@@ -904,7 +918,6 @@
 <div class="blob blob-1"></div>
 <div class="blob blob-2"></div>
 <div class="blob blob-3"></div>
-<div id="scrollProgress"></div>
 <div id="cursorGlow"></div>
 <canvas id="particleCanvas" aria-hidden="true"></canvas>
 
@@ -1092,7 +1105,7 @@
           <div class="skill-tags">
             <span class="skill-tag hot">Python</span><span class="skill-tag hot">SQL</span>
             <span class="skill-tag">R</span>
-            <span class="skill-tag learning">Java</span>
+            <span class="skill-tag learning">Java</span><span class="skill-tag learning">C / C++</span>
           </div>
         </div>
         <div class="skill-category fade-in-up">
@@ -1678,7 +1691,7 @@
       <div class="contact-body">
         <div class="fade-in-up">
           <div class="contact-links">
-            <a href="mailto:mrkhondokar.prof@gmail.com" class="contact-link">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mrkhondokar.prof@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-link">
               <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
               <div><div class="contact-link-title">Gmail</div><div class="contact-link-val">mrkhondokar.prof@gmail.com</div></div>
             </a>
@@ -1718,11 +1731,11 @@
             <form id="contactForm" novalidate>
               <div class="form-row">
                 <label class="form-label" for="cf-name">Your Name</label>
-                <input id="cf-name" name="name" type="text" class="form-input" placeholder="Jane Smith" autocomplete="name" required />
+                <input id="cf-name" name="name" type="text" class="form-input" placeholder="Alex Johnson" autocomplete="name" required />
               </div>
               <div class="form-row">
                 <label class="form-label" for="cf-email">Email Address</label>
-                <input id="cf-email" name="email" type="email" class="form-input" placeholder="jane@example.com" autocomplete="email" required />
+                <input id="cf-email" name="email" type="email" class="form-input" placeholder="you@example.com" autocomplete="email" required />
               </div>
               <div class="form-row">
                 <label class="form-label" for="cf-subject">Subject</label>
@@ -2189,17 +2202,6 @@
     })();
   })();
 
-  /* ── Scroll Progress Bar ── */
-  (function(){
-    const bar = document.getElementById('scrollProgress');
-    if (!bar) return;
-    function update(){
-      const h = document.documentElement;
-      const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-      bar.style.width = Math.min(pct, 100) + '%';
-    }
-    window.addEventListener('scroll', update, {passive:true});
-  })();
 
   /* ── Cursor Ambient Glow ── */
   (function(){
