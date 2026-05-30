@@ -94,8 +94,10 @@
     [data-theme="dark"] a.nav-logo:hover img{filter:brightness(0) invert(1) drop-shadow(0 0 6px rgba(52,211,153,0.65));}
     [data-theme="light"] a.nav-logo:hover img{filter:drop-shadow(0 0 4px rgba(26,53,116,0.3));}
     /* ── Light mode button overrides (dark mode unchanged) ── */
-    [data-theme="light"] .btn-primary,[data-theme="light"] .nav-cta,[data-theme="light"] .theme-btn,[data-theme="light"] .form-submit{background:linear-gradient(135deg,#059669 0%,#0284c7 100%);color:#ffffff;}
-    [data-theme="light"] .btn-primary:hover,[data-theme="light"] .nav-cta:hover,[data-theme="light"] .theme-btn:hover,[data-theme="light"] .form-submit:hover{opacity:0.88;box-shadow:0 8px 24px rgba(5,150,105,0.3);}
+    [data-theme="light"] .btn-primary,[data-theme="light"] .nav-cta,[data-theme="light"] .form-submit{background:linear-gradient(135deg,#059669 0%,#0284c7 100%);color:#ffffff;}
+    [data-theme="light"] .btn-primary:hover,[data-theme="light"] .nav-cta:hover,[data-theme="light"] .form-submit:hover{opacity:0.88;box-shadow:0 8px 24px rgba(5,150,105,0.3);}
+    [data-theme="light"] .theme-btn{background:rgba(13,110,85,0.04);border-color:rgba(13,110,85,0.22);color:var(--text-muted);}
+    [data-theme="light"] .theme-btn:hover{border-color:rgba(13,110,85,0.5);color:var(--emerald);background:rgba(13,110,85,0.08);}
     [data-theme="light"] .btn-secondary{background:rgba(13,110,85,0.04);border-color:rgba(13,110,85,0.28);}
     [data-theme="light"] .btn-download{background:rgba(180,83,9,0.04);border-color:rgba(180,83,9,0.28);}
     [data-theme="light"] .btn-download:hover{border-color:var(--amber);color:var(--amber);background:rgba(180,83,9,0.08);}
@@ -114,8 +116,10 @@
     .nav-links a:hover::after,.nav-links a.active::after{right:0;}
     .nav-links a.active{color:var(--emerald);}
     .nav-right{display:flex;gap:0.75rem;align-items:center;}
-    .nav-cta,.theme-btn{background:var(--grad);color:#030d08;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.84rem;font-weight:700;font-family:'Outfit',sans-serif;border:none;cursor:pointer;display:inline-flex;align-items:center;transition:var(--t);}
-    .nav-cta:hover,.theme-btn:hover{opacity:0.85;transform:translateY(-1px);}
+    .nav-cta{background:var(--grad);color:#030d08;padding:0.42rem 1.15rem;border-radius:50px;font-size:0.84rem;font-weight:700;font-family:'Outfit',sans-serif;border:none;cursor:pointer;display:inline-flex;align-items:center;transition:var(--t);}
+    .nav-cta:hover{opacity:0.85;transform:translateY(-1px);}
+    .theme-btn{background:rgba(255,255,255,0.04);border:1.5px solid var(--card-border);color:var(--text-muted);padding:0.38rem 1rem;border-radius:50px;font-size:0.82rem;font-weight:600;font-family:'Outfit',sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:0.35rem;transition:var(--t);}
+    .theme-btn:hover{border-color:rgba(52,211,153,0.45);color:var(--emerald);background:rgba(52,211,153,0.07);transform:translateY(-1px);}
     .hamburger{display:none;cursor:pointer;background:none;border:none;flex-direction:column;gap:5px;}
     .hamburger span{display:block;width:24px;height:2px;background:var(--text-muted);border-radius:2px;transition:var(--t);}
     .mobile-nav{position:fixed;top:68px;left:0;right:0;background:var(--nav-bg);backdrop-filter:blur(24px);border-bottom:1px solid var(--card-border);padding:1.5rem 2rem;display:flex;flex-direction:column;gap:1.25rem;z-index:999;transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;transition:transform 0.3s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease,visibility 0s 0.3s;}
@@ -310,7 +314,7 @@
     .exp-col-title{font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:800;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.75rem;}
     .exp-col-title::after{content:'';flex:1;height:1px;background:var(--card-border);}
     .timeline{display:flex;flex-direction:column;position:relative;}
-    .timeline::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--emerald),transparent);}
+    .timeline::before{content:'';position:absolute;left:17px;top:10px;bottom:20px;width:2px;background:linear-gradient(to bottom,var(--emerald) 0%,rgba(52,211,153,0.35) 55%,rgba(52,211,153,0.08) 85%,transparent 100%);border-radius:2px;}
     .timeline-item{display:flex;gap:1.15rem;padding-bottom:1.65rem;}
     .timeline-dot{width:36px;height:36px;flex-shrink:0;border-radius:50%;background:var(--card);border:2px solid var(--emerald);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;color:var(--emerald);}
     .timeline-dot svg{width:16px;height:16px;}
@@ -989,8 +993,7 @@
             <div class="about-avatar" id="aboutAvatarWrap"><img src="Profile pic.png" alt="Sameeul Khondoker Jisan" width="400" height="400" loading="lazy" onerror="this.style.display='none';document.getElementById('aboutAvatarWrap').classList.add('avatar-fallback')" /></div>
             <div class="about-name">Sameeul Khondoker Jisan</div>
             <div class="about-status">
-              <span class="about-status-dot"></span>
-              <span class="about-role">Data Analyst | Data Scientist | Future AI Engineer</span>
+              <span class="about-role">Data Analyst · Data Scientist · Future AI Engineer</span>
             </div>
             <div class="about-info-list">
               <div class="about-info-row">
@@ -1009,10 +1012,6 @@
                 <div class="info-icon-wrap info-iw-pu"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
                 <span>IELTS 7.0 Overall Band</span>
               </div>
-              <a href="mailto:mrkhondokar.prof@gmail.com" class="about-info-row">
-                <div class="info-icon-wrap info-iw-ro"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
-                <span>mrkhondokar.prof@gmail.com</span>
-              </a>
             </div>
           </div>
         </div>
@@ -1020,7 +1019,7 @@
           <div class="section-eyebrow">About Me</div>
           <h2 class="section-title">From Raw Data to <span class="line-accent">Intelligent Decisions</span></h2>
           <p class="about-text">I'm a Data Analyst and Data Science student at Daffodil International University (CGPA 3.55/4.00). My primary focus is turning messy, real-world data into clear analytical insights — through EDA, dashboards, statistical modelling, and business intelligence. I'm actively deepening my data science and machine learning knowledge, with a long-term goal of becoming an AI Engineer who builds intelligent systems end-to-end.</p>
-          <p class="about-text">Currently interning at <a href="https://www.linkedin.com/company/tecvix" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">TecVix</a> as a Data Science Intern, developing production ML pipelines with feature selection, predictive modelling, and statistical analysis to support data-driven product and BI research decisions. Previously interned at <a href="https://saiket.in/" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">SaiKet Systems</a>, processing 50K+ records and deploying 3 ML models via REST API. Actively pursuing research assistant positions, advanced internships, and graduate study in Data Science &amp; AI — with two in-progress publications on <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">AI-based carbon footprint prediction</a> and the <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">effects of incomplete data on ML model performance</a>.</p>
+          <p class="about-text">Currently interning at <a href="https://tecvix.com/" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">TecVix</a> as a Data Science Intern, developing production ML pipelines with feature selection, predictive modelling, and statistical analysis to support data-driven product and BI research decisions. Previously interned at <a href="https://saiket.in/" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">SaiKet Systems</a>, processing 50K+ records and deploying 3 ML models via REST API. Actively pursuing research assistant positions, advanced internships, and graduate study in Data Science &amp; AI — with two in-progress publications on <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">AI-based carbon footprint prediction</a> and the <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(52,211,153,0.35);">effects of incomplete data on ML model performance</a>.</p>
           <div class="about-highlight">"Today: a Data Analyst who makes data speak. Tomorrow: an AI Engineer who makes systems think. Every project, internship, and certification is a deliberate step on that path."</div>
           <h4 style="font-family:'Outfit',sans-serif;margin:1.5rem 0 0.6rem;font-weight:800;">Research Interests</h4>
           <div class="ri-tags">
@@ -1075,6 +1074,7 @@
           <div class="skill-tags">
             <span class="skill-tag hot">Python</span><span class="skill-tag hot">SQL</span>
             <span class="skill-tag">R</span><span class="skill-tag">Java</span>
+            <span class="skill-tag">Bash / Shell</span>
             <span class="skill-tag learning">C/C++</span>
           </div>
         </div>
@@ -1087,6 +1087,7 @@
             <span class="skill-tag hot">Predictive Modeling</span><span class="skill-tag hot">MLP Regressor</span>
             <span class="skill-tag">NLP</span><span class="skill-tag">SHAP</span>
             <span class="skill-tag">Deep Learning</span><span class="skill-tag">Generative AI</span>
+            <span class="skill-tag">Ensemble Methods</span><span class="skill-tag">Regression & Classification</span>
             <span class="skill-tag learning">PyTorch</span><span class="skill-tag learning">TensorFlow</span>
           </div>
         </div>
@@ -1108,6 +1109,8 @@
             <span class="skill-tag hot">Statistical Analysis</span><span class="skill-tag hot">Feature Engineering</span>
             <span class="skill-tag hot">EDA</span><span class="skill-tag hot">Data Cleaning</span>
             <span class="skill-tag hot">Data Preprocessing</span><span class="skill-tag hot">Business Intelligence</span>
+            <span class="skill-tag hot">Hypothesis Testing</span><span class="skill-tag hot">A/B Testing</span>
+            <span class="skill-tag">Time Series Analysis</span><span class="skill-tag">Cohort Analysis</span>
             <span class="skill-tag">KPI Reporting</span><span class="skill-tag">Dashboard Development</span>
           </div>
         </div>
@@ -1117,7 +1120,8 @@
           <div class="skill-tags">
             <span class="skill-tag hot">Matplotlib</span><span class="skill-tag hot">Seaborn</span>
             <span class="skill-tag hot">Excel</span><span class="skill-tag hot">Power BI</span>
-            <span class="skill-tag hot">Tableau</span><span class="skill-tag">Plotly</span>
+            <span class="skill-tag hot">Tableau</span><span class="skill-tag hot">Plotly</span>
+            <span class="skill-tag">Looker Studio</span><span class="skill-tag">Streamlit</span>
           </div>
         </div>
         <div class="skill-category fade-in-up">
@@ -1125,7 +1129,9 @@
           <div class="skill-cat-title">Databases & Backend</div>
           <div class="skill-tags">
             <span class="skill-tag hot">MySQL</span><span class="skill-tag hot">PostgreSQL</span>
-            <span class="skill-tag hot">RESTful APIs</span><span class="skill-tag">Flask</span>
+            <span class="skill-tag hot">RESTful APIs</span><span class="skill-tag hot">Flask</span>
+            <span class="skill-tag">FastAPI</span><span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">ChromaDB</span><span class="skill-tag">Vector Databases</span>
             <span class="skill-tag learning">Supabase</span>
           </div>
         </div>
@@ -1135,9 +1141,21 @@
           <div class="skill-tags">
             <span class="skill-tag hot">Git / GitHub</span><span class="skill-tag hot">Jupyter Notebook</span>
             <span class="skill-tag hot">Google Colab</span><span class="skill-tag hot">VS Code</span>
-            <span class="skill-tag">Postman</span><span class="skill-tag">Docker</span>
-            <span class="skill-tag">Google Cloud</span>
-            <span class="skill-tag learning">PyCharm</span>
+            <span class="skill-tag hot">MLflow</span><span class="skill-tag">Postman</span>
+            <span class="skill-tag">Docker</span><span class="skill-tag">Google Cloud</span>
+            <span class="skill-tag">DVC</span><span class="skill-tag">Weights & Biases</span>
+            <span class="skill-tag learning">Hugging Face Hub</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in-up">
+          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 100 16A8 8 0 0012 2z"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg></div>
+          <div class="skill-cat-title">AI / LLM Engineering</div>
+          <div class="skill-tags">
+            <span class="skill-tag hot">LangChain</span><span class="skill-tag hot">RAG Pipelines</span>
+            <span class="skill-tag hot">Prompt Engineering</span><span class="skill-tag hot">Embeddings</span>
+            <span class="skill-tag">Hugging Face Transformers</span><span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Function Calling</span><span class="skill-tag">LLM Orchestration</span>
+            <span class="skill-tag learning">LLM Fine-tuning</span><span class="skill-tag learning">AI Agents</span>
           </div>
         </div>
         <div class="skill-category fade-in-up">
@@ -1169,12 +1187,16 @@
             <span class="exploring-title">Currently Exploring</span>
           </div>
           <div class="exploring-tags">
-            <span class="exp-tag">PyTorch</span>
-            <span class="exp-tag">Deep Learning</span>
-            <span class="exp-tag">Transformers</span>
-            <span class="exp-tag">LangChain</span>
-            <span class="exp-tag">RAG Pipelines</span>
+            <span class="exp-tag">LLM Fine-tuning</span>
+            <span class="exp-tag">Agentic AI</span>
+            <span class="exp-tag">LangGraph</span>
+            <span class="exp-tag">Hugging Face</span>
+            <span class="exp-tag">Vector Databases</span>
             <span class="exp-tag">MLflow</span>
+            <span class="exp-tag">Apache Airflow</span>
+            <span class="exp-tag">dbt</span>
+            <span class="exp-tag">Streamlit</span>
+            <span class="exp-tag">FastAPI</span>
           </div>
         </div>
       </div>
@@ -1498,7 +1520,7 @@
               <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
               <div class="timeline-content">
                 <div class="timeline-title">Data Science Intern</div>
-                <div class="timeline-org"><a href="https://www.linkedin.com/company/tecvix" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;">TecVix</a></div>
+                <div class="timeline-org"><a href="https://tecvix.com/" target="_blank" rel="noopener noreferrer" style="color:var(--emerald);text-decoration:none;">TecVix</a></div>
                 <div class="timeline-date">May 2026 – Present · Dhaka, Bangladesh</div>
                 <div class="timeline-desc">Developing production ML pipelines incorporating data preprocessing, feature selection, and predictive modelling; applying statistical analysis to extract actionable insights from real-world datasets to support data-driven product and BI research decisions.</div>
               </div>
@@ -1557,15 +1579,27 @@
             <div class="pub-cards">
               <div class="pub-card">
                 <div class="pub-tag">Research Paper</div>
-                <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" class="pub-title" style="text-decoration:none;color:inherit;">AI-Based Predictive Modeling of Individual Carbon Footprints Using Behavioral and Energy Consumption Data</a>
+                <div class="pub-title">AI-Based Predictive Modeling of Individual Carbon Footprints Using Behavioral and Energy Consumption Data</div>
                 <div class="pub-desc">Designed ensemble models (RF, XGBoost, MLP Regressor) on behavioral &amp; energy datasets; applied SHAP-based XAI to identify top lifestyle carbon drivers; benchmarked with cross-validation and regression metrics</div>
-                <div class="pub-status">Research in Progress</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem;">
+                  <div class="pub-status">Research in Progress</div>
+                  <a href="https://github.com/mrkhondoker/AI-Based-Predictive-Modeling-of-Individual-Carbon-Footprints" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.32rem;color:var(--emerald);font-size:0.74rem;font-weight:700;border:1px solid rgba(52,211,153,0.25);border-radius:50px;padding:0.2rem 0.6rem;background:rgba(52,211,153,0.06);transition:var(--t);" onmouseover="this.style.background='rgba(52,211,153,0.14)';this.style.borderColor='rgba(52,211,153,0.5)'" onmouseout="this.style.background='rgba(52,211,153,0.06)';this.style.borderColor='rgba(52,211,153,0.25)'">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                </div>
               </div>
               <div class="pub-card">
                 <div class="pub-tag">Research Paper</div>
-                <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" class="pub-title" style="text-decoration:none;color:inherit;">When Machine Learning Models Should Not Predict: A Study on the Effect of Incomplete Data on Machine Learning Performance</a>
+                <div class="pub-title">When Machine Learning Models Should Not Predict: A Study on the Effect of Incomplete Data on Machine Learning Performance</div>
                 <div class="pub-desc">Benchmarked LR, Decision Tree, and KNN across varied missingness rates; documented accuracy degradation curves and proposed data-quality risk thresholds for production ML deployment decisions</div>
-                <div class="pub-status">Research in Progress</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem;">
+                  <div class="pub-status">Research in Progress</div>
+                  <a href="https://github.com/mrkhondoker/When-Machine-Learning-Models-Should-Not-Predict" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.32rem;color:var(--emerald);font-size:0.74rem;font-weight:700;border:1px solid rgba(52,211,153,0.25);border-radius:50px;padding:0.2rem 0.6rem;background:rgba(52,211,153,0.06);transition:var(--t);" onmouseover="this.style.background='rgba(52,211,153,0.14)';this.style.borderColor='rgba(52,211,153,0.5)'" onmouseout="this.style.background='rgba(52,211,153,0.06)';this.style.borderColor='rgba(52,211,153,0.25)'">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1642,10 +1676,6 @@
               <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
               <div><div class="contact-link-title">GitHub</div><div class="contact-link-val">github.com/mrkhondoker</div></div>
             </a>
-            <a href="mailto:mrkhondokar.prof@gmail.com" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
-              <div><div class="contact-link-title">Email</div><div class="contact-link-val">mrkhondokar.prof@gmail.com</div></div>
-            </a>
             <a href="https://wa.me/qr/REVX7G7CHBMGJ1" target="_blank" rel="noopener noreferrer" class="contact-link">
               <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/></svg></div>
               <div><div class="contact-link-title">WhatsApp</div><div class="contact-link-val">Chat on WhatsApp</div></div>
@@ -1705,11 +1735,11 @@
   <div class="footer-socials">
     <a href="https://linkedin.com/in/mrkhondokar504" target="_blank" rel="noopener noreferrer me" class="social-btn" title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></a>
     <a href="https://github.com/mrkhondoker" target="_blank" rel="noopener noreferrer me" class="social-btn" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+    <a href="https://wa.me/qr/REVX7G7CHBMGJ1" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/></svg></a>
     <a href="https://www.instagram.com/mrkhondokar040/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://x.com/Mr_Khondokar502" target="_blank" rel="noopener noreferrer" class="social-btn" title="X / Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
     <a href="https://www.facebook.com/MrKhondokar040" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
     <a href="https://www.threads.com/@mrkhondokar040" target="_blank" rel="noopener noreferrer" class="social-btn" title="Threads"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7.5a7 7 0 00-7-5.5C7.477 2 4 6.248 4 12s3.477 10 8 10c4.418 0 7.75-3.582 8-8"/><path d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4"/><path d="M20 2l-2 2 2 2"/></svg></a>
-    <a href="https://x.com/Mr_Khondokar502" target="_blank" rel="noopener noreferrer" class="social-btn" title="X / Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
-    <a href="https://wa.me/qr/REVX7G7CHBMGJ1" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/></svg></a>
   </div>
   <div class="footer-copy">© <span id="yr"></span> Sameeul Khondoker Jisan · Dhaka, Bangladesh · Built with passion for AI & Data Science</div>
 </footer>
