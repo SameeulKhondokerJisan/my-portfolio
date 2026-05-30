@@ -61,7 +61,7 @@
     }
     [data-theme="light"] {
       --bg:#f0faf5; --bg2:#e6f7ef; --bg3:#ffffff;
-      --card:rgba(255,255,255,0.92); --card-border:rgba(13,110,85,0.18);
+      --card:#ffffff; --card-border:rgba(13,110,85,0.16);
       --text:#0f1f17; --text-muted:#2d5440; --text-dim:#6b7280;
       --emerald:#0d6e55; --emerald-dark:#0a5240;
       --amber:#b45309; --amber-dark:#92400e; --rose:#be185d;
@@ -105,7 +105,7 @@
     [data-theme="light"] .hero-avatar::after{display:none;}
     [data-theme="light"] .about-avatar::after{display:none;}
     /* ── Light mode: floating info cards ── */
-    [data-theme="light"] .hero-badge{background:rgba(255,255,255,0.94);border-color:rgba(13,110,85,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.1),0 0 0 1px rgba(0,0,0,0.04),inset 0 1px 0 rgba(255,255,255,0.8);}
+    [data-theme="light"] .hero-badge{background:#ffffff;border-color:rgba(13,110,85,0.18);box-shadow:0 8px 32px rgba(0,0,0,0.1),0 0 0 1px rgba(0,0,0,0.04),inset 0 1px 0 rgba(255,255,255,0.8);}
     [data-theme="light"] .hero-badge::before{background:linear-gradient(135deg,rgba(5,150,105,0.05) 0%,transparent 55%);}
     [data-theme="light"] .badge-val{color:#0f1f17;}
     [data-theme="light"] .badge-lbl,[data-theme="light"] .badge-sub{color:#6b7280;}
@@ -822,7 +822,7 @@
     [data-theme="light"] .cert-card:hover{box-shadow:0 8px 24px rgba(13,110,85,0.08);}
     [data-theme="light"] .contact-link:hover{box-shadow:0 8px 28px rgba(13,110,85,0.1);}
     [data-theme="light"] .project-card:hover .project-outcome{background:rgba(13,110,85,0.08);}
-    [data-theme="light"] .project-badge{background:rgba(255,255,255,0.92);box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+    [data-theme="light"] .project-badge{background:#ffffff;box-shadow:0 2px 8px rgba(0,0,0,0.12);}
     [data-theme="light"] .skill-tag{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.1);color:var(--text-muted);}
     [data-theme="light"] .skill-tag:hover{background:rgba(13,110,85,0.08);border-color:rgba(13,110,85,0.35);color:var(--emerald);}
     [data-theme="light"] .skill-tag.hot{background:rgba(180,83,9,0.06);border-color:rgba(180,83,9,0.22);color:var(--amber);}
@@ -839,21 +839,29 @@
     [data-theme="light"] .track-ico{background:rgba(13,110,85,0.12);color:var(--emerald);}
     [data-theme="light"] .track-blue .track-ico{background:rgba(37,99,235,0.12);color:#2563eb;}
     [data-theme="light"] .project-tag{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.1);color:var(--text-muted);}
-    /* Remove blurry frosted-glass on all cards in light mode */
+    /* Solid, crisp, frosted-glass-free cards in light mode (no background bleed = no haze) */
     [data-theme="light"] .project-card,[data-theme="light"] .skill-category,
     [data-theme="light"] .timeline-content,[data-theme="light"] .contact-link,
     [data-theme="light"] .contact-form,[data-theme="light"] .cert-card,
     [data-theme="light"] .pub-card,[data-theme="light"] .about-img-card,
     [data-theme="light"] .edu-card,[data-theme="light"] .about-highlight,
-    [data-theme="light"] .exploring-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,0.96);}
-    [data-theme="light"] .project-card{background:rgba(255,255,255,0.98);}
-    [data-theme="light"] .form-input,[data-theme="light"] .form-textarea{background:rgba(255,255,255,0.9);border-color:rgba(13,110,85,0.18);}
+    [data-theme="light"] .exploring-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:#ffffff;box-shadow:0 1px 2px rgba(13,30,22,0.04),0 4px 14px rgba(13,30,22,0.05);}
+    [data-theme="light"] .project-card{background:#ffffff;box-shadow:0 2px 4px rgba(13,30,22,0.05),0 10px 30px rgba(13,30,22,0.07);}
+    [data-theme="light"] .form-input,[data-theme="light"] .form-textarea{background:#ffffff;border-color:rgba(13,110,85,0.18);}
     [data-theme="light"] .form-input:focus,[data-theme="light"] .form-textarea:focus{background:#ffffff;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(13,110,85,0.08);}
     [data-theme="light"] .about-info-row{background:rgba(13,110,85,0.03);}
     [data-theme="light"] .about-info-row:hover{background:rgba(13,110,85,0.07);border-color:rgba(13,110,85,0.18);}
     [data-theme="light"] .node-circle.future{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.12);}
     [data-theme="light"] .status-soon{background:rgba(0,0,0,0.05);color:var(--text-dim);}
     [data-theme="light"] .project-badge{backdrop-filter:none;-webkit-backdrop-filter:none;}
+    /* ═══ LIGHT MODE DE-HAZE: remove foggy color blobs / grain / ambient mesh ═══ */
+    [data-theme="light"] .blob{display:none;}
+    [data-theme="light"] body::before{opacity:0;}
+    [data-theme="light"] body::after{display:none;}
+    [data-theme="light"] #particleCanvas{opacity:0.1;}
+    [data-theme="light"] #cursorGlow{display:none;}
+    /* Align bottom of work-experience timeline with awards (even footer) */
+    .timeline-item:last-child{padding-bottom:0;}
 
     /* ═══ FINAL PROFESSIONAL REFINEMENT PASS ═══ */
     /* Noise: reduce film grain, sparser dot grid, softer text glow */
