@@ -627,9 +627,6 @@
     .timeline-dot{transition:box-shadow 0.3s ease,transform 0.3s ease;}
     .timeline-item:hover .timeline-dot{box-shadow:0 0 0 6px rgba(52,211,153,0.15),0 0 18px rgba(52,211,153,0.35);transform:scale(1.25);}
 
-    /* ── Section title underline draw (was .section-heading — fixed to match HTML) ── */
-    .section-title::after{content:'';display:block;margin:0.5rem auto 0;height:2px;background:var(--grad);border-radius:2px;width:0;transition:width 0.65s cubic-bezier(0.4,0,0.2,1);}
-    .section-title.in-view::after{width:3.5rem;}
 
     /* ── Nav active link glow ── */
     .nav-link.active{color:var(--emerald)!important;}
@@ -645,7 +642,6 @@
     [data-theme="light"] .timeline-item:hover .timeline-dot{box-shadow:0 0 0 6px rgba(13,110,85,0.12),0 0 18px rgba(13,110,85,0.22);transform:scale(1.25);}
     [data-theme="light"] .blob{animation:blobFloat 9s ease-in-out infinite alternate,blobPulseLight 6s ease-in-out infinite alternate;}
     @keyframes blobPulseLight{0%{opacity:0.03}50%{opacity:0.07}100%{opacity:0.03}}
-    [data-theme="light"] .section-title::after{background:linear-gradient(135deg,#059669 0%,#0284c7 100%);}
     [data-theme="light"] .project-card:hover{box-shadow:0 28px 56px rgba(0,0,0,0.12),0 0 0 1px rgba(13,110,85,0.12),0 0 40px rgba(13,110,85,0.06);}
     [data-theme="light"] .skill-category:hover{box-shadow:0 20px 40px rgba(0,0,0,0.08),0 0 30px rgba(13,110,85,0.06);}
     [data-theme="light"] .line-accent{background:linear-gradient(90deg,#059669 0%,#b45309 30%,#0891b2 60%,#059669 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;}
