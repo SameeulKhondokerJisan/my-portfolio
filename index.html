@@ -547,20 +547,30 @@
 
     /* ── Currently Exploring ── */
     .exploring-wrap{margin-top:3rem;}
-    .exploring-card{background:linear-gradient(135deg,rgba(52,211,153,0.05) 0%,rgba(251,191,36,0.02) 100%);border:1px solid rgba(52,211,153,0.18);border-radius:var(--radius);padding:1.5rem 1.75rem;transition:var(--t);}
-    .exploring-card:hover{border-color:rgba(52,211,153,0.32);box-shadow:0 8px 32px rgba(52,211,153,0.08);}
-    .exploring-header{display:flex;align-items:center;gap:0.65rem;margin-bottom:1.35rem;}
-    .exploring-dot{width:8px;height:8px;border-radius:50%;background:var(--emerald);animation:pulse 2s infinite;flex-shrink:0;}
-    .exploring-title{font-family:'Outfit',sans-serif;font-weight:900;font-size:0.88rem;color:var(--emerald);letter-spacing:0.02em;}
-    .exploring-meta{margin-left:auto;font-size:0.67rem;color:var(--text-dim);background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.14);border-radius:50px;padding:0.14rem 0.6rem;white-space:nowrap;font-weight:600;letter-spacing:0.03em;}
-    .exploring-tracks{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
-    .track-label{font-size:0.67rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.7rem;padding-bottom:0.5rem;border-bottom:1px solid var(--card-border);}
-    .exploring-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
-    .exp-tag{background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.18);color:var(--emerald);font-size:0.72rem;font-weight:600;padding:0.24rem 0.68rem;border-radius:6px;letter-spacing:0.01em;transition:var(--t);}
-    .exp-tag:hover{background:rgba(52,211,153,0.14);border-color:rgba(52,211,153,0.42);transform:translateY(-1px);}
+    .exploring-card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:1.6rem 1.75rem;transition:var(--t);backdrop-filter:blur(20px);}
+    .exploring-card:hover{border-color:rgba(52,211,153,0.3);}
+    .exploring-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:1.4rem;}
+    .exploring-dot{width:8px;height:8px;border-radius:50%;background:var(--emerald);animation:pulse 2s infinite;flex-shrink:0;box-shadow:0 0 0 4px rgba(52,211,153,0.12);}
+    .exploring-title{font-family:'Outfit',sans-serif;font-weight:900;font-size:0.92rem;letter-spacing:0.01em;}
+    .exploring-meta{margin-left:auto;font-size:0.64rem;color:var(--emerald);background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.2);border-radius:50px;padding:0.2rem 0.7rem;white-space:nowrap;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;}
+    .exploring-tracks{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .explore-track{background:rgba(52,211,153,0.035);border:1px solid rgba(52,211,153,0.13);border-radius:14px;padding:1.1rem 1.15rem;transition:var(--t);}
+    .explore-track:hover{border-color:rgba(52,211,153,0.3);background:rgba(52,211,153,0.055);}
+    .explore-track.track-blue{background:rgba(96,165,250,0.035);border-color:rgba(96,165,250,0.13);}
+    .explore-track.track-blue:hover{border-color:rgba(96,165,250,0.3);background:rgba(96,165,250,0.055);}
+    .track-head{display:flex;align-items:center;gap:0.55rem;margin-bottom:0.95rem;}
+    .track-ico{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(52,211,153,0.12);color:var(--emerald);}
+    .track-ico svg{width:15px;height:15px;}
+    .track-blue .track-ico{background:rgba(96,165,250,0.12);color:#60a5fa;}
+    .track-label{font-family:'Outfit',sans-serif;font-size:0.79rem;font-weight:800;letter-spacing:0.01em;color:var(--text);}
+    .exploring-tags{display:flex;flex-wrap:wrap;gap:0.42rem;}
+    .exp-tag{background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.2);color:var(--emerald);font-size:0.72rem;font-weight:600;padding:0.26rem 0.7rem;border-radius:7px;letter-spacing:0.01em;transition:var(--t);}
+    .exp-tag:hover{background:rgba(52,211,153,0.16);border-color:rgba(52,211,153,0.45);transform:translateY(-1px);}
+    .track-blue .exp-tag{background:rgba(96,165,250,0.08);border-color:rgba(96,165,250,0.2);color:#60a5fa;}
+    .track-blue .exp-tag:hover{background:rgba(96,165,250,0.16);border-color:rgba(96,165,250,0.45);}
     @media(max-width:620px){
-      .exploring-card{padding:1.1rem 1.25rem;}
-      .exploring-tracks{grid-template-columns:1fr;gap:1.25rem;}
+      .exploring-card{padding:1.2rem 1.25rem;}
+      .exploring-tracks{grid-template-columns:1fr;gap:0.85rem;}
     }
 
     /* ── Enhanced hover glows ── */
@@ -602,12 +612,6 @@
     @keyframes shimmerSlide{0%{background-position:200% center}100%{background-position:-200% center}}
     .line-accent{background:linear-gradient(90deg,var(--emerald) 0%,var(--amber) 30%,#06b6d4 60%,var(--emerald) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmerSlide 7s linear infinite;}
 
-    /* ── Enhanced exploring-card animated border ── */
-    .exploring-card{position:relative;overflow:hidden;}
-    .exploring-card::before{content:'';position:absolute;inset:-1px;border-radius:calc(var(--radius) + 1px);background:conic-gradient(from var(--angle,0deg),transparent 70%,rgba(52,211,153,0.45) 80%,rgba(251,191,36,0.35) 90%,transparent 100%);z-index:-1;animation:rotateBorder 7s linear infinite;opacity:0.4;}
-    @property --angle{syntax:'<angle>';initial-value:0deg;inherits:false;}
-    @keyframes rotateBorder{to{--angle:360deg;}}
-
     /* ── 3D card tilt ── */
     .project-card{transform-style:preserve-3d;will-change:transform;}
     .project-card .card-inner-glow{position:absolute;inset:0;border-radius:var(--radius);background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(52,211,153,0.07) 0%,transparent 65%);pointer-events:none;z-index:1;transition:opacity 0.3s ease;opacity:0;}
@@ -635,7 +639,6 @@
     /* ── Light mode overrides for premium visual features ── */
     [data-theme="light"] #cursorGlow{background:radial-gradient(circle,rgba(13,110,85,0.05) 0%,transparent 70%);}
     [data-theme="light"] #home::before{background-image:radial-gradient(rgba(13,110,85,0.065) 1px,transparent 1px);}
-    [data-theme="light"] .exploring-card::before{background:conic-gradient(from var(--angle,0deg),transparent 70%,rgba(5,150,105,0.4) 80%,rgba(180,83,9,0.3) 90%,transparent 100%);}
     [data-theme="light"] .project-card .card-inner-glow{background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(13,110,85,0.06) 0%,transparent 65%);}
     [data-theme="light"] .timeline-item:hover .timeline-dot{box-shadow:0 0 0 6px rgba(13,110,85,0.12),0 0 18px rgba(13,110,85,0.22);transform:scale(1.25);}
     [data-theme="light"] .blob{animation:blobFloat 9s ease-in-out infinite alternate,blobPulseLight 6s ease-in-out infinite alternate;}
@@ -823,10 +826,17 @@
     [data-theme="light"] .skill-tag.hot{background:rgba(180,83,9,0.06);border-color:rgba(180,83,9,0.22);color:var(--amber);}
     [data-theme="light"] .skill-tag.soft{background:rgba(225,29,72,0.05);border-color:rgba(225,29,72,0.2);color:var(--rose);}
     [data-theme="light"] .skill-tag.learning{background:rgba(100,116,139,0.05);border-color:rgba(100,116,139,0.18);color:var(--text-dim);}
-    [data-theme="light"] .exp-tag{background:rgba(13,110,85,0.06);border-color:rgba(13,110,85,0.2);}
-    [data-theme="light"] .exp-tag:hover{background:rgba(13,110,85,0.12);border-color:rgba(13,110,85,0.38);}
+    [data-theme="light"] .exp-tag{background:rgba(13,110,85,0.07);border-color:rgba(13,110,85,0.22);color:var(--emerald);}
+    [data-theme="light"] .exp-tag:hover{background:rgba(13,110,85,0.13);border-color:rgba(13,110,85,0.4);}
+    [data-theme="light"] .track-blue .exp-tag{background:rgba(37,99,235,0.07);border-color:rgba(37,99,235,0.22);color:#2563eb;}
+    [data-theme="light"] .track-blue .exp-tag:hover{background:rgba(37,99,235,0.13);border-color:rgba(37,99,235,0.4);}
+    [data-theme="light"] .explore-track{background:rgba(13,110,85,0.04);border-color:rgba(13,110,85,0.14);}
+    [data-theme="light"] .explore-track:hover{border-color:rgba(13,110,85,0.3);background:rgba(13,110,85,0.06);}
+    [data-theme="light"] .explore-track.track-blue{background:rgba(37,99,235,0.04);border-color:rgba(37,99,235,0.14);}
+    [data-theme="light"] .explore-track.track-blue:hover{border-color:rgba(37,99,235,0.3);background:rgba(37,99,235,0.06);}
+    [data-theme="light"] .track-ico{background:rgba(13,110,85,0.12);color:var(--emerald);}
+    [data-theme="light"] .track-blue .track-ico{background:rgba(37,99,235,0.12);color:#2563eb;}
     [data-theme="light"] .project-tag{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.1);color:var(--text-muted);}
-    [data-theme="light"] .track-label{border-bottom-color:rgba(0,0,0,0.1);}
     /* Remove blurry frosted-glass on all cards in light mode */
     [data-theme="light"] .project-card,[data-theme="light"] .skill-category,
     [data-theme="light"] .timeline-content,[data-theme="light"] .contact-link,
@@ -837,7 +847,6 @@
     [data-theme="light"] .project-card{background:rgba(255,255,255,0.98);}
     [data-theme="light"] .form-input,[data-theme="light"] .form-textarea{background:rgba(255,255,255,0.9);border-color:rgba(13,110,85,0.18);}
     [data-theme="light"] .form-input:focus,[data-theme="light"] .form-textarea:focus{background:#ffffff;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(13,110,85,0.08);}
-    [data-theme="light"] .exploring-card{background:linear-gradient(135deg,rgba(13,110,85,0.04) 0%,rgba(180,83,9,0.02) 100%);}
     [data-theme="light"] .about-info-row{background:rgba(13,110,85,0.03);}
     [data-theme="light"] .about-info-row:hover{background:rgba(13,110,85,0.07);border-color:rgba(13,110,85,0.18);}
     [data-theme="light"] .node-circle.future{background:rgba(0,0,0,0.03);border-color:rgba(0,0,0,0.12);}
@@ -879,7 +888,6 @@
     /* Mobile: free up GPU layers, disable CPU-heavy animations */
     @media(hover:none){
       .btn-primary,.btn-secondary,.project-card{will-change:auto;}
-      .exploring-card::before{opacity:0!important;animation:none!important;}
       .line-accent{animation:none!important;}
     }
     /* Tablet: remove stagger delays (handled via JS on desktop only) */
@@ -903,8 +911,6 @@
     /* Mobile dropdown :focus-within fallback */
     .nav-resume-wrap:focus-within .resume-dropdown{opacity:1;visibility:visible;transform:translateY(0);transition:opacity 0.2s ease,transform 0.2s ease,visibility 0s 0s;}
     .hero-resume-wrap:focus-within .hero-resume-dropdown{opacity:1;visibility:visible;transform:translateY(0);transition:opacity 0.2s ease,transform 0.2s ease,visibility 0s 0s;}
-    /* Awards: last chip spans full row when alone */
-    .award-chip:last-child:nth-child(odd){grid-column:1/-1;}
     /* Copy-to-clipboard toast */
     #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(16px);background:var(--emerald);color:#fff;padding:0.55rem 1.25rem;border-radius:50px;font-size:0.81rem;font-weight:700;z-index:9999;opacity:0;pointer-events:none;transition:opacity 0.28s,transform 0.28s;white-space:nowrap;box-shadow:0 4px 18px rgba(52,211,153,0.35);letter-spacing:0.02em;}
     #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
@@ -1050,11 +1056,11 @@
               </div>
               <div class="about-info-row">
                 <div class="info-icon-wrap info-iw-am"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-                <span>IBM Certified: Data Analyst</span>
+                <span>IBM Certified Data Analyst</span>
               </div>
               <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-em"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-                <span>Open to Internships &amp; Research</span>
+                <div class="info-icon-wrap info-iw-em"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+                <span>2 Research Papers in Progress</span>
               </div>
               <div class="about-info-row" role="button" tabindex="0" onclick="copyEmail()" onkeydown="if(event.key==='Enter'||event.key===' ')copyEmail()" style="cursor:pointer;" title="Click to copy email">
                 <div class="info-icon-wrap info-iw-ro"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -1225,7 +1231,10 @@
           </div>
           <div class="exploring-tracks">
             <div class="explore-track">
-              <div class="track-label">AI &amp; LLM Engineering</div>
+              <div class="track-head">
+                <div class="track-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M20 9h2M20 14h2M2 9h2M2 14h2"/></svg></div>
+                <div class="track-label">AI &amp; LLM Engineering</div>
+              </div>
               <div class="exploring-tags">
                 <span class="exp-tag">Deep Learning</span>
                 <span class="exp-tag">LangChain</span>
@@ -1236,8 +1245,11 @@
                 <span class="exp-tag">Hugging Face</span>
               </div>
             </div>
-            <div class="explore-track">
-              <div class="track-label">Data Engineering &amp; MLOps</div>
+            <div class="explore-track track-blue">
+              <div class="track-head">
+                <div class="track-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
+                <div class="track-label">Data Engineering &amp; MLOps</div>
+              </div>
               <div class="exploring-tags">
                 <span class="exp-tag">Apache Airflow</span>
                 <span class="exp-tag">dbt Core</span>
