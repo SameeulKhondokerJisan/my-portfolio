@@ -406,9 +406,11 @@
     .awards-grid:hover .award-chip{border-color:var(--emerald);color:var(--emerald);box-shadow:0 8px 20px rgba(52,211,153,0.15);}
 
     /* ── Experience alignment ── */
-    .experience-grid{align-items:stretch;}
-    .experience-grid > div:first-child{display:flex;flex-direction:column;}
-    .experience-grid > div:first-child .timeline{flex:1;justify-content:space-between;}
+    /* NOTE: do NOT use flex:1 + justify-content:space-between on .timeline.
+       It distributes leftover space as fractional gaps, pushing lower cards
+       onto sub-pixel Y-positions, which makes their text render blurry /
+       less bold. Natural flow keeps every card on a whole pixel = crisp. */
+    .experience-grid{align-items:start;}
     .exp-right{display:flex;flex-direction:column;gap:1.5rem;}
     .exp-subsection{display:flex;flex-direction:column;gap:0.6rem;}
 
