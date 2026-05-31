@@ -912,9 +912,8 @@
     .ri-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem;margin-bottom:0.25rem;}
     .ri-tag{font-size:0.75rem;font-family:'Outfit',sans-serif;font-weight:600;padding:0.28rem 0.72rem;border-radius:20px;background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.2);color:var(--emerald);transition:var(--t);}
     [data-theme="light"] .ri-tag{background:rgba(13,110,85,0.06);border-color:rgba(13,110,85,0.2);color:var(--emerald);}
-    /* De-emphasize minor timeline entries */
-    .timeline-minor .timeline-content{opacity:0.62;}
-    .timeline-minor .timeline-dot{opacity:0.45;transform:scale(0.82);}
+    /* Minor timeline entries: keep full opacity (no fade) — only a subtle size hierarchy */
+    .timeline-minor .timeline-dot{transform:scale(0.82);}
     .timeline-minor .timeline-title{font-size:0.84rem;}
     .timeline-minor .timeline-desc{font-size:0.76rem;}
     /* Mobile dropdown :focus-within fallback */
