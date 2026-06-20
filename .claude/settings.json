@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Personal Space/CV | Resume/Resume/[V1] Resume - Sameeul Khondoker Jisan.pdf\" \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/resume.pdf\" && echo \"Copied successfully\")",
+      "Bash(git commit -m ' *)",
+      "Bash(git push)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(git remote *)",
+      "Bash(cp \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Personal Space/CV | Resume/Resume/[V1] Resume - Sameeul Khondoker Jisan.pdf\" \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/resume-v1.pdf\")",
+      "Bash(cp \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Personal Space/CV | Resume/Resume/[V2] Resume - Sameeul Khondoker Jisan.pdf\" \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/resume-v2.pdf\")",
+      "WebSearch",
+      "Bash(cp \"/Users/sameeulkhondokarjisan/Downloads/IBM Data Analyst.pdf\" \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/ibm-data-analyst.pdf\")",
+      "Bash(cp \"/Users/sameeulkhondokarjisan/Downloads/IBM Data Science.pdf\" \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/ibm-data-science.pdf\")",
+      "Bash(cp \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Personal Space/CV | Resume/Resume/[V1] Resume - Sameeul Khondoker Jisan.pdf\" \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/resume-v1.pdf\" && ls -lh \"/Users/sameeulkhondokarjisan/Downloads/Main Drive/Programming Corner/Vs Code/Development/My Portfolio/\"*.pdf)",
+      "Bash(git rm *)"
+    ],
+    "additionalDirectories": [
+      "/Users/sameeulkhondokarjisan/Downloads/Main Drive/Personal Space/CV | Resume/Resume"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command // \"\"' | grep -q 'git commit' && git push 2>/dev/null || true",
+            "statusMessage": "Pushing to remote..."
+          }
+        ]
+      }
+    ]
+  }
+}
