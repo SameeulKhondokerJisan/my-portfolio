@@ -266,7 +266,7 @@
 
     const leftItems = [
       { icon:'grad',   clr:'em', lbl:'Academic',          val:'3.55 / 4.0',      sub:'BSc Software Engineering, DIU'  },
-      { icon:'doc',    clr:'ro', lbl:'Research',           val:'2 Papers',         sub:'Carbon Footprint · Incomplete Data' },
+      { icon:'doc',    clr:'ro', lbl:'Research',           val:'1 Paper',          sub:'Carbon Footprint · In Progress' },
       { icon:'globe',  clr:'bl', lbl:'English',            val:'IELTS Band 7.0',   sub:'C1 Level · International'       },
       { icon:'cal',    clr:'am', lbl:'Graduating',         val:'Class of 2026',    sub:'Daffodil International Univ.'   },
       { icon:'code',   clr:'cy', lbl:'Projects Built',     val:'6+ AI / ML',       sub:'Research → Production'          },
