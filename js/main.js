@@ -143,7 +143,7 @@
      Send — so most messages never actually arrived.
 
      SETUP (one time):
-       1. Go to https://web3forms.com and enter mrkhondokar.prof@gmail.com
+       1. Go to https://web3forms.com and enter mrkhondoker.prof@gmail.com
        2. They email you an Access Key (a UUID)
        3. Paste it into WEB3FORMS_KEY below and redeploy
      Until a real key is set, the form falls back to the old mailto: flow.
@@ -157,7 +157,7 @@
     const btn    = document.getElementById('formSubmitBtn');
     const BTN_LABEL = btn ? btn.textContent : 'Send Message';
 
-    const myEmail = ['mrkhondokar', '.prof@', 'gmail', '.com'].join('');
+    const myEmail = ['mrkhondoker', '.prof@', 'gmail', '.com'].join('');
 
     function say(text, cls) {
       status.textContent = text;
@@ -513,7 +513,7 @@
   })();
 
   function copyEmail(){
-    const email='mrkhondokar.prof@gmail.com';
+    const email='mrkhondoker.prof@gmail.com';
     const t=document.getElementById('toast');
     const show=()=>{t.textContent='Email copied!';t.classList.add('show');setTimeout(()=>{t.classList.remove('show');t.textContent='';},2200);};
     if(navigator.clipboard&&navigator.clipboard.writeText){
