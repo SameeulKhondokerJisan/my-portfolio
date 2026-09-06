@@ -137,19 +137,20 @@
   })();
 
   /* ------------------------------------------------------------------
-     Contact form — posts to Web3Forms, which forwards the message to my
-     inbox. The old version only built a mailto: link, which relied on the
-     visitor having an email client configured AND remembering to press
-     Send — so most messages never actually arrived.
+     Contact form — delivers the message straight to my Gmail inbox.
 
-     SETUP (one time):
-       1. Go to https://web3forms.com and enter mrkhondoker.prof@gmail.com
-       2. They email you an Access Key (a UUID)
-       3. Paste it into WEB3FORMS_KEY below and redeploy
-     Until a real key is set, the form falls back to the old mailto: flow.
+     A GitHub Pages site is static: there is no server of mine that can send
+     mail, so the form POSTs to FormSubmit, which relays it directly to the
+     Gmail address below. No API key, no account, no dashboard.
+
+     ONE-TIME ACTIVATION: the first time this form is submitted, FormSubmit
+     emails mrkhondoker.prof@gmail.com a confirmation link. Click it once and
+     every later submission arrives in the inbox automatically. Submit the
+     form yourself once after deploying to trigger it.
+
+     If the relay is unreachable, the form falls back to a "Compose in Gmail"
+     link so the visitor can still send the message by hand.
      ------------------------------------------------------------------ */
-  const WEB3FORMS_KEY = 'PASTE-YOUR-WEB3FORMS-ACCESS-KEY-HERE';
-
   (function () {
     const form = document.getElementById('contactForm');
     if (!form) return;
@@ -158,18 +159,32 @@
     const BTN_LABEL = btn ? btn.textContent : 'Send Message';
 
     const myEmail = ['mrkhondoker', '.prof@', 'gmail', '.com'].join('');
+    const ENDPOINT = 'https://formsubmit.co/ajax/' + myEmail;
 
     function say(text, cls) {
       status.textContent = text;
       status.className = 'form-status' + (cls ? ' ' + cls : '');
     }
 
-    /* Fallback used when no key is configured or the network call fails —
-       at least the visitor still has a way to reach me. */
-    function mailtoFallback(name, subject, message, replyTo) {
-      const s = subject ? `Portfolio: ${subject} — from ${name}` : `Portfolio Contact — from ${name}`;
-      const b = `${message}\n\n— ${name}${replyTo ? '\n' + replyTo : ''}`;
-      window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(b)}`;
+    /* Fallback: a Gmail compose window, pre-filled. Rendered as a link the
+       visitor clicks — auto-opening a tab here would be swallowed by popup
+       blockers, since we are already past an await. */
+    function offerGmail(name, subject, message, replyTo) {
+      const su = subject ? 'Portfolio: ' + subject + ' — from ' + name
+                         : 'Portfolio Contact — from ' + name;
+      const body = message + '\n\n— ' + name + (replyTo ? '\n' + replyTo : '');
+      const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' +
+        encodeURIComponent(myEmail) + '&su=' + encodeURIComponent(su) +
+        '&body=' + encodeURIComponent(body);
+
+      status.className = 'form-status error';
+      status.textContent = 'Couldn’t send that automatically. ';
+      const a = document.createElement('a');
+      a.href = gmail; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = 'Compose it in Gmail instead';
+      a.style.textDecoration = 'underline';
+      status.appendChild(a);
+      status.appendChild(document.createTextNode(' — or email me at ' + myEmail + '.'));
     }
 
     form.addEventListener('submit', async function (e) {
@@ -195,41 +210,34 @@
         return;
       }
 
-      if (!WEB3FORMS_KEY || WEB3FORMS_KEY.indexOf('PASTE-YOUR') === 0) {
-        mailtoFallback(name, subject, message, email);
-        say('Opening your email app — press Send to deliver the message.', 'success');
-        return;
-      }
-
-      const payload = {
-        access_key: WEB3FORMS_KEY,
-        name: name,
-        email: email,
-        subject: subject ? `Portfolio: ${subject} — from ${name}` : `Portfolio Contact — from ${name}`,
-        message: message,
-        from_name: 'Portfolio Contact Form',
-        replyto: email,
-      };
-
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
       say('Sending your message…', 'pending');
 
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch(ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload),
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            _replyto: email,
+            _subject: subject ? 'Portfolio: ' + subject + ' — from ' + name
+                              : 'Portfolio Contact — from ' + name,
+            message: message,
+            _template: 'table',
+            _captcha: 'false',
+          }),
         });
         const out = await res.json().catch(() => ({}));
-        if (res.ok && out.success) {
-          say('Thanks — your message has been sent. I’ll reply to ' + email + ' within a day.', 'success');
+        /* FormSubmit returns success as the string "true" */
+        if (res.ok && String(out.success) === 'true') {
+          say('Thanks — your message is on its way to my inbox. I’ll reply to ' + email + ' within a day.', 'success');
           form.reset();
         } else {
-          throw new Error(out.message || 'Submission failed');
+          throw new Error(out.message || 'Relay rejected the submission');
         }
       } catch (err) {
-        say('Couldn’t send that automatically — opening your email app instead. If nothing opens, email me at ' + myEmail + '.', 'error');
-        mailtoFallback(name, subject, message, email);
+        offerGmail(name, subject, message, email);
       } finally {
         if (btn) { btn.disabled = false; btn.textContent = BTN_LABEL; }
       }

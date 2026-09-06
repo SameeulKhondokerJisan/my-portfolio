@@ -39,7 +39,7 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 - **Light & dark themes** with OS-preference detection and a manual toggle (persisted in `localStorage`)
 - **Responsive** layout (desktop → tablet → mobile)
 - **Resume download** — one click, no redirects
-- **Working contact form** — submissions post to [Web3Forms](https://web3forms.com) and land in my inbox, with a `mailto:` fallback if the request fails. Set `WEB3FORMS_KEY` in `js/main.js`.
+- **Working contact form** — messages are relayed straight to my Gmail inbox by [FormSubmit](https://formsubmit.co) (no API key, no account). Falls back to a pre-filled Gmail compose link if the relay is unreachable. One-time setup: submit the form once after deploying and click the confirmation email FormSubmit sends.
 - **Sections:** Hero · About · Skills · Career Roadmap · Projects · Experience & Certifications · Contact
 - Accessible, keyboard-navigable, reduced-motion friendly
 
