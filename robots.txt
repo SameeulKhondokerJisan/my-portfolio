@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sameeulkhondokerjisan.github.io/sitemap.xml
+Sitemap: https://sameeulkhondokerjisan.github.io/my-portfolio/sitemap.xml

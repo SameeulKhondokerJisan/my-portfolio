@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+**/.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor / OS noise
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Claude Code local settings (keep shared settings.json tracked)
+.claude/settings.local.json

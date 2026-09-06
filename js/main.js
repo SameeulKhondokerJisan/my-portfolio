@@ -2,36 +2,29 @@
   /* Dynamic year */
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* Download both the CV and the Resume on a single click */
-  function downloadBothResumes() {
-    const files = [
-      { href: 'CV___Sameeul_Khondoker_Jisan.pdf', name: 'CV - Sameeul Khondoker Jisan.pdf' },
-      { href: 'Resume___Sameeul_Khondoker_Jisan.pdf', name: 'Resume - Sameeul Khondoker Jisan.pdf' }
-    ];
-    files.forEach((file, i) => {
-      setTimeout(() => {
-        const a = document.createElement('a');
-        a.href = file.href;
-        a.download = file.name;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }, i * 400);
-    });
+  /* Download the Resume (single file, friendly filename) */
+  function downloadResume() {
+    const a = document.createElement('a');
+    a.href = 'Sameeul_Khondoker_Jisan_Resume.pdf';
+    a.download = 'Sameeul Khondoker Jisan.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }
 
-  /* Theme Toggle — label shows what mode you will switch TO */
+  /* Theme Toggle — icons are swapped by CSS via [data-theme] */
   const themeBtn = document.getElementById('themeToggle');
   const html = document.documentElement;
-  // Sync button label with current theme on load
-  themeBtn.textContent = html.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
-  themeBtn.setAttribute('aria-label', html.getAttribute('data-theme') === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  function syncThemeLabel() {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    themeBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  syncThemeLabel();
   themeBtn.addEventListener('click', () => {
     const isDark = html.getAttribute('data-theme') === 'dark';
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
-    themeBtn.textContent = isDark ? 'Dark' : 'Light';
-    themeBtn.setAttribute('aria-label', isDark ? 'Switch to dark mode' : 'Switch to light mode');
+    syncThemeLabel();
   });
 
   /* Mobile Nav */
@@ -49,7 +42,7 @@
   /* Focus trap for mobile nav */
   document.getElementById('mobileNav').addEventListener('keydown', function(e) {
     if (!this.classList.contains('open')) return;
-    const focusable = Array.from(this.querySelectorAll('a'));
+    const focusable = Array.from(this.querySelectorAll('a, button'));
     const first = focusable[0], last = focusable[focusable.length - 1];
     if (e.key === 'Tab') {
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -60,11 +53,19 @@
 
   /* Back to Top — hide when near page bottom (avoids covering footer icons) */
   const btt = document.getElementById('backToTop');
+  /* Passive + rAF-batched: reading scrollHeight on every scroll event forces a
+     synchronous layout, which is what makes scrolling feel sticky on phones. */
+  let bttQueued = false;
   window.addEventListener('scroll', () => {
-    const scrolled   = window.scrollY;
-    const nearBottom = (window.innerHeight + scrolled) >= (document.body.scrollHeight - 120);
-    btt.classList.toggle('visible', scrolled > 400 && !nearBottom);
-  });
+    if (bttQueued) return;
+    bttQueued = true;
+    requestAnimationFrame(() => {
+      bttQueued = false;
+      const scrolled   = window.scrollY;
+      const nearBottom = (window.innerHeight + scrolled) >= (document.body.scrollHeight - 120);
+      btt.classList.toggle('visible', scrolled > 400 && !nearBottom);
+    });
+  }, { passive: true });
   btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   /* Scroll animations — animate once (unobserve after first trigger) */
@@ -86,46 +87,24 @@
           const id = e.target.id;
           document.querySelectorAll('.nav-links a').forEach(l => {
             l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
-            l.style.color = '';
           });
         }
       });
     }, { threshold: 0.4 }).observe(s);
   });
 
+  /* Hero role is now a static "Data Analyst" in the markup — the title reads
+     "Data Scientist & Data Analyst", so there is nothing left to cycle. */
 
-  /* Role typewriter — spring fade with vertical shift */
-  (function(){
-    const roles = ['Data Scientist','AI Engineer','ML Researcher','AI Researcher','Python Developer'];
-    let ri = 0;
-    const roleEl = document.getElementById('heroRole');
-    if (!roleEl) return;
-    roleEl.style.display = 'inline-block';
-    function cycle(){
-      roleEl.style.transition = 'opacity 0.32s cubic-bezier(0.4,0,0.2,1),transform 0.32s cubic-bezier(0.4,0,0.2,1)';
-      roleEl.style.opacity = '0';
-      roleEl.style.transform = 'translateY(6px)';
-      setTimeout(() => {
-        ri = (ri + 1) % roles.length;
-        roleEl.textContent = roles[ri];
-        roleEl.style.transition = 'none';
-        roleEl.style.transform = 'translateY(-6px)';
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-          roleEl.style.transition = 'opacity 0.44s cubic-bezier(0.16,1,0.3,1),transform 0.44s cubic-bezier(0.16,1,0.3,1)';
-          roleEl.style.opacity = '1';
-          roleEl.style.transform = 'translateY(0)';
-        }));
-      }, 360);
-    }
-    setInterval(cycle, 3200);
-  })();
-
-  /* Roadmap train loop — JS-driven to guarantee seamless 50% translate */
+  /* Roadmap train loop — JS-driven to guarantee seamless 50% translate.
+     Pauses on hover AND keyboard focus; disabled entirely for
+     prefers-reduced-motion (nodes stay reachable via manual scroll). */
   (function () {
     const track = document.getElementById('roadmapTrack');
     if (!track) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     let animId, startTime, pausedAt = 0, paused = false;
-    const DURATION = 20000;
+    const DURATION = 22000;
 
     function step(ts) {
       if (!startTime) startTime = ts - pausedAt;
@@ -138,87 +117,124 @@
 
     animId = requestAnimationFrame(step);
 
-    track.parentElement.addEventListener('mouseenter', () => {
+    function pause() {
+      if (paused) return;
       paused = true;
       pausedAt = performance.now() - startTime;
       cancelAnimationFrame(animId);
-    });
-    track.parentElement.addEventListener('mouseleave', () => {
+    }
+    function resume() {
+      if (!paused) return;
       paused = false;
       startTime = null;
       animId = requestAnimationFrame(step);
-    });
+    }
+    const container = track.parentElement;
+    container.addEventListener('mouseenter', pause);
+    container.addEventListener('mouseleave', resume);
+    container.addEventListener('focusin', pause);
+    container.addEventListener('focusout', resume);
   })();
 
-  /* Contact form — sends via Web3Forms (works on localhost + GitHub Pages) */
-  document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const btn    = document.getElementById('formSubmitBtn');
+  /* ------------------------------------------------------------------
+     Contact form — posts to Web3Forms, which forwards the message to my
+     inbox. The old version only built a mailto: link, which relied on the
+     visitor having an email client configured AND remembering to press
+     Send — so most messages never actually arrived.
+
+     SETUP (one time):
+       1. Go to https://web3forms.com and enter mrkhondokar.prof@gmail.com
+       2. They email you an Access Key (a UUID)
+       3. Paste it into WEB3FORMS_KEY below and redeploy
+     Until a real key is set, the form falls back to the old mailto: flow.
+     ------------------------------------------------------------------ */
+  const WEB3FORMS_KEY = 'PASTE-YOUR-WEB3FORMS-ACCESS-KEY-HERE';
+
+  (function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
     const status = document.getElementById('formStatus');
-    const data   = new FormData(this);
-    const name    = (data.get('name')    || '').trim();
-    const email   = (data.get('email')   || '').trim();
-    const subject = (data.get('subject') || 'Portfolio Contact').trim();
-    const message = (data.get('message') || '').trim();
+    const btn    = document.getElementById('formSubmitBtn');
+    const BTN_LABEL = btn ? btn.textContent : 'Send Message';
 
-    if (!name || !email || !message) {
-      status.textContent = 'Please fill in your name, email, and message.';
-      status.className = 'form-status error';
-      status.style.display = 'block';
-      return;
+    const myEmail = ['mrkhondokar', '.prof@', 'gmail', '.com'].join('');
+
+    function say(text, cls) {
+      status.textContent = text;
+      status.className = 'form-status' + (cls ? ' ' + cls : '');
     }
 
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    status.style.display = 'none';
-
-    const ep     = ['mrkhondokar', '.prof@', 'gmail', '.com'].join('');
-    const mailto = `mailto:${ep}?subject=${encodeURIComponent('Portfolio Contact: ' + subject)}&body=${encodeURIComponent(message)}`;
-
-    /* ── Web3Forms ──────────────────────────────────────────────────────────
-       Get your free access key at https://web3forms.com → enter your email.
-       Replace the placeholder below with your key (no activation step needed).
-    ──────────────────────────────────────────────────────────────────────── */
-    const WEB3FORMS_KEY = '1861fdc6-3d9e-4519-80e5-75581be662f3';
-
-    let succeeded = false;
-    try {
-      const res  = await fetch('https://api.web3forms.com/submit', {
-        method : 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body   : JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          name, email, message,
-          subject: `Portfolio Contact: ${subject}`,
-          replyto: email,
-          botcheck: ''
-        })
-      });
-      const json = await res.json();
-      /* 200 OK = submission recorded; treat as success regardless of email delivery status */
-      succeeded = res.ok;
-    } catch (_) { succeeded = false; }
-
-    if (succeeded) {
-      btn.textContent = 'Message Sent ✓';
-      status.textContent = "Thank you for reaching out! I'll get back to you soon.";
-      status.className = 'form-status success';
-      this.reset();
-    } else {
-      btn.textContent = 'Send Message ✈';
-      status.innerHTML = `Delivery failed — <a href="${mailto}" style="color:inherit;text-decoration:underline;">click here to email directly</a> instead.`;
-      status.className = 'form-status error';
+    /* Fallback used when no key is configured or the network call fails —
+       at least the visitor still has a way to reach me. */
+    function mailtoFallback(name, subject, message, replyTo) {
+      const s = subject ? `Portfolio: ${subject} — from ${name}` : `Portfolio Contact — from ${name}`;
+      const b = `${message}\n\n— ${name}${replyTo ? '\n' + replyTo : ''}`;
+      window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(b)}`;
     }
 
-    btn.disabled = false;
-    status.style.display = 'block';
-    setTimeout(() => {
-      if (status.className.includes('success')) {
-        btn.textContent = 'Send Message ✈';
-        status.style.display = 'none';
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const data    = new FormData(form);
+      const name    = (data.get('name')    || '').trim();
+      const email   = (data.get('email')   || '').trim();
+      const subject = (data.get('subject') || '').trim();
+      const message = (data.get('message') || '').trim();
+
+      if (!name || !message) {
+        say('Please fill in your name and message.', 'error');
+        return;
       }
-    }, 6000);
-  });
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        say('Please enter a valid email address so I can reply.', 'error');
+        return;
+      }
+      /* Honeypot — only bots tick this. Pretend it worked, send nothing. */
+      if (data.get('botcheck')) {
+        say('Thanks — your message has been sent.', 'success');
+        form.reset();
+        return;
+      }
+
+      if (!WEB3FORMS_KEY || WEB3FORMS_KEY.indexOf('PASTE-YOUR') === 0) {
+        mailtoFallback(name, subject, message, email);
+        say('Opening your email app — press Send to deliver the message.', 'success');
+        return;
+      }
+
+      const payload = {
+        access_key: WEB3FORMS_KEY,
+        name: name,
+        email: email,
+        subject: subject ? `Portfolio: ${subject} — from ${name}` : `Portfolio Contact — from ${name}`,
+        message: message,
+        from_name: 'Portfolio Contact Form',
+        replyto: email,
+      };
+
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      say('Sending your message…', 'pending');
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (res.ok && out.success) {
+          say('Thanks — your message has been sent. I’ll reply to ' + email + ' within a day.', 'success');
+          form.reset();
+        } else {
+          throw new Error(out.message || 'Submission failed');
+        }
+      } catch (err) {
+        say('Couldn’t send that automatically — opening your email app instead. If nothing opens, email me at ' + myEmail + '.', 'error');
+        mailtoFallback(name, subject, message, email);
+      } finally {
+        if (btn) { btn.disabled = false; btn.textContent = BTN_LABEL; }
+      }
+    });
+  })();
 
   /* Stat counter animation — triggers once on scroll into view */
   (function(){
@@ -262,22 +278,21 @@
       term:   '<polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>',
     };
 
-    const CLR = { em:'badge-icon-em', am:'badge-icon-am', bl:'badge-icon-bl', ro:'badge-icon-ro', pu:'badge-icon-pu', cy:'badge-icon-cy' };
+    const CLR = { cy:'badge-icon-cy', vi:'badge-icon-vi', bl:'badge-icon-bl', mi:'badge-icon-mi', ro:'badge-icon-ro', am:'badge-icon-am' };
 
     const leftItems = [
-      { icon:'grad',   clr:'em', lbl:'Academic',          val:'3.55 / 4.0',      sub:'BSc Software Engineering, DIU'  },
-      { icon:'doc',    clr:'ro', lbl:'Research',           val:'1 Paper',          sub:'Carbon Footprint · In Progress' },
-      { icon:'globe',  clr:'bl', lbl:'English',            val:'IELTS Band 7.0',   sub:'C1 Level · International'       },
-      { icon:'cal',    clr:'am', lbl:'Graduating',         val:'Class of 2026',    sub:'Daffodil International Univ.'   },
-      { icon:'code',   clr:'cy', lbl:'Projects Built',     val:'6+ AI / ML',       sub:'Research → Production'          },
+      { icon:'grad',   clr:'cy', lbl:'Academic',       val:'3.46 / 4.00',       sub:'BSc Software Engineering, DIU'  },
+      { icon:'pulse',  clr:'ro', lbl:'Analytics',      val:'Power BI · SQL',    sub:'Dashboards · KPI Reporting'     },
+      { icon:'cal',    clr:'am', lbl:'Graduating',     val:'Class of 2026',     sub:'Daffodil International Univ.'   },
+      { icon:'code',   clr:'mi', lbl:'Projects Built', val:'4+ Data / ML',      sub:'Analysis → Production'          },
     ];
 
     const rightItems = [
-      { icon:'award',  clr:'am', lbl:'Certification',      val:'IBM Certified',    sub:'Data Science & Data Analytics'  },
-      { icon:'pulse',  clr:'em', lbl:'Availability',       val:'Open to Work',     sub:'Full-time · Remote Friendly'    },
-      { icon:'brief',  clr:'bl', lbl:'Experience',         val:'Data Sci. Intern',  sub:'Codio AI · SaiKet Systems'      },
-      { icon:'rocket', clr:'pu', lbl:'Career Goal',        val:'AI Engineer',      sub:'ML Research · AI Systems'       },
-      { icon:'term',   clr:'cy', lbl:'Core Stack',         val:'Python · PyTorch', sub:'XGBoost · Transformers'         },
+      { icon:'award',  clr:'vi', lbl:'Certification',  val:'IBM Certified ×6',  sub:'DS · DA · ML · DL · AI Eng · GenAI' },
+      { icon:'pulse',  clr:'mi', lbl:'Availability',   val:'Open to Work',      sub:'Full-time · Remote Friendly'    },
+      { icon:'brief',  clr:'bl', lbl:'Experience',     val:'Data Sci. Intern',  sub:'Codio AI · SaiKet Systems'      },
+      { icon:'rocket', clr:'cy', lbl:'Career Goal',    val:'Data Scientist',    sub:'Predictive Modelling · BI'      },
+      { icon:'term',   clr:'am', lbl:'Core Stack',     val:'Python · SQL',      sub:'Pandas · Power BI · Scikit-learn' },
     ];
 
     function makeSvg(key) {
@@ -329,6 +344,7 @@
       }, delay);
     }
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const leftBadge  = document.querySelector('.badge-left');
     const rightBadge = document.querySelector('.badge-right');
     if (leftBadge)  cycleBadge(leftBadge,  leftItems,  2200);
@@ -339,6 +355,7 @@
   (function(){
     const canvas = document.getElementById('particleCanvas');
     if (!canvas) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const isTouch = window.matchMedia('(hover:none)').matches;
     const ctx = canvas.getContext('2d');
     let W, H;
@@ -361,7 +378,7 @@
 
     function getCol(){
       return document.documentElement.getAttribute('data-theme') === 'light'
-        ? [13,110,85] : [52,211,153];
+        ? [14,116,144] : [34,211,238];
     }
 
     function frame(){
@@ -406,7 +423,7 @@
 
   /* ── Hero parallax — lerped for butter-smooth scroll ── */
   (function(){
-    if (window.matchMedia('(hover:none)').matches) return;
+    if (window.matchMedia('(hover:none)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const heroLeft  = document.querySelector('.hero-left');
     const heroRight = document.querySelector('.hero-right');
     if (!heroLeft || !heroRight) return;
@@ -425,25 +442,22 @@
     })();
   })();
 
-
   /* ── Cursor Ambient Glow ── */
   (function(){
     const glow = document.getElementById('cursorGlow');
     if (!glow || window.matchMedia('(hover:none)').matches) return;
     let mx = window.innerWidth / 2, my = window.innerHeight / 2;
     let cx = mx, cy = my;
-    let raf;
     document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; glow.style.opacity = '1'; }, {passive:true});
     document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
     function lerp(a, b, t){ return a + (b - a) * t; }
-    function loop(){
+    (function loop(){
       cx = lerp(cx, mx, 0.072);
       cy = lerp(cy, my, 0.072);
       glow.style.left = cx + 'px';
       glow.style.top  = cy + 'px';
-      raf = requestAnimationFrame(loop);
-    }
-    loop();
+      requestAnimationFrame(loop);
+    })();
   })();
 
   /* ── 3D Card Tilt + inner glow ── */
@@ -498,18 +512,10 @@
     targets.forEach(el => io.observe(el));
   })();
 
-  /* ── Section heading underline draw ── */
-  (function(){
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-    }, {threshold: 0.4});
-    document.querySelectorAll('.section-title').forEach(h => io.observe(h));
-  })();
-
   function copyEmail(){
     const email='mrkhondokar.prof@gmail.com';
     const t=document.getElementById('toast');
-    const show=()=>{t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);};
+    const show=()=>{t.textContent='Email copied!';t.classList.add('show');setTimeout(()=>{t.classList.remove('show');t.textContent='';},2200);};
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(email).then(show).catch(()=>{fallbackCopy(email);show();});
     } else { fallbackCopy(email); show(); }
