@@ -93,8 +93,20 @@
     }, { threshold: 0.4 }).observe(s);
   });
 
-  /* Hero role is now a static "Data Analyst" in the markup — the title reads
-     "Data Scientist & Data Analyst", so there is nothing left to cycle. */
+  /* Hero role — "Data Scientist &" stays put while the second line rotates
+     through the other roles. The h1 carries the full list for screen readers,
+     and reduced-motion visitors keep the first role. */
+  (function () {
+    const roles = document.querySelectorAll('#heroRole .hero-role');
+    if (roles.length < 2) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let idx = 0;
+    setInterval(() => {
+      roles[idx].classList.remove('is-active');
+      idx = (idx + 1) % roles.length;
+      roles[idx].classList.add('is-active');
+    }, 2800);
+  })();
 
   /* Roadmap train loop — JS-driven to guarantee seamless 50% translate.
      Pauses on hover AND keyboard focus; disabled entirely for
@@ -248,6 +260,8 @@
   (function(){
     const els = document.querySelectorAll('.stat-num[data-count]');
     if (!els.length) return;
+    /* The markup already holds the final values — reduced-motion visitors keep them */
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
@@ -289,18 +303,19 @@
     const CLR = { cy:'badge-icon-cy', vi:'badge-icon-vi', bl:'badge-icon-bl', mi:'badge-icon-mi', ro:'badge-icon-ro', am:'badge-icon-am' };
 
     const leftItems = [
-      { icon:'grad',   clr:'cy', lbl:'Academic',       val:'3.46 / 4.00',       sub:'BSc Software Engineering, DIU'  },
+      { icon:'grad',   clr:'cy', lbl:'Academic',       val:'3.55 / 4.00',       sub:'BSc Software Engineering, DIU'  },
       { icon:'pulse',  clr:'ro', lbl:'Analytics',      val:'Power BI · SQL',    sub:'Dashboards · KPI Reporting'     },
+      { icon:'code',   clr:'bl', lbl:'Engineering',    val:'Flask · Docker',    sub:'REST APIs · Full-Stack Apps'    },
       { icon:'cal',    clr:'am', lbl:'Graduating',     val:'Class of 2026',     sub:'Daffodil International Univ.'   },
-      { icon:'code',   clr:'mi', lbl:'Projects Built', val:'4+ Data / ML',      sub:'Analysis → Production'          },
+      { icon:'doc',    clr:'mi', lbl:'Projects Built', val:'6+ Data · ML · SWE', sub:'Analysis → Production'         },
     ];
 
     const rightItems = [
       { icon:'award',  clr:'vi', lbl:'Certification',  val:'IBM Certified ×6',  sub:'DS · DA · ML · DL · AI Eng · GenAI' },
       { icon:'pulse',  clr:'mi', lbl:'Availability',   val:'Open to Work',      sub:'Full-time · Remote Friendly'    },
       { icon:'brief',  clr:'bl', lbl:'Experience',     val:'Data Sci. Intern',  sub:'Codio AI · SaiKet Systems'      },
-      { icon:'rocket', clr:'cy', lbl:'Career Goal',    val:'Data Scientist',    sub:'Predictive Modelling · BI'      },
-      { icon:'term',   clr:'am', lbl:'Core Stack',     val:'Python · SQL',      sub:'Pandas · Power BI · Scikit-learn' },
+      { icon:'rocket', clr:'cy', lbl:'Career Goal',    val:'Data Scientist',    sub:'Predictive Modelling · MLOps'   },
+      { icon:'term',   clr:'am', lbl:'Core Stack',     val:'Python · SQL',      sub:'Pandas · Flask · Scikit-learn'  },
     ];
 
     function makeSvg(key) {

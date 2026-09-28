@@ -6,14 +6,28 @@
 \usepackage[left=0.55in,right=0.55in,top=0.5in,bottom=0.5in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 
+% Map every glyph to Unicode so applicant-tracking systems and copy/paste
+% read the text back exactly (ligatures such as "fi" otherwise extract badly).
+\input{glyphtounicode}
+\pdfgentounicode=1
+
 \definecolor{linkblue}{HTML}{2140B0}
-\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,
+  pdftitle={Sameeul Khondoker Jisan — Resume},
+  pdfauthor={Sameeul Khondoker Jisan},
+  pdfsubject={Data Scientist | Data Analyst | Software Engineer | Machine Learning Engineer},
+  pdfkeywords={Data Science, Data Analysis, Software Engineering, Machine Learning, Python, SQL, Flask, Docker, REST API, Power BI}}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+% No hyphenation: split keywords ("Ensem-ble", "Engi-neering") break ATS
+% keyword matching. The emergency stretch absorbs the looser justified lines.
+\hyphenpenalty=10000 \exhyphenpenalty=10000
+\setlength{\emergencystretch}{1.5em}
 
 % Section heading: bold, with a full-width rule beneath (base LaTeX only,
 % so this file compiles on a minimal TeX install with no extra packages).
@@ -30,44 +44,47 @@
     \setlength{\partopsep}{0pt}\setlength{\rightmargin}{0pt}}%
 }{\end{list}}
 
-% Company / school heading:  #1 bold blue left, #2 plain right
-\newcommand{\orgline}[2]{\textbf{\textcolor{linkblue}{#1}}\hfill #2\par}
+% Company / school heading:  #1 URL, #2 bold blue name (linked), #3 plain right
+\newcommand{\orgline}[3]{\textbf{\href{#1}{#2}}\hfill #3\par}
 % Role line: #1 italic left, #2 italic right
 \newcommand{\roleline}[2]{\textit{#1}\hfill \textit{#2}\par\vspace{0.15em}}
+% Project heading: #1 URL, #2 bold blue title (linked)
+\newcommand{\projline}[2]{\textbf{\href{#1}{#2}}\par}
 
 \begin{document}
 
 %% ---------------- Header ----------------
 \begin{center}
-  {\huge Sameeul Khondoker Jisan}\\[0.45em]
-  {\small Mirpur, Dhaka, Bangladesh $\vert$
+  {\huge\bfseries Sameeul Khondoker Jisan}\\[0.4em]
+  {\large Data Scientist $\vert$ Data Analyst $\vert$ Software Engineer $\vert$ Machine Learning Engineer}\\[0.3em]
+  {\small \href{https://maps.google.com/?q=Mirpur,+Dhaka,+Bangladesh}{Mirpur, Dhaka, Bangladesh} $\vert$
   \href{mailto:mrkhondoker.prof@gmail.com}{mrkhondoker.prof@gmail.com} $\vert$
-  \href{tel:+8801767766680}{+880 1767-766680}}\\[0.25em]
-  {\small \href{https://sameeulkhondokerjisan.github.io/my-portfolio}{sameeulkhondokerjisan.github.io/my-portfolio} $\vert$
-  \href{https://linkedin.com/in/sameeul-khondoker-jisan}{linkedin.com/in/sameeul-khondoker-jisan} $\vert$
+  \href{tel:+8801767766680}{+880\,1767-766680}}\\[0.2em]
+  {\small \href{https://sameeulkhondokerjisan.github.io/my-portfolio/}{sameeulkhondokerjisan.github.io/my-portfolio} $\vert$
+  \href{https://www.linkedin.com/in/mrkhondoker/}{linkedin.com/in/mrkhondoker} $\vert$
   \href{https://github.com/SameeulKhondokerJisan}{github.com/SameeulKhondokerJisan}}
 \end{center}
 \vspace{0.3em}
 
 %% ---------------- Summary ----------------
 \rsection{Professional Summary}
-Data Science-focused Software Engineering undergraduate (CGPA 3.46/4.00, graduating Dec 2026) with hands-on
-experience in data analysis, statistical modeling, ETL pipeline design, predictive analytics, and BI dashboard development.
-IBM-certified in Data Science, Data Analytics, Machine Learning, Deep Learning, AI Engineering, and Generative AI
-Engineering. Proficient in Python, SQL, Pandas, NumPy, Scikit-learn, Power BI, Tableau, and SHAP-based Explainable
-AI. Processed 50,000+ records, deployed three production models, and built data-driven dashboards that tracked KPIs for
-business decisions.
+Software Engineering undergraduate (CGPA 3.55/4.00, graduating Dec 2026) with a Data Science major and hands-on
+experience in data analysis, statistical modeling, ETL pipeline design, predictive analytics, BI dashboard development,
+and full-stack application engineering. IBM-certified in Data Science, Data Analytics, Machine Learning, Deep Learning,
+AI Engineering, and Generative AI Engineering. Proficient in Python, SQL, Pandas, NumPy, Scikit-learn, Flask, Docker,
+Power BI, Tableau, and SHAP-based Explainable AI. Processed 50,000+ records, deployed three production models via
+REST API and Docker, and built data-driven dashboards that tracked KPIs for business decisions.
 
 %% ---------------- Core Competencies ----------------
 \rsection{Core Competencies}
-Data Science $\vert$ Data Analysis $\vert$ Statistical Modeling $\vert$ Predictive Analytics $\vert$ ETL Pipeline Design $\vert$ Feature Engineering $\vert$
-Hypothesis Testing $\vert$ A/B Testing $\vert$ Data Visualization $\vert$ BI Dashboards $\vert$ EDA $\vert$ Data Cleaning $\vert$ Data Preprocessing $\vert$ SQL
-$\vert$ Python $\vert$ Explainable AI (SHAP)
+Data Science $\vert$ Data Analysis $\vert$ Software Engineering $\vert$ Statistical Modeling $\vert$ Predictive Analytics $\vert$ ETL Pipeline Design $\vert$
+Feature Engineering $\vert$ Hypothesis Testing $\vert$ A/B Testing $\vert$ Data Visualization $\vert$ BI Dashboards $\vert$ REST API Development $\vert$
+Full-Stack Development $\vert$ SQL $\vert$ Python $\vert$ Explainable AI (SHAP)
 
 %% ---------------- Technical Skills ----------------
 \rsection{Technical Skills}
 \textbf{Languages \& Engineering:} Python, SQL, Flask, REST API, Docker, Git/GitHub, ETL Pipeline Design, MLOps,
-Model Deployment\par\vspace{0.3em}
+Model~Deployment, Software Development\par\vspace{0.3em}
 \textbf{Data Science \& Analysis:} Pandas, NumPy, Statistical Modeling, Statistical Analysis, Hypothesis Testing, Predictive
 Analytics, A/B Testing, EDA, Feature Engineering, Data Cleaning, Data Preprocessing, Data Visualization, Excel, Power
 BI, Tableau, Matplotlib, Seaborn, Plotly\par\vspace{0.3em}
@@ -75,13 +92,13 @@ BI, Tableau, Matplotlib, Seaborn, Plotly\par\vspace{0.3em}
 Methods\par\vspace{0.3em}
 \textbf{Deep Learning \& GenAI:} PyTorch, TensorFlow, Keras, CNN, RNN, LSTM, MLP, Transfer Learning, Hugging Face
 Transformers, NLP, LLMs, LangChain, RAG, Prompt Engineering, Fine-Tuning, AI Agents\par\vspace{0.3em}
-\textbf{Model Evaluation \& Interpretability:} SHAP, Explainable AI, Cross-Validation, Hyperparameter Tuning, Precision-Recall, F1-Score,
+\textbf{Model Evaluation \& XAI:} SHAP, Explainable AI, Cross-Validation, Hyperparameter Tuning, Precision-Recall, F1-Score,
 ROC-AUC, MSE, R-squared\par\vspace{0.3em}
-\textbf{Databases \& Cloud:} PostgreSQL, MySQL, Supabase, Google Cloud, Jupyter Notebook
+\textbf{Databases, Cloud \& Web:} PostgreSQL, MySQL, Supabase, Google Cloud, Next.js, Jupyter Notebook
 
 %% ---------------- Work Experience ----------------
 \rsection{Work Experience}
-\orgline{Codio AI Solution}{Dhaka, Bangladesh}
+\orgline{https://codioaisolution.com/}{Codio AI Solution}{Dhaka, Bangladesh}
 \roleline{Data Science Intern}{May 2026 -- Present}
 \begin{tight}
   \item Design and maintain Python-based ETL pipelines for multi-source data ingestion; build predictive models and BI dashboards that track KPIs for product and business decisions.
@@ -89,7 +106,7 @@ ROC-AUC, MSE, R-squared\par\vspace{0.3em}
 \end{tight}
 \vspace{0.45em}
 
-\orgline{SaiKet Systems}{Dhaka, Bangladesh}
+\orgline{https://saiketsystems.in/}{SaiKet Systems}{Dhaka, Bangladesh}
 \roleline{Data Science Intern}{Apr 2026 -- May 2026}
 \begin{tight}
   \item Processed 50,000+ records using Python, Pandas, and NumPy; reduced preprocessing time 40\% by building automated missing-data imputation, outlier detection, and data-quality workflows.
@@ -97,37 +114,36 @@ ROC-AUC, MSE, R-squared\par\vspace{0.3em}
 \end{tight}
 \vspace{0.45em}
 
-\orgline{GoEdu}{Remote}
+\orgline{https://goedu.ac/}{GoEdu}{Remote}
 \roleline{Content Creator \& Engagement Analyst}{Feb 2025 -- Feb 2026}
 \begin{tight}
   \item Applied A/B testing methodology across 50+ educational videos to compare content formats and identify retention drivers; viewership grew 25\%, reaching 10,000+ learners.
 \end{tight}
 \vspace{0.45em}
 
-\orgline{Golden Harvest InfoTech Limited}{Dhaka, Bangladesh}
+\orgline{https://www.ghitbd.com/}{Golden Harvest InfoTech Limited}{Dhaka, Bangladesh}
 \roleline{Data Entry Operator}{Jan 2022 -- Dec 2022}
 \begin{tight}
   \item Managed 100,000+ records at 99.8\% accuracy; redesigned validation checklists, cutting processing time 20\%.
 \end{tight}
 
 %% ---------------- Projects ----------------
-\newpage
 \rsection{Projects}
-\textbf{\textcolor{linkblue}{Finzy} -- \textcolor{linkblue}{AI-Powered Personal Finance Dashboard}}\par
+\projline{https://github.com/SameeulKhondokerJisan/finzyy-ai-assisted-expense-management-system}{Finzy -- AI-Powered Personal Finance Dashboard}
 \textit{Python, Next.js, PostgreSQL, Supabase, Google Gemini AI, Docker, REST API}\par
 Full-stack finance platform with AI-driven expense categorization, receipt OCR, real-time analytics, and budget tracking
 on a Dockerized PostgreSQL/Supabase backend.\par\vspace{0.4em}
 
-\textbf{\textcolor{linkblue}{Heart Failure Prediction}}\par
+\projline{https://github.com/SameeulKhondokerJisan/heart-failure-prediction}{Heart Failure Prediction}
 \textit{Python, Scikit-learn, Pandas, Matplotlib, Seaborn}\par
 Exploratory data analysis on 12 clinical features; Logistic Regression achieved 84\% accuracy, evaluated with confusion
 matrix, precision-recall, and F1-score.\par\vspace{0.4em}
 
-\textbf{\textcolor{linkblue}{Student Performance Prediction}}\par
+\projline{https://github.com/SameeulKhondokerJisan/student-performance-prediction}{Student Performance Prediction}
 \textit{Python, CatBoost, Scikit-learn, Flask, Docker}\par
 End-to-end CatBoost pipeline deployed via Flask REST API with Dockerized real-time inference.\par\vspace{0.4em}
 
-\textbf{\textcolor{linkblue}{Movie Recommendation System}}\par
+\projline{https://github.com/SameeulKhondokerJisan/movie-recommendation-system}{Movie Recommendation System}
 \textit{Python, Flask, Scikit-learn, Pandas, NumPy, TMDB API}\par
 Hybrid recommendation engine combining TF-IDF content-based and collaborative filtering; deployed as a full-stack app
 with TMDB API integration.
@@ -135,19 +151,19 @@ with TMDB API integration.
 %% ---------------- Education ----------------
 \rsection{Education}
 \textbf{B.Sc. in Software Engineering, Major in Data Science}\hfill \textit{Expected Dec 2026}\par
-\href{https://diu.edu.bd}{Daffodil International University} $\vert$ CGPA: 3.46 / 4.00 \hfill Dhaka, Bangladesh\par
+\href{https://daffodilvarsity.edu.bd/}{Daffodil International University} $\vert$ CGPA: 3.55\,/\,4.00 \hfill Dhaka, Bangladesh\par
 \textit{Coursework:} Machine Learning, Data Mining, Statistical Analysis, Database Systems, Algorithm Design, Software
 Engineering\par\vspace{0.35em}
 
 \textbf{Higher Secondary Certificate (HSC) -- Science}\hfill \textit{Jul 2019 -- Dec 2021}\par
-\href{https://dic.edu.bd/}{Daffodil International College} $\vert$ GPA: 4.33 / 5.00 \hfill Dhaka, Bangladesh\par\vspace{0.35em}
+\href{https://dic.edu.bd/}{Daffodil International College} $\vert$ GPA: 4.33\,/\,5.00 \hfill Dhaka, Bangladesh\par\vspace{0.35em}
 
 \textbf{Secondary School Certificate (SSC) -- Science}\hfill \textit{Jan 2017 -- Feb 2019}\par
-\href{https://aahs.edu.bd/}{Agargaon Adarsha High School} $\vert$ GPA: 3.89 / 5.00 \hfill Dhaka, Bangladesh
+\href{https://aahs.edu.bd/}{Agargaon Adarsha High School} $\vert$ GPA: 3.89\,/\,5.00 \hfill Dhaka, Bangladesh
 
 %% ---------------- Certifications ----------------
 \rsection{Certifications}
-\textbf{IBM / \href{https://coursera.org}{Coursera} Professional Certificates}
+\textbf{IBM / \href{https://www.coursera.org/}{Coursera} Professional Certificates}
 \begin{tight}
   \item \href{https://coursera.org/verify/professional-cert/34TJ036HZQMA}{IBM Machine Learning Professional Certificate} \hfill Jul 2026
   \item \href{https://coursera.org/verify/professional-cert/9FL2EW331MBX}{IBM Generative AI Engineering Professional Certificate} \hfill May 2026
@@ -159,9 +175,9 @@ Engineering\par\vspace{0.35em}
 \vspace{0.25em}
 \textbf{Other Certifications}
 \begin{tight}
-  \item Complete 2026 Python Bootcamp: Learn Python from Scratch -- Udemy, Mar 2026
-  \item GenAI \& Prompt Engineering; AI Workflows and Agents; Zero-Code App (Vibe Coding); AI + Superpresentations -- Grameenphone Academy, Jun 2026
-  \item Microsoft Excel, Microsoft PowerPoint -- 10 Minute School, Jan 2025; Microsoft Word -- Feb 2023
+  \item \href{https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb}{Complete 2026 Python Bootcamp: Learn Python from Scratch} -- Udemy, Mar 2026
+  \item GenAI \& Prompt Engineering; AI Workflows and Agents; Zero-Code App (Vibe Coding); AI + Superpresentations -- \href{https://academy.grameenphone.com/}{Grameenphone Academy}, Jun 2026
+  \item \href{https://10minuteschool.com/certificate/67863ee3542fd}{Microsoft Excel}, \href{https://10minuteschool.com/certificate/67766165a0740}{Microsoft PowerPoint} -- \href{https://10minuteschool.com/}{10 Minute School}, Jan 2025; \href{https://10minuteschool.com/certificate/63f48949a08d0}{Microsoft Word} -- Feb 2023
   \item Google Sheets: Formulas and Functions; Video Editing with Camtasia (with distinction) -- \href{https://goedu.ac/}{GoEdu}, Apr 2025
   \item Data Entry and Freelancing (3-month course) -- Perpetual IT World, May 2022
 \end{tight}
@@ -169,11 +185,11 @@ Engineering\par\vspace{0.35em}
 %% ---------------- Awards ----------------
 \rsection{Awards, Leadership \& Activities}
 \begin{tight}
-  \item CDC Career Ambassador 2025 -- Certificate of Achievement, \href{https://diu.edu.bd}{Daffodil International University}
+  \item CDC Career Ambassador 2025 -- Certificate of Achievement, \href{https://daffodilvarsity.edu.bd/}{Daffodil International University}
   \item \href{https://goedu.ac/}{GoEdu} Campus Ambassador (Feb -- Jul 2025) -- Certificate of Appreciation for campus outreach
-  \item UIU CSE FEST 2025 Project Show -- Represented DIU as Team Castle Victorious
-  \item National Robotics Championship 2025 -- National-level competitor, BUBT Sports Complex, Feb 2025
-  \item DIU Job Utsob 2024 \& 2025 -- Volunteer, organizing, logistics, and transport teams
+  \item \href{https://www.uiu.ac.bd/}{UIU} CSE FEST 2025 Project Show -- Represented \href{https://daffodilvarsity.edu.bd/}{DIU} as Team Castle Victorious
+  \item National Robotics Championship 2025 -- National-level competitor, \href{https://www.bubt.edu.bd/}{BUBT} Sports Complex, Feb 2025
+  \item \href{https://daffodilvarsity.edu.bd/}{DIU} Job Utsob 2024 \& 2025 -- Volunteer, organizing, logistics, and transport teams
 \end{tight}
 
 \end{document}
