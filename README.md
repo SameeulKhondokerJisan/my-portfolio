@@ -29,11 +29,13 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 │   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the resume PDF
 ├── Sameeul_Khondoker_Jisan_Resume.pdf       # served by the Download Resume button
 ├── icons/
-│   ├── favicon-32.png, favicon-192.png, apple-touch-icon.png   # browser-tab / home-screen icons
+│   ├── favicon-32.png, favicon-192.png, icon-512.png, apple-touch-icon.png   # browser-tab / home-screen icons
 │   └── logo-body.png, logo-bar.png   # J logo split into two masks, recoloured per theme in CSS
 ├── jisan_portfolio.png  # 1200×630 social share card (Open Graph / Twitter)
 ├── Profile pic.png
 ├── jisan-logo.png       # original logo artwork (source for the icons)
+├── 404.html             # "page not found" page (GitHub Pages serves it for any missing path)
+├── site.webmanifest     # home-screen name + icons for Android
 ├── robots.txt
 └── sitemap.xml
 ```
