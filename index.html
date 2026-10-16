@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sameeul Khondoker Jisan — Data Scientist, Data Analyst &amp; Software Engineer</title>
-  <meta name="description" content="Portfolio of Sameeul Khondoker Jisan — Data Scientist, Data Analyst, Software Engineer and Machine Learning Engineer. IBM-certified ×6, building ETL pipelines, predictive models, REST APIs, and full-stack apps that turn raw data into business decisions. Based in Dhaka, Bangladesh." />
-  <meta name="theme-color" content="#0a0f1e" />
+  <title>Sameeul Khondoker Jisan — Data Analyst</title>
+  <meta name="description" content="Sameeul Khondoker Jisan — Data Analyst in Dhaka, Bangladesh. IBM-certified Data Analyst and Data Scientist using Python, SQL, Excel, Power BI and Tableau for EDA, statistical analysis, ETL pipelines, KPI dashboards and data-driven reporting." />
+  <meta name="theme-color" content="#0a0f0d" />
   <link rel="canonical" href="https://sameeulkhondokerjisan.github.io/my-portfolio/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sameeulkhondokerjisan.github.io/my-portfolio/" />
-  <meta property="og:title" content="Sameeul Khondoker Jisan — Data Scientist, Data Analyst &amp; Software Engineer" />
-  <meta property="og:description" content="Data Scientist · Data Analyst · Software Engineer · ML Engineer — IBM-certified ×6. ETL pipelines, predictive modelling, REST APIs, Docker deployments, and BI dashboards that drive business decisions. Based in Dhaka, Bangladesh." />
+  <meta property="og:title" content="Sameeul Khondoker Jisan — Data Analyst" />
+  <meta property="og:description" content="IBM-certified Data Analyst · Python, SQL, Excel, Power BI, Tableau. EDA, statistical analysis, ETL pipelines and KPI dashboards that turn raw data into decisions. Based in Dhaka, Bangladesh." />
   <meta property="og:image" content="https://sameeulkhondokerjisan.github.io/my-portfolio/jisan_portfolio.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Sameeul Khondoker Jisan — Data Scientist, Data Analyst &amp; Software Engineer portfolio" />
+  <meta property="og:image:alt" content="Sameeul Khondoker Jisan — Data Analyst portfolio" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@mr_khondoker040" />
-  <meta name="twitter:title" content="Sameeul Khondoker Jisan — Data Scientist, Data Analyst &amp; Software Engineer" />
-  <meta name="twitter:description" content="Data Scientist · Data Analyst · Software Engineer · ML Engineer — IBM-certified ×6. ETL pipelines, predictive modelling, REST APIs, and BI dashboards that drive business decisions." />
+  <meta name="twitter:title" content="Sameeul Khondoker Jisan — Data Analyst" />
+  <meta name="twitter:description" content="IBM-certified Data Analyst · Python, SQL, Excel, Power BI, Tableau. EDA, ETL pipelines and KPI dashboards that turn raw data into decisions." />
   <meta name="twitter:image" content="https://sameeulkhondokerjisan.github.io/my-portfolio/jisan_portfolio.png" />
 
   <!-- JSON-LD Structured Data -->
@@ -31,14 +31,15 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sameeul Khondoker Jisan",
-    "jobTitle": ["Data Scientist", "Data Analyst", "Software Engineer", "Machine Learning Engineer"],
-    "description": "Data Scientist, Data Analyst and Software Engineer — Software Engineering undergraduate majoring in Data Science, IBM-certified ×6 in Data Science, Data Analytics, Machine Learning, Deep Learning, AI Engineering and Generative AI Engineering.",
+    "jobTitle": "Data Analyst",
+    "description": "Data Analyst with a Software Engineering background. IBM-certified Data Analyst and Data Scientist experienced in EDA, statistical analysis, ETL pipelines, BI dashboard development, KPI tracking and data-driven reporting.",
     "url": "https://sameeulkhondokerjisan.github.io/my-portfolio/",
+    "image": "https://sameeulkhondokerjisan.github.io/my-portfolio/jisan_portfolio.png",
     "email": "mrkhondoker.prof@gmail.com",
     "telephone": "+8801767766680",
     "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Daffodil International University", "url": "https://daffodilvarsity.edu.bd/" },
-    "knowsAbout": ["Data Science", "Data Analysis", "Software Engineering", "Machine Learning", "Python", "SQL", "ETL Pipelines", "REST APIs", "Docker", "Power BI", "Explainable AI"],
+    "knowsAbout": ["Data Analysis", "Statistical Analysis", "Exploratory Data Analysis", "A/B Testing", "KPI Tracking", "Data Visualization", "Python", "SQL", "Excel", "Power BI", "Tableau", "Pandas", "ETL Pipelines", "PostgreSQL"],
     "sameAs": [
       "https://www.linkedin.com/in/mrkhondoker/",
       "https://github.com/SameeulKhondokerJisan",
@@ -50,971 +51,652 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="jisan-logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="jisan-logo.png" />
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Respect OS dark/light preference on first load -->
+  <!-- Set the theme before first paint (no flash of the wrong theme).
+       Stored choice wins; otherwise follow the OS preference. -->
   <script>
-    (function(){
-      var stored = localStorage.getItem('theme');
-      var prefer = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', stored || prefer);
+    (function () {
+      var d = document.documentElement, t;
+      d.classList.add('js');
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      d.setAttribute('data-theme', t);
     })();
   </script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="bg-grid" aria-hidden="true"></div>
-<div class="bg-glow glow-1" aria-hidden="true"></div>
-<div class="bg-glow glow-2" aria-hidden="true"></div>
-<div id="cursorGlow" aria-hidden="true"></div>
-<canvas id="particleCanvas" aria-hidden="true"></canvas>
 
-<!-- Nav -->
-<nav id="navbar">
-  <a href="#home" class="nav-logo"><img src="jisan-logo.png" alt="Jisan" width="24" height="34" /></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-right">
-    <button class="theme-btn" id="themeToggle" aria-label="Switch to light mode">
-      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-    </button>
-    <button class="nav-resume-btn" onclick="downloadResume()" aria-label="Download Resume">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Resume
-    </button>
-    <a href="#contact" class="nav-cta">Hire Me</a>
+<!-- Header -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a href="#home" class="brand" aria-label="Sameeul Khondoker Jisan — back to top">
+      <img src="jisan-logo.png" alt="" width="21" height="30" />
+      <span class="brand-text"><span class="brand-name">Jisan</span><span class="brand-role">Data Analyst</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light mode">
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm nav-resume" href="Sameeul_Khondoker_Jisan_Resume.pdf" download="Sameeul Khondoker Jisan - Resume.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+      <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-nav" id="mobileNav">
-  <a href="#home" onclick="closeMobileNav()">Home</a>
-  <a href="#about" onclick="closeMobileNav()">About</a>
-  <a href="#skills" onclick="closeMobileNav()">Skills</a>
-  <a href="#projects" onclick="closeMobileNav()">Projects</a>
-  <a href="#experience" onclick="closeMobileNav()">Experience</a>
-  <a href="#contact" onclick="closeMobileNav()">Contact</a>
-  <button class="mobile-resume-btn" onclick="downloadResume();closeMobileNav()">↓ Download Resume</button>
+</header>
+<div class="mobile-menu" id="mobileNav">
+  <nav class="container" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-primary" href="Sameeul_Khondoker_Jisan_Resume.pdf" download="Sameeul Khondoker Jisan - Resume.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </nav>
 </div>
 
 <main id="main" tabindex="-1">
+
 <!-- Hero -->
-<section id="home" aria-label="Introduction">
-  <div class="hero-container">
-    <div class="hero-left">
-      <div class="hero-eyebrow"><span class="dot"></span>Open to Opportunities · Dhaka, Bangladesh</div>
-      <h1 class="hero-title">
-        <span class="sr-only">Sameeul Khondoker Jisan — Data Scientist, Data Analyst, Software Engineer &amp; Machine Learning Engineer</span>
-        <span aria-hidden="true">Data Scientist &amp;<br>
-        <span class="hero-roles" id="heroRole">
-          <span class="hero-role line-accent is-active">Software Engineer</span>
-          <span class="hero-role line-accent">Data Analyst</span>
-          <span class="hero-role line-accent">ML Engineer</span>
-        </span></span>
-      </h1>
-      <p class="hero-tagline">I build ETL pipelines, predictive models, BI dashboards, and full-stack applications that turn raw data into business decisions — from data cleaning and statistical modelling to REST APIs and Dockerized model deployment. IBM-certified ×6 across Data Science, Data Analytics, Machine Learning and AI Engineering.</p>
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-num" data-count="3.55" data-decimals="2">3.55</div><div class="stat-label">CGPA / 4.00</div></div>
-        <div class="stat"><div class="stat-num" data-count="6" data-suffix="+">6+</div><div class="stat-label">Projects Built</div></div>
-        <div class="stat"><div class="stat-num" data-count="6" data-suffix="×">6×</div><div class="stat-label">IBM Certified</div></div>
-        <div class="stat"><div class="stat-num" data-count="3">3</div><div class="stat-label">Models Deployed</div></div>
-      </div>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-primary">
-          View Projects
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+<section id="home" class="hero" aria-labelledby="heroTitle">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>Open to Data Analyst roles<span class="pill-loc"> · Dhaka, Bangladesh</span></p>
+      <p class="hero-hello">Hi, I'm <strong>Sameeul Khondoker Jisan</strong></p>
+      <h1 class="hero-title" id="heroTitle"><span class="accent">Data Analyst</span> turning raw data into <span class="hl">clear decisions</span>.</h1>
+      <p class="hero-lede">I clean, analyze and visualize data with Python, SQL, Excel, Power BI and Tableau — building ETL pipelines, KPI dashboards and data-driven reports that stakeholders act on. IBM-certified Data Analyst and Data Scientist with a Software Engineering background.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          View my projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <button class="btn-secondary btn-download" onclick="downloadResume()" aria-label="Download Resume">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <a href="Sameeul_Khondoker_Jisan_Resume.pdf" download="Sameeul Khondoker Jisan - Resume.pdf" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Resume
-        </button>
+        </a>
       </div>
+      <ul class="stack" aria-label="Daily tools">
+        <li class="stack-label" aria-hidden="true">Daily stack</li>
+        <li>Python</li><li>SQL</li><li>Excel</li><li>Power BI</li><li>Tableau</li><li>Pandas</li>
+      </ul>
     </div>
-    <div class="hero-right">
-      <div class="hero-img-wrap">
-        <div class="hero-img-bg"></div>
-        <div class="hero-avatar" id="heroAvatarWrap"><img src="Profile pic.png" alt="Sameeul Khondoker Jisan" width="800" height="1202" loading="eager" fetchpriority="high" decoding="async" onerror="this.style.display='none';document.getElementById('heroAvatarWrap').classList.add('avatar-fallback')" /></div>
-        <div class="hero-badge badge-left" aria-hidden="true">
-          <div class="badge-inner">
-            <div class="badge-icon-wrap badge-icon-cy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-            <div class="badge-text-wrap">
-              <div class="badge-lbl">CGPA</div>
-              <div class="badge-val">3.55 / 4.00</div>
-              <div class="badge-sub">BSc Software Engineering, DIU</div>
+
+    <!-- Analyst snapshot: every number below comes straight from the resume -->
+    <div class="hero-panel" id="heroPanel" role="group" aria-label="Analyst snapshot">
+      <div class="panel-bar" aria-hidden="true">
+        <span class="panel-dots"><i></i><i></i><i></i></span>
+        <span class="panel-name">analyst_snapshot.pbix</span>
+        <span class="panel-live"><span class="pulse-dot"></span>live</span>
+      </div>
+      <div class="panel-body">
+        <div class="panel-top">
+          <figure class="panel-photo">
+            <img src="Profile pic.png" alt="Portrait of Sameeul Khondoker Jisan" width="800" height="1202" loading="eager" fetchpriority="high" decoding="async" />
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              IBM-certified Data Analyst
+            </figcaption>
+          </figure>
+          <div class="kpis">
+            <div class="kpi">
+              <span class="kpi-label">Records processed</span>
+              <span class="kpi-value" data-count="50000" data-suffix="+">50,000+</span>
+              <svg class="spark" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <defs><linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="stop-acc" stop-opacity=".3"/><stop offset="1" class="stop-acc" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0,34 L20,30 L40,32 L60,25 L80,27 L100,19 L120,21 L140,13 L160,15 L180,8 L200,4 L200,40 L0,40 Z" fill="url(#sparkFill)"/>
+                <path class="sp-line" d="M0,34 L20,30 L40,32 L60,25 L80,27 L100,19 L120,21 L140,13 L160,15 L180,8 L200,4"/>
+              </svg>
+            </div>
+            <div class="kpi">
+              <span class="kpi-label">Data accuracy</span>
+              <span class="kpi-value" data-count="99.8" data-decimals="1" data-suffix="%">99.8%</span>
+              <span class="kpi-note">across 100,000+ records</span>
+            </div>
+            <div class="kpi">
+              <span class="kpi-label">Learners reached</span>
+              <span class="kpi-value" data-count="10000" data-suffix="+">10,000+</span>
+              <span class="kpi-note">through A/B-tested content</span>
             </div>
           </div>
         </div>
-        <div class="hero-badge badge-right" aria-hidden="true">
-          <div class="badge-inner">
-            <div class="badge-icon-wrap badge-icon-vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-            <div class="badge-text-wrap">
-              <div class="badge-lbl">Certification</div>
-              <div class="badge-val">IBM Certified ×6</div>
-              <div class="badge-sub">AI Eng · GenAI · ML · DL · DS · DA</div>
-            </div>
+        <div class="panel-chart">
+          <div class="chart-head">
+            <span class="chart-title">Measured impact</span>
+            <span class="chart-legend" aria-hidden="true"><span class="lg-time">time cut</span><span class="lg-gain">gain</span></span>
           </div>
+          <ul class="bars">
+            <li class="bar is-time" style="--v:40"><span class="bar-label">Preprocessing time</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><span class="bar-val">−40%</span></li>
+            <li class="bar is-gain" style="--v:30"><span class="bar-label">Reporting accuracy</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><span class="bar-val">+30%</span></li>
+            <li class="bar is-gain" style="--v:25"><span class="bar-label">Video viewership</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><span class="bar-val">+25%</span></li>
+            <li class="bar is-time" style="--v:20"><span class="bar-label">Processing time</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><span class="bar-val">−20%</span></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <div class="scroll-ind"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
 <!-- About -->
-<section id="about">
-  <div class="section-wrap">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-sidebar fade-in-up">
-          <div class="about-img-card">
-            <div class="about-avatar" id="aboutAvatarWrap"><img src="Profile pic.png" alt="Sameeul Khondoker Jisan" width="800" height="1202" loading="lazy" decoding="async" onerror="this.style.display='none';document.getElementById('aboutAvatarWrap').classList.add('avatar-fallback')" /></div>
-            <div class="about-name">Sameeul Khondoker Jisan</div>
-            <div class="about-status">
-              <span class="about-role">Data Scientist · Data Analyst · Software Engineer · ML Engineer</span>
-            </div>
-            <div class="about-info-list">
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-cy"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-bl"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-                <span>BSc Software Engineering · Major in Data Science, DIU</span>
-              </div>
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-bl"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
-                <span>CGPA 3.55 / 4.00 · Expected Dec 2026</span>
-              </div>
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-vi"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
-                <span>Data Science Intern @ Codio AI Solution</span>
-              </div>
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-vi"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-                <span>IBM Certified ×6 — AI Eng, GenAI, ML, Deep Learning, Data Science, Data Analytics</span>
-              </div>
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-mi"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                <span>Python · SQL · Statistical Analysis · Power BI</span>
-              </div>
-              <div class="about-info-row">
-                <div class="info-icon-wrap info-iw-bl"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                <span>Flask · REST APIs · Docker · Full-Stack Apps</span>
-              </div>
-              <div class="about-info-row" role="button" tabindex="0" onclick="copyEmail()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyEmail();}" style="cursor:pointer;" title="Click to copy email">
-                <div class="info-icon-wrap info-iw-ro"><svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                <span>mrkhondoker.prof@gmail.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-content fade-in-up">
-          <div class="section-eyebrow">01 · About Me</div>
-          <h2 class="section-title">From Raw Data to <span class="line-accent">Deployed Solutions</span></h2>
-          <p class="about-text">I'm a Software Engineering undergraduate at Daffodil International University with a major in Data Science (CGPA 3.55/4.00, graduating Dec 2026), working across the full data and software stack: ETL pipelines, data cleaning, exploratory analysis, statistical and predictive modelling, BI dashboards, and full-stack applications served through REST APIs and Docker. I'm IBM-certified ×6 — Data Science, Data Analytics, Machine Learning, Deep Learning (PyTorch, Keras &amp; TensorFlow), AI Engineering, and Generative AI Engineering.</p>
-          <p class="about-text">Currently a Data Science Intern at <a class="inline-link" href="https://codioaisolution.com/" target="_blank" rel="noopener noreferrer">Codio AI Solution</a>, designing Python-based ETL pipelines for multi-source ingestion and building predictive models and KPI dashboards that drive product and business decisions. Previously at <a class="inline-link" href="https://saiketsystems.in/" target="_blank" rel="noopener noreferrer">SaiKet Systems</a>, I processed 50,000+ records (cutting preprocessing time 40%), built missing-data imputation and outlier-detection workflows, and deployed three models to production via REST API and Docker — with performance monitoring that raised reporting accuracy 30%.</p>
-          <div class="about-highlight">"Data analysis taught me to make data speak. Data science taught me to make it predict. Software engineering taught me to ship it — clean pipelines, honest models, and applications a business can actually use."</div>
-          <h4 class="about-subhead">Focus Areas</h4>
-          <div class="ri-tags">
-            <span class="ri-tag">Exploratory Data Analysis</span>
-            <span class="ri-tag">Statistical Analysis &amp; Hypothesis Testing</span>
-            <span class="ri-tag">Predictive Modelling</span>
-            <span class="ri-tag">ETL &amp; Data Pipelines</span>
-            <span class="ri-tag">Full-Stack &amp; REST API Development</span>
-            <span class="ri-tag">Model Deployment &amp; MLOps</span>
-            <span class="ri-tag">Business Intelligence &amp; Dashboards</span>
-            <span class="ri-tag">KPI Reporting &amp; Data Storytelling</span>
-          </div>
-          <h4 class="about-subhead">Education</h4>
-          <div class="edu-timeline">
-            <div class="edu-card">
-              <div class="edu-degree">B.Sc. in Software Engineering — Major in Data Science</div>
-              <div class="edu-school"><a class="inline-link" href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> · Machine Learning, Data Mining, Statistical Analysis, Database Systems, Algorithm Design, Software Engineering</div>
-              <div class="edu-meta"><span class="edu-year">Expected Dec 2026</span><span class="edu-gpa">CGPA 3.55 / 4.00</span></div>
-            </div>
-            <div class="edu-card">
-              <div class="edu-degree">Higher Secondary Certificate (HSC) — Science</div>
-              <div class="edu-school"><a class="inline-link" href="https://dic.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International College</a></div>
-              <div class="edu-meta"><span class="edu-year">Jul 2019 – Dec 2021</span><span class="edu-gpa">GPA 4.33 / 5.00</span></div>
-            </div>
-            <div class="edu-card">
-              <div class="edu-degree">Secondary School Certificate (SSC) — Science</div>
-              <div class="edu-school"><a class="inline-link" href="https://aahs.edu.bd/" target="_blank" rel="noopener noreferrer">Agargaon Adarsha High School</a></div>
-              <div class="edu-meta"><span class="edu-year">Jan 2017 – Feb 2019</span><span class="edu-gpa">GPA 3.89 / 5.00</span></div>
-            </div>
-          </div>
-        </div>
+<section id="about" class="section" aria-labelledby="aboutTitle">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">01</span>About</p>
+      <h2 class="section-title" id="aboutTitle">An analyst with an <span class="hl">engineer’s toolkit</span></h2>
+    </header>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>I'm a <strong>Data Analyst</strong> finishing a B.Sc. in Software Engineering with a major in Data Science at <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> — CGPA 3.55/4.00, graduating December 2026. I'm IBM-certified as both a Data Analyst and a Data Scientist.</p>
+        <p>Right now I'm a Data Analyst Intern at <a href="https://codioaisolution.com/" target="_blank" rel="noopener noreferrer">Codio AI Solution</a>, designing Python-based ETL pipelines for multi-source data and building BI dashboards that track product and business KPIs. Before that, at <a href="https://saiketsystems.in/" target="_blank" rel="noopener noreferrer">SaiKet Systems</a>, I processed <strong>50,000+ records</strong> and automated imputation, outlier detection and data-quality checks — cutting preprocessing time <strong>40%</strong> and improving reporting accuracy <strong>30%</strong>.</p>
+        <p>The software engineering background shows in how I work: reproducible pipelines, version-controlled notebooks, and quality checks that catch bad data before it reaches a dashboard.</p>
+        <blockquote class="pull-quote">Good analysis isn’t the chart — it’s the decision the chart makes obvious.</blockquote>
       </div>
+      <aside class="card fact-card reveal" aria-label="Quick facts">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Quick facts</h3>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Mirpur, Dhaka, Bangladesh</dd></div>
+          <div><dt>Now</dt><dd>Data Analyst Intern · Codio AI Solution</dd></div>
+          <div><dt>Degree</dt><dd>B.Sc. Software Engineering, Major in Data Science — DIU</dd></div>
+          <div><dt>CGPA</dt><dd>3.55 / 4.00 · Expected Dec 2026</dd></div>
+          <div><dt>Certified</dt><dd>IBM Data Analyst · IBM Data Science</dd></div>
+          <div><dt>Email</dt><dd><button type="button" class="copy-email" data-copy-email title="Copy email address">mrkhondoker.prof@gmail.com</button></dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="process">
+      <h3 class="sub-title reveal">How I work through a dataset</h3>
+      <ol class="steps">
+        <li class="card step reveal"><span class="step-num">01</span><h4>Ask</h4><p>Pin down the business question and the KPIs that will answer it.</p></li>
+        <li class="card step reveal"><span class="step-num">02</span><h4>Clean</h4><p>ETL, imputation, outlier detection and data-quality checks.</p></li>
+        <li class="card step reveal"><span class="step-num">03</span><h4>Explore</h4><p>EDA, statistical analysis, hypothesis and A/B testing.</p></li>
+        <li class="card step reveal"><span class="step-num">04</span><h4>Visualize</h4><p>Power BI and Tableau dashboards built around the KPIs.</p></li>
+        <li class="card step reveal"><span class="step-num">05</span><h4>Recommend</h4><p>Clear reports and data storytelling that lead to a decision.</p></li>
+      </ol>
     </div>
   </div>
 </section>
 
 <!-- Skills -->
-<section id="skills">
-  <div class="section-wrap">
-    <div class="section-inner">
-      <div class="section-eyebrow">02 · Technical Arsenal</div>
-      <h2 class="section-title">Skills &amp; <span class="line-accent">Technologies</span></h2>
-      <p class="section-sub">A stack built for the full data and software lifecycle — from ingestion and cleaning to statistical analysis, predictive modelling, production APIs, and business-facing dashboards.</p>
-      <div class="skills-legend">
-        <span class="legend-item"><span class="legend-dot core"></span>Core strength</span>
-        <span class="legend-item"><span class="legend-dot proficient"></span>Proficient</span>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <div class="skill-cat-title">Software Engineering</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">Python</span><span class="skill-tag hot">SQL</span>
-            <span class="skill-tag hot">REST API Development</span><span class="skill-tag hot">Flask</span>
-            <span class="skill-tag hot">Full-Stack Development</span><span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Java</span><span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">C</span><span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">Software Development</span>
-          </div>
+<section id="skills" class="section section-alt" aria-labelledby="skillsTitle">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">02</span>Skills</p>
+      <h2 class="section-title" id="skillsTitle">The analyst’s <span class="hl">toolkit</span></h2>
+      <p class="section-sub">Grouped the way they appear on my resume — from cleaning and analysis through to dashboards and predictive models.</p>
+    </header>
+    <div class="legend reveal" aria-hidden="true"><span class="lg-core">Core — used daily</span><span>Working knowledge</span></div>
+    <div class="skills-grid">
+      <article class="card skill-card reveal">
+        <div class="skill-head">
+          <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></span>
+          <div><h3>Analytics &amp; Visualization</h3><span class="skill-count">16 skills</span></div>
         </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><line x1="6" y1="6.5" x2="6.01" y2="6.5"/><line x1="6" y1="17.5" x2="6.01" y2="17.5"/></svg></div>
-          <div class="skill-cat-title">MLOps &amp; Data Engineering</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">ETL Pipeline Design</span><span class="skill-tag hot">Docker</span>
-            <span class="skill-tag hot">Model Deployment</span><span class="skill-tag">MLOps</span>
-            <span class="skill-tag">Multi-Source Ingestion</span><span class="skill-tag">Performance Monitoring</span>
-            <span class="skill-tag">Data-Quality Workflows</span>
-          </div>
+        <ul class="chips">
+          <li class="chip is-core">Data Analysis</li><li class="chip is-core">Statistical Analysis</li><li class="chip is-core">EDA</li>
+          <li class="chip">Hypothesis Testing</li><li class="chip">A/B Testing</li><li class="chip is-core">Data Cleaning</li>
+          <li class="chip">Data Quality Assurance</li><li class="chip is-core">KPI Tracking</li><li class="chip">Reporting</li>
+          <li class="chip">Data Storytelling</li><li class="chip is-core">Excel</li><li class="chip is-core">Power BI</li>
+          <li class="chip is-core">Tableau</li><li class="chip">Matplotlib</li><li class="chip">Seaborn</li><li class="chip">Plotly</li>
+        </ul>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="skill-head">
+          <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+          <div><h3>Programming &amp; Data Engineering</h3><span class="skill-count">10 skills</span></div>
         </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
-          <div class="skill-cat-title">Data Science &amp; Analysis</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">Pandas</span><span class="skill-tag hot">NumPy</span>
-            <span class="skill-tag hot">EDA</span><span class="skill-tag hot">Statistical Analysis</span>
-            <span class="skill-tag hot">Feature Engineering</span><span class="skill-tag hot">Data Cleaning</span>
-            <span class="skill-tag">Statistical Modeling</span><span class="skill-tag">Predictive Analytics</span>
-            <span class="skill-tag">Hypothesis Testing</span><span class="skill-tag">A/B Testing</span>
-            <span class="skill-tag">Data Preprocessing</span><span class="skill-tag">Missing-Data Imputation</span>
-            <span class="skill-tag">Outlier Detection</span>
-          </div>
+        <ul class="chips">
+          <li class="chip is-core">Python</li><li class="chip is-core">SQL</li><li class="chip">R</li>
+          <li class="chip is-core">Pandas</li><li class="chip">NumPy</li><li class="chip is-core">ETL Pipeline Design</li>
+          <li class="chip">Data Wrangling</li><li class="chip">Feature Engineering</li><li class="chip">Git / GitHub</li>
+          <li class="chip">Jupyter Notebook</li>
+        </ul>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="skill-head">
+          <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+          <div><h3>Databases &amp; Predictive Analytics</h3><span class="skill-count">9 skills</span></div>
         </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M2 15h2M2 9h2M15 20v2M9 20v2M20 15h2M20 9h2"/></svg></div>
-          <div class="skill-cat-title">Machine Learning</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">Scikit-learn</span><span class="skill-tag hot">XGBoost</span>
-            <span class="skill-tag hot">CatBoost</span><span class="skill-tag hot">Random Forest</span>
-            <span class="skill-tag">Logistic Regression</span><span class="skill-tag">Decision Tree</span>
-            <span class="skill-tag">KNN</span><span class="skill-tag">Ensemble Methods</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 100 16A8 8 0 0012 2z"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg></div>
-          <div class="skill-cat-title">Deep Learning &amp; GenAI</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">PyTorch</span><span class="skill-tag hot">TensorFlow</span>
-            <span class="skill-tag hot">Keras</span><span class="skill-tag">Neural Networks</span>
-            <span class="skill-tag">CNN</span><span class="skill-tag">RNN / LSTM</span>
-            <span class="skill-tag">MLP</span><span class="skill-tag">Transfer Learning</span>
-            <span class="skill-tag">NLP</span><span class="skill-tag hot">Generative AI</span>
-            <span class="skill-tag">LLMs</span><span class="skill-tag">Transformers</span>
-            <span class="skill-tag">Hugging Face</span><span class="skill-tag">LangChain</span>
-            <span class="skill-tag">RAG</span><span class="skill-tag">Prompt Engineering</span>
-            <span class="skill-tag">Fine-Tuning</span><span class="skill-tag">AI Agents</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <div class="skill-cat-title">Model Evaluation &amp; XAI</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">SHAP</span><span class="skill-tag hot">Explainable AI</span>
-            <span class="skill-tag hot">Cross-Validation</span><span class="skill-tag">Hyperparameter Tuning</span>
-            <span class="skill-tag">Confusion Matrix</span><span class="skill-tag">Precision-Recall</span>
-            <span class="skill-tag">F1-Score</span><span class="skill-tag">ROC-AUC</span>
-            <span class="skill-tag">MSE / R²</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <div class="skill-cat-title">Visualization &amp; BI</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">Matplotlib</span><span class="skill-tag hot">Seaborn</span>
-            <span class="skill-tag hot">Power BI</span><span class="skill-tag hot">Excel</span>
-            <span class="skill-tag">Tableau</span><span class="skill-tag">Plotly</span>
-            <span class="skill-tag">Dashboard Development</span><span class="skill-tag">KPI Reporting</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-          <div class="skill-cat-title">Databases, Cloud &amp; Tools</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">PostgreSQL</span><span class="skill-tag hot">MySQL</span>
-            <span class="skill-tag">Supabase</span><span class="skill-tag">Google Cloud</span>
-            <span class="skill-tag">Jupyter Notebook</span><span class="skill-tag">Google Colab</span>
-            <span class="skill-tag">VS Code</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in-up">
-          <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <div class="skill-cat-title">Professional Skills</div>
-          <div class="skill-tags">
-            <span class="skill-tag soft">Problem Solving</span><span class="skill-tag soft">Analytical Thinking</span>
-            <span class="skill-tag soft">Data Storytelling</span><span class="skill-tag soft">Team Collaboration</span>
-            <span class="skill-tag soft">Communication</span><span class="skill-tag soft">Leadership</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Currently Exploring -->
-      <div class="exploring-wrap fade-in-up">
-        <div class="exploring-card">
-          <div class="exploring-header">
-            <div class="exploring-dot"></div>
-            <span class="exploring-title">Currently Exploring</span>
-            <span class="exploring-meta">Active · 2026</span>
-          </div>
-          <div class="exploring-tracks">
-            <div class="explore-track">
-              <div class="track-head">
-                <div class="track-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-                <div class="track-label">Advanced Analytics &amp; Statistics</div>
-              </div>
-              <div class="exploring-tags">
-                <span class="exp-tag">A/B Testing &amp; Experimentation</span>
-                <span class="exp-tag">Time-Series Forecasting</span>
-                <span class="exp-tag">Causal Inference</span>
-                <span class="exp-tag">Bayesian Statistics</span>
-                <span class="exp-tag">Cohort &amp; Retention Analysis</span>
-                <span class="exp-tag">Advanced SQL (Window Functions)</span>
-              </div>
-            </div>
-            <div class="explore-track track-alt">
-              <div class="track-head">
-                <div class="track-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
-                <div class="track-label">Data Engineering &amp; Warehousing</div>
-              </div>
-              <div class="exploring-tags">
-                <span class="exp-tag">Apache Airflow</span>
-                <span class="exp-tag">dbt (Data Build Tool)</span>
-                <span class="exp-tag">BigQuery</span>
-                <span class="exp-tag">Dimensional Data Modelling</span>
-                <span class="exp-tag">Data Quality Testing</span>
-                <span class="exp-tag">Cloud Data Warehousing (GCP)</span>
-              </div>
-            </div>
-            <div class="explore-track track-blue">
-              <div class="track-head">
-                <div class="track-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                <div class="track-label">Software Engineering &amp; MLOps</div>
-              </div>
-              <div class="exploring-tags">
-                <span class="exp-tag">System Design</span>
-                <span class="exp-tag">CI/CD with GitHub Actions</span>
-                <span class="exp-tag">Automated Testing (pytest)</span>
-                <span class="exp-tag">Microservices</span>
-                <span class="exp-tag">Model Serving &amp; Monitoring</span>
-                <span class="exp-tag">Kubernetes</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+        <ul class="chips">
+          <li class="chip is-core">PostgreSQL</li><li class="chip is-core">MySQL</li><li class="chip">Google Cloud</li>
+          <li class="chip">Scikit-learn</li><li class="chip">Logistic Regression</li><li class="chip">Random Forest</li>
+          <li class="chip">Cross-Validation</li><li class="chip">ROC-AUC</li><li class="chip">SHAP</li>
+        </ul>
+      </article>
     </div>
-  </div>
-</section>
-
-<!-- Career Roadmap -->
-<section id="roadmap">
-  <div class="section-wrap">
-    <div class="section-inner">
-      <div class="roadmap-header fade-in-up">
-        <div class="section-eyebrow">03 · Career Vision</div>
-        <h2 class="section-title">Where Code Meets <span class="line-accent">Data Science</span></h2>
-        <p class="section-sub">A deliberate progression — software engineering and analytics foundations, predictive modelling today, then production ML and MLOps — building toward senior data science and data strategy.</p>
-      </div>
-      <div class="roadmap-track-container fade-in-up" tabindex="0" aria-label="Career roadmap — animation pauses while hovered or focused">
-        <div class="roadmap-track" id="roadmapTrack">
-          <!-- Set 1 -->
-          <div class="roadmap-node">
-            <div class="node-circle done">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 8l-6 6 6 6M18.5 8l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5l-4 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/></svg>
-            </div>
-            <div class="node-label">Software Engineer</div>
-            <div class="node-sublabel">Full-Stack &middot; REST APIs</div>
-            <div class="node-status status-done">&#10003; Foundation</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle done">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="14" width="5" height="12" rx="1.5" fill="currentColor" opacity="0.7"/><rect x="9" y="9" width="5" height="17" rx="1.5" fill="currentColor" opacity="0.85"/><rect x="16" y="4" width="5" height="22" rx="1.5" fill="currentColor"/><rect x="23" y="11" width="5" height="15" rx="1.5" fill="currentColor" opacity="0.75"/></svg>
-            </div>
-            <div class="node-label">Data Analyst</div>
-            <div class="node-sublabel">Analytics &middot; BI &middot; Dashboards</div>
-            <div class="node-status status-done">&#10003; Foundation</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle current">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3v6M14 3l-3 3M14 3l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="14" cy="17" rx="8" ry="5" stroke="currentColor" stroke-width="1.8"/><path d="M6 17v4c0 2.76 3.58 5 8 5s8-2.24 8-5v-4" stroke="currentColor" stroke-width="1.8"/><circle cx="14" cy="17" r="2.5" fill="currentColor" opacity="0.5"/></svg>
-            </div>
-            <div class="node-label">Data Scientist</div>
-            <div class="node-sublabel">Predictive Modelling &middot; Intern Now</div>
-            <div class="node-status status-current">&#9673; Current</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle active">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.1 9.4l3.8 3.2M8.1 18.6l3.8-3.2M16.1 12.6l3.8-3.2M16.1 15.4l3.8 3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/><circle cx="6" cy="8" r="2.6" fill="currentColor" opacity="0.7"/><circle cx="6" cy="20" r="2.6" fill="currentColor" opacity="0.7"/><circle cx="14" cy="14" r="3.2" fill="currentColor"/><circle cx="22" cy="8" r="2.6" fill="currentColor" opacity="0.7"/><circle cx="22" cy="20" r="2.6" fill="currentColor" opacity="0.7"/></svg>
-            </div>
-            <div class="node-label">ML Engineer</div>
-            <div class="node-sublabel">Production ML &middot; MLOps</div>
-            <div class="node-status status-active">&#9678; Next</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle future">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21l7.5-7.5 4.5 4.5L25 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="19 8 25 8 25 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.5" cy="13.5" r="2.2" fill="currentColor" opacity="0.6"/></svg>
-            </div>
-            <div class="node-label">Senior Data Scientist</div>
-            <div class="node-sublabel">Advanced Modelling &middot; Data Strategy</div>
-            <div class="node-status status-soon">&#9678; Vision</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <!-- Set 2 (duplicate for seamless loop) &mdash; hidden from assistive tech -->
-          <div style="display:contents" aria-hidden="true">
-          <div class="roadmap-node">
-            <div class="node-circle done">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 8l-6 6 6 6M18.5 8l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5l-4 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/></svg>
-            </div>
-            <div class="node-label">Software Engineer</div>
-            <div class="node-sublabel">Full-Stack &middot; REST APIs</div>
-            <div class="node-status status-done">&#10003; Foundation</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle done">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="14" width="5" height="12" rx="1.5" fill="currentColor" opacity="0.7"/><rect x="9" y="9" width="5" height="17" rx="1.5" fill="currentColor" opacity="0.85"/><rect x="16" y="4" width="5" height="22" rx="1.5" fill="currentColor"/><rect x="23" y="11" width="5" height="15" rx="1.5" fill="currentColor" opacity="0.75"/></svg>
-            </div>
-            <div class="node-label">Data Analyst</div>
-            <div class="node-sublabel">Analytics &middot; BI &middot; Dashboards</div>
-            <div class="node-status status-done">&#10003; Foundation</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle current">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3v6M14 3l-3 3M14 3l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="14" cy="17" rx="8" ry="5" stroke="currentColor" stroke-width="1.8"/><path d="M6 17v4c0 2.76 3.58 5 8 5s8-2.24 8-5v-4" stroke="currentColor" stroke-width="1.8"/><circle cx="14" cy="17" r="2.5" fill="currentColor" opacity="0.5"/></svg>
-            </div>
-            <div class="node-label">Data Scientist</div>
-            <div class="node-sublabel">Predictive Modelling &middot; Intern Now</div>
-            <div class="node-status status-current">&#9673; Current</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle active">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.1 9.4l3.8 3.2M8.1 18.6l3.8-3.2M16.1 12.6l3.8-3.2M16.1 15.4l3.8 3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/><circle cx="6" cy="8" r="2.6" fill="currentColor" opacity="0.7"/><circle cx="6" cy="20" r="2.6" fill="currentColor" opacity="0.7"/><circle cx="14" cy="14" r="3.2" fill="currentColor"/><circle cx="22" cy="8" r="2.6" fill="currentColor" opacity="0.7"/><circle cx="22" cy="20" r="2.6" fill="currentColor" opacity="0.7"/></svg>
-            </div>
-            <div class="node-label">ML Engineer</div>
-            <div class="node-sublabel">Production ML &middot; MLOps</div>
-            <div class="node-status status-active">&#9678; Next</div>
-          </div>
-          <span class="roadmap-arrow" aria-hidden="true">&rarr;</span>
-          <div class="roadmap-node">
-            <div class="node-circle future">
-              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21l7.5-7.5 4.5 4.5L25 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="19 8 25 8 25 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.5" cy="13.5" r="2.2" fill="currentColor" opacity="0.6"/></svg>
-            </div>
-            <div class="node-label">Senior Data Scientist</div>
-            <div class="node-sublabel">Advanced Modelling &middot; Data Strategy</div>
-            <div class="node-status status-soon">&#9678; Vision</div>
-          </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="learning reveal">
+      <span class="learning-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Currently sharpening</span>
+      <ul class="chips">
+        <li class="chip is-next">Advanced SQL (window functions)</li><li class="chip is-next">Time-series forecasting</li>
+        <li class="chip is-next">Cohort &amp; retention analysis</li><li class="chip is-next">Causal inference</li>
+        <li class="chip is-next">dbt</li><li class="chip is-next">BigQuery</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- Projects -->
-<section id="projects">
-  <div class="section-wrap">
-    <div class="section-inner">
-      <div class="section-eyebrow">04 · Selected Work</div>
-      <h2 class="section-title">Featured <span class="line-accent">Projects</span></h2>
-      <p class="section-sub">End-to-end data and software work — exploratory analysis, predictive modelling, full-stack apps, and production-style backend systems.</p>
-      <div class="projects-grid">
+<section id="projects" class="section" aria-labelledby="projectsTitle">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">03</span>Projects</p>
+      <h2 class="section-title" id="projectsTitle">Analysis <span class="hl">case studies</span></h2>
+      <p class="section-sub">Each project written up the way I'd brief a stakeholder: the question, how I approached it, and what came out of it.</p>
+    </header>
+    <div class="cases">
 
-        <!-- Finzy -->
-        <div class="project-card fade-in-up">
-          <div class="card-inner-glow"></div>
-          <div class="project-visual" style="background:linear-gradient(135deg,#070c1c,#0d1730);">
-            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
-              <defs><radialGradient id="proj-g1" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22"/><stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/></radialGradient></defs>
-              <rect width="320" height="175" fill="url(#proj-g1)"/>
-              <circle cx="80" cy="55" r="5" fill="#22d3ee" opacity="0.85"/><circle cx="80" cy="88" r="5" fill="#22d3ee" opacity="0.65"/><circle cx="80" cy="121" r="5" fill="#22d3ee" opacity="0.85"/>
-              <circle cx="160" cy="38" r="4" fill="#a78bfa" opacity="0.8"/><circle cx="160" cy="70" r="4" fill="#a78bfa" opacity="0.9"/><circle cx="160" cy="102" r="4" fill="#a78bfa" opacity="0.8"/><circle cx="160" cy="134" r="4" fill="#a78bfa" opacity="0.7"/>
-              <circle cx="240" cy="55" r="5" fill="#22d3ee" opacity="0.9"/><circle cx="240" cy="121" r="5" fill="#22d3ee" opacity="0.75"/>
-              <line x1="85" y1="55" x2="156" y2="38" stroke="#22d3ee" stroke-width="0.7" opacity="0.35"/><line x1="85" y1="55" x2="156" y2="70" stroke="#22d3ee" stroke-width="0.7" opacity="0.35"/><line x1="85" y1="88" x2="156" y2="70" stroke="#22d3ee" stroke-width="0.7" opacity="0.35"/><line x1="85" y1="88" x2="156" y2="102" stroke="#22d3ee" stroke-width="0.7" opacity="0.35"/><line x1="85" y1="121" x2="156" y2="102" stroke="#22d3ee" stroke-width="0.7" opacity="0.35"/><line x1="85" y1="121" x2="156" y2="134" stroke="#22d3ee" stroke-width="0.7" opacity="0.35"/>
-              <line x1="164" y1="38" x2="235" y2="55" stroke="#a78bfa" stroke-width="0.7" opacity="0.35"/><line x1="164" y1="70" x2="235" y2="55" stroke="#a78bfa" stroke-width="0.7" opacity="0.35"/><line x1="164" y1="102" x2="235" y2="121" stroke="#a78bfa" stroke-width="0.7" opacity="0.35"/><line x1="164" y1="134" x2="235" y2="121" stroke="#a78bfa" stroke-width="0.7" opacity="0.35"/>
-              <text x="160" y="104" text-anchor="middle" fill="rgba(34,211,238,0.1)" font-size="90" font-family="Georgia" font-weight="900">$</text>
-              <rect x="260" y="130" width="12" height="30" rx="2" fill="#a78bfa" opacity="0.7"/><rect x="276" y="115" width="12" height="45" rx="2" fill="#a78bfa" opacity="0.85"/><rect x="292" y="105" width="12" height="55" rx="2" fill="#a78bfa"/>
-              <polygon points="30,25 33,33 41,36 33,39 30,47 27,39 19,36 27,33" fill="#22d3ee" opacity="0.7"/>
-            </svg>
-            <div class="project-badge badge-ai">Full-Stack · AI</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Finzy — AI-Powered Personal Finance Dashboard</div>
-            <div class="project-problem">Problem: Manual expense tracking is error-prone and gives no intelligent insight into spending patterns or budgets.</div>
-            <div class="project-role">Full-Stack Platform · Google Gemini AI · Docker · REST API</div>
-            <div class="project-desc">Full-stack finance platform with AI-driven expense categorization, receipt OCR, real-time analytics, and budget tracking. Google Gemini AI converts unstructured receipts into analytics-ready records; the PostgreSQL/Supabase backend runs fully Dockerized behind a REST API.</div>
-            <div class="project-outcome">Real-time analytics dashboard with automated AI categorization and budget alerts</div>
-            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Next.js</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Supabase</span><span class="project-tag">Gemini AI</span><span class="project-tag">Docker</span></div>
-            <div class="project-footer"><a href="https://github.com/SameeulKhondokerJisan/finzyy-ai-assisted-expense-management-system" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a><div class="feat-tag">Featured</div></div>
+      <!-- Finzy -->
+      <article class="card case case-featured reveal">
+        <div class="case-visual">
+          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
+            <rect class="pnl" x="16" y="16" width="140" height="62" rx="10"/>
+            <text class="lbl" x="30" y="38">SPENT</text>
+            <rect class="f-acc" x="30" y="50" width="80" height="14" rx="4" fill-opacity=".9"/>
+            <rect class="pnl" x="170" y="16" width="140" height="62" rx="10"/>
+            <text class="lbl" x="184" y="38">BUDGET LEFT</text>
+            <rect class="f-ln" x="184" y="54" width="112" height="7" rx="3.5"/>
+            <rect class="f-amb" x="184" y="54" width="72" height="7" rx="3.5"/>
+            <rect class="pnl" x="324" y="16" width="140" height="62" rx="10"/>
+            <text class="lbl" x="338" y="38">RECEIPTS · OCR</text>
+            <rect class="f-sky" x="338" y="50" width="62" height="14" rx="4" fill-opacity=".85"/>
+            <rect class="pnl" x="16" y="92" width="170" height="162" rx="10"/>
+            <text class="lbl" x="30" y="114">BY CATEGORY</text>
+            <g class="nf" stroke-width="16" transform="rotate(-90 101 184)">
+              <circle class="s-acc" cx="101" cy="184" r="40" stroke-dasharray="92.5 158.83"/>
+              <circle class="s-amb" cx="101" cy="184" r="40" stroke-dasharray="62.3 189.03" stroke-dashoffset="-95.5"/>
+              <circle class="s-sky" cx="101" cy="184" r="40" stroke-dasharray="47.3 204.03" stroke-dashoffset="-160.8"/>
+              <circle class="s-cor" cx="101" cy="184" r="40" stroke-dasharray="37.2 214.13" stroke-dashoffset="-211.1"/>
+            </g>
+            <rect class="pnl" x="198" y="92" width="266" height="162" rx="10"/>
+            <text class="lbl" x="212" y="114">MONTHLY SPEND</text>
+            <text class="lbl" x="450" y="143" text-anchor="end">budget</text>
+            <line class="s-amb" x1="212" y1="150" x2="450" y2="150" stroke-dasharray="4 4" stroke-width="1.5"/>
+            <line class="s-ln" x1="212" y1="230" x2="450" y2="230"/>
+            <rect class="f-acc" x="222" y="174" width="20" height="56" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="255" y="160" width="20" height="70" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="288" y="182" width="20" height="48" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="321" y="156" width="20" height="74" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="354" y="168" width="20" height="62" rx="4" fill-opacity=".85"/>
+            <rect class="f-amb" x="387" y="136" width="20" height="94" rx="4"/>
+            <rect class="f-acc" x="420" y="164" width="20" height="66" rx="4" fill-opacity=".85"/>
+            <text class="lbl" x="232" y="246" text-anchor="middle">J</text><text class="lbl" x="265" y="246" text-anchor="middle">F</text><text class="lbl" x="298" y="246" text-anchor="middle">M</text><text class="lbl" x="331" y="246" text-anchor="middle">A</text><text class="lbl" x="364" y="246" text-anchor="middle">M</text><text class="lbl" x="397" y="246" text-anchor="middle">J</text><text class="lbl" x="430" y="246" text-anchor="middle">J</text>
+          </svg>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="badge">Analytics dashboard</span><span class="badge badge-plain">Featured</span></div>
+          <h3 class="case-title">Finzy — Personal Finance Analytics Dashboard</h3>
+          <p class="case-summary">A finance analytics platform with automated expense categorization, receipt OCR, real-time spending analytics, budget tracking and interactive dashboards.</p>
+          <dl class="case-points">
+            <div><dt>Question</dt><dd>Where is the money actually going each month — and which categories push spending over budget?</dd></div>
+            <div><dt>Approach</dt><dd>Receipt OCR and automated categorization turn raw expenses into clean, structured records in PostgreSQL / Supabase, served to the dashboard through a REST API.</dd></div>
+            <div><dt>Outcome</dt><dd>Real-time spending analytics with budget tracking and interactive category and trend views.</dd></div>
+          </dl>
+          <div class="case-foot">
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>PostgreSQL</li><li>Supabase</li><li>REST API</li></ul>
+            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/finzyy-ai-assisted-expense-management-system" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Finzy)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
+      </article>
 
-        <!-- Heart Failure Prediction -->
-        <div class="project-card fade-in-up">
-          <div class="card-inner-glow"></div>
-          <div class="project-visual" style="background:linear-gradient(135deg,#160816,#241028);">
-            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
-              <defs><radialGradient id="proj-g4" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#fb7185" stop-opacity="0.22"/><stop offset="100%" stop-color="#fb7185" stop-opacity="0"/></radialGradient></defs>
-              <rect width="320" height="175" fill="url(#proj-g4)"/>
-              <polyline points="20,95 55,95 65,40 75,145 85,95 105,95 115,70 125,120 135,95 175,95 185,55 195,130 205,95 300,95" fill="none" stroke="#fb7185" stroke-width="1.8" opacity="0.7"/>
-              <circle cx="205" cy="95" r="5" fill="#fb7185" opacity="0.9"/>
-              <circle cx="205" cy="95" r="10" fill="none" stroke="#fb7185" stroke-width="1" opacity="0.4"/>
-              <rect x="230" y="110" width="10" height="40" rx="2" fill="#fb7185" opacity="0.5"/>
-              <rect x="245" y="95" width="10" height="55" rx="2" fill="#fb7185" opacity="0.65"/>
-              <rect x="260" y="120" width="10" height="30" rx="2" fill="#fb7185" opacity="0.5"/>
-              <rect x="275" y="105" width="10" height="45" rx="2" fill="#fb7185" opacity="0.65"/>
-              <rect x="290" y="130" width="10" height="20" rx="2" fill="#fb7185" opacity="0.45"/>
-              <rect x="22" y="22" width="90" height="28" rx="6" fill="rgba(251,113,133,0.1)" stroke="#fb7185" stroke-width="1" opacity="0.7"/>
-              <text x="67" y="41" text-anchor="middle" fill="#fb7185" font-size="11" font-family="Arial" font-weight="700" opacity="0.8">84% Accuracy</text>
-              <circle cx="50" cy="140" r="3" fill="#fb7185" opacity="0.4"/><circle cx="140" cy="35" r="2.5" fill="#a78bfa" opacity="0.5"/><circle cx="175" cy="130" r="2" fill="#fb7185" opacity="0.35"/>
-            </svg>
-            <div class="project-badge badge-ds">ML · Healthcare</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Heart Failure Prediction</div>
-            <div class="project-problem">Problem: Early, data-driven prediction of heart failure risk can enable timely clinical intervention.</div>
-            <div class="project-role">ML Project · Healthcare · EDA + Interpretable Modelling</div>
-            <div class="project-desc">Ran EDA across 12 clinical features and chose interpretable Logistic Regression deliberately — in clinical settings, knowing which features drive a prediction matters as much as accuracy. Evaluated with a confusion matrix, precision-recall, and F1-score.</div>
-            <div class="project-outcome">84% accuracy with fully interpretable clinical risk factors</div>
-            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Pandas</span><span class="project-tag">Matplotlib</span><span class="project-tag">Seaborn</span></div>
-            <div class="project-footer"><a href="https://github.com/SameeulKhondokerJisan/heart-failure-prediction" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
+      <!-- Heart Failure -->
+      <article class="card case reveal">
+        <div class="case-visual">
+          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
+            <rect class="pnl" x="16" y="16" width="214" height="238" rx="10"/>
+            <text class="lbl" x="30" y="38">CORRELATION MAP</text>
+            <g>
+              <rect class="f-acc" x="35" y="56" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="71" y="56" width="32" height="32" rx="4" fill-opacity=".56"/><rect class="f-cor" x="107" y="56" width="32" height="32" rx="4" fill-opacity=".45"/><rect class="f-acc" x="143" y="56" width="32" height="32" rx="4" fill-opacity=".7"/><rect class="f-cor" x="179" y="56" width="32" height="32" rx="4" fill-opacity=".3"/>
+              <rect class="f-acc" x="35" y="92" width="32" height="32" rx="4" fill-opacity=".56"/><rect class="f-acc" x="71" y="92" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="107" y="92" width="32" height="32" rx="4" fill-opacity=".36"/><rect class="f-acc" x="143" y="92" width="32" height="32" rx="4" fill-opacity=".44"/><rect class="f-cor" x="179" y="92" width="32" height="32" rx="4" fill-opacity=".5"/>
+              <rect class="f-cor" x="35" y="128" width="32" height="32" rx="4" fill-opacity=".45"/><rect class="f-acc" x="71" y="128" width="32" height="32" rx="4" fill-opacity=".36"/><rect class="f-acc" x="107" y="128" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-cor" x="143" y="128" width="32" height="32" rx="4" fill-opacity=".35"/><rect class="f-acc" x="179" y="128" width="32" height="32" rx="4" fill-opacity=".6"/>
+              <rect class="f-acc" x="35" y="164" width="32" height="32" rx="4" fill-opacity=".7"/><rect class="f-acc" x="71" y="164" width="32" height="32" rx="4" fill-opacity=".44"/><rect class="f-cor" x="107" y="164" width="32" height="32" rx="4" fill-opacity=".35"/><rect class="f-acc" x="143" y="164" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="179" y="164" width="32" height="32" rx="4" fill-opacity=".4"/>
+              <rect class="f-cor" x="35" y="200" width="32" height="32" rx="4" fill-opacity=".3"/><rect class="f-cor" x="71" y="200" width="32" height="32" rx="4" fill-opacity=".5"/><rect class="f-acc" x="107" y="200" width="32" height="32" rx="4" fill-opacity=".6"/><rect class="f-acc" x="143" y="200" width="32" height="32" rx="4" fill-opacity=".4"/><rect class="f-acc" x="179" y="200" width="32" height="32" rx="4" fill-opacity=".95"/>
+            </g>
+            <rect class="pnl" x="242" y="16" width="222" height="110" rx="10"/>
+            <text class="lbl" x="256" y="38">CLINICAL SIGNAL</text>
+            <polyline class="s-cor nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="256,88 292,88 300,88 308,62 316,110 324,88 352,88 360,76 368,98 376,88 404,88 412,56 420,112 428,88 450,88"/>
+            <rect class="pnl" x="242" y="138" width="222" height="116" rx="10"/>
+            <text class="lbl" x="256" y="160">DISTRIBUTION</text>
+            <line class="s-ln" x1="256" y1="240" x2="450" y2="240"/>
+            <rect class="f-sky" x="256" y="226" width="18" height="14" rx="3" fill-opacity=".75"/><rect class="f-sky" x="278" y="212" width="18" height="28" rx="3" fill-opacity=".75"/><rect class="f-sky" x="300" y="194" width="18" height="46" rx="3" fill-opacity=".75"/><rect class="f-sky" x="322" y="180" width="18" height="60" rx="3" fill-opacity=".75"/><rect class="f-sky" x="344" y="172" width="18" height="68" rx="3" fill-opacity=".75"/><rect class="f-sky" x="366" y="184" width="18" height="56" rx="3" fill-opacity=".75"/><rect class="f-sky" x="388" y="200" width="18" height="40" rx="3" fill-opacity=".75"/><rect class="f-sky" x="410" y="216" width="18" height="24" rx="3" fill-opacity=".75"/><rect class="f-sky" x="432" y="228" width="18" height="12" rx="3" fill-opacity=".75"/>
+            <polyline class="s-acc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="265,224 287,210 309,192 331,178 353,170 375,182 397,198 419,214 441,226"/>
+          </svg>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="badge badge-amber">Healthcare EDA</span></div>
+          <h3 class="case-title">Heart Failure Data Analysis</h3>
+          <p class="case-summary">Exploratory analysis of a clinical dataset to find which patient features carry the strongest heart-failure risk signal.</p>
+          <dl class="case-points">
+            <div><dt>Question</dt><dd>Which of 12 clinical features are the clearest risk factors for heart failure?</dd></div>
+            <div><dt>Approach</dt><dd>EDA across all 12 features — distribution profiling, correlation mapping and statistical analysis.</dd></div>
+            <div><dt>Outcome</dt><dd>Key risk factors identified, backed by an interpretable Logistic Regression baseline at 84% accuracy.</dd></div>
+          </dl>
+          <div class="case-foot">
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>Scikit-learn</li></ul>
+            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/heart-failure-prediction" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Heart Failure Data Analysis)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
+      </article>
 
-        <!-- Student Performance Prediction -->
-        <div class="project-card fade-in-up">
-          <div class="card-inner-glow"></div>
-          <div class="project-visual" style="background:linear-gradient(135deg,#060e18,#0a1826);">
-            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
-              <defs><radialGradient id="proj-g6" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#60a5fa" stop-opacity="0.18"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/></radialGradient></defs>
-              <rect width="320" height="175" fill="url(#proj-g6)"/>
-              <rect x="30" y="100" width="22" height="50" rx="3" fill="rgba(96,165,250,0.18)" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
-              <rect x="62" y="75" width="22" height="75" rx="3" fill="rgba(96,165,250,0.22)" stroke="#60a5fa" stroke-width="1" opacity="0.7"/>
-              <rect x="94" y="55" width="22" height="95" rx="3" fill="rgba(96,165,250,0.28)" stroke="#60a5fa" stroke-width="1.2" opacity="0.8"/>
-              <rect x="126" y="40" width="22" height="110" rx="3" fill="rgba(96,165,250,0.32)" stroke="#60a5fa" stroke-width="1.4" opacity="0.9"/>
-              <rect x="158" y="60" width="22" height="90" rx="3" fill="rgba(96,165,250,0.24)" stroke="#60a5fa" stroke-width="1" opacity="0.75"/>
-              <rect x="190" y="85" width="22" height="65" rx="3" fill="rgba(96,165,250,0.18)" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
-              <polyline points="41,100 73,75 105,55 137,40 169,60 201,85" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.6" stroke-dasharray="4 2"/>
-              <rect x="240" y="55" width="62" height="45" rx="6" fill="rgba(96,165,250,0.08)" stroke="#60a5fa" stroke-width="1.2" opacity="0.6"/>
-              <rect x="250" y="64" width="42" height="7" rx="2" fill="#60a5fa" opacity="0.3"/>
-              <rect x="250" y="75" width="30" height="7" rx="2" fill="#60a5fa" opacity="0.22"/>
-              <rect x="250" y="86" width="20" height="5" rx="2" fill="#22d3ee" opacity="0.3"/>
-              <text x="271" y="118" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial" font-weight="700" opacity="0.55">Docker</text>
-              <line x1="20" y1="150" x2="220" y2="150" stroke="#60a5fa" stroke-width="0.8" opacity="0.3"/>
-            </svg>
-            <div class="project-badge badge-ds">ML · CatBoost</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Student Performance Prediction</div>
-            <div class="project-problem">Problem: Schools need early-warning systems that flag at-risk students before outcomes deteriorate.</div>
-            <div class="project-role">End-to-End ML Pipeline · CatBoost · Docker Deployment</div>
-            <div class="project-desc">End-to-end CatBoost pipeline — chosen for its native handling of categorical student features — served through a Flask REST API with Dockerized real-time inference, treating production deployment as a first-class requirement from day one.</div>
-            <div class="project-outcome">Production-ready containerized pipeline serving real-time predictions via REST API</div>
-            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">CatBoost</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Flask</span><span class="project-tag">Docker</span></div>
-            <div class="project-footer"><a href="https://github.com/SameeulKhondokerJisan/student-performance-prediction" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
+      <!-- Student Performance -->
+      <article class="card case reveal">
+        <div class="case-visual">
+          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
+            <rect class="pnl" x="16" y="16" width="286" height="238" rx="10"/>
+            <text class="lbl" x="30" y="38">SCORE BY FACTOR GROUP</text>
+            <line class="s-ln" x1="30" y1="112" x2="288" y2="112" stroke-dasharray="3 4"/>
+            <line class="s-ln" x1="30" y1="152" x2="288" y2="152" stroke-dasharray="3 4"/>
+            <line class="s-ln" x1="30" y1="192" x2="288" y2="192" stroke-dasharray="3 4"/>
+            <line class="s-ln" x1="30" y1="232" x2="288" y2="232"/>
+            <rect class="f-acc" x="36" y="162" width="22" height="70" rx="4" fill-opacity=".85"/><rect class="f-amb" x="62" y="178" width="22" height="54" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="102" y="136" width="22" height="96" rx="4" fill-opacity=".85"/><rect class="f-amb" x="128" y="154" width="22" height="78" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="168" y="114" width="22" height="118" rx="4" fill-opacity=".85"/><rect class="f-amb" x="194" y="140" width="22" height="92" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="234" y="100" width="22" height="132" rx="4" fill-opacity=".85"/><rect class="f-amb" x="260" y="128" width="22" height="104" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="200" y="52" width="9" height="9" rx="2"/><text class="lbl" x="214" y="60">math</text>
+            <rect class="f-amb" x="250" y="52" width="9" height="9" rx="2"/><text class="lbl" x="264" y="60">read</text>
+            <rect class="pnl" x="314" y="16" width="150" height="238" rx="10"/>
+            <text class="lbl" x="328" y="38">SPREAD</text>
+            <line class="s-ln" x1="328" y1="232" x2="450" y2="232"/>
+            <g stroke-width="1.5" stroke-linecap="round">
+              <line class="s-sky" x1="350" y1="120" x2="350" y2="210"/><line class="s-sky" x1="344" y1="120" x2="356" y2="120"/><line class="s-sky" x1="344" y1="210" x2="356" y2="210"/>
+              <rect class="f-sky s-sky" x="339" y="146" width="22" height="40" rx="3" fill-opacity=".25"/><line class="s-sky" x1="339" y1="168" x2="361" y2="168" stroke-width="2.5"/>
+              <line class="s-acc" x1="389" y1="96" x2="389" y2="200"/><line class="s-acc" x1="383" y1="96" x2="395" y2="96"/><line class="s-acc" x1="383" y1="200" x2="395" y2="200"/>
+              <rect class="f-acc s-acc" x="378" y="124" width="22" height="46" rx="3" fill-opacity=".25"/><line class="s-acc" x1="378" y1="146" x2="400" y2="146" stroke-width="2.5"/>
+              <line class="s-amb" x1="428" y1="136" x2="428" y2="214"/><line class="s-amb" x1="422" y1="136" x2="434" y2="136"/><line class="s-amb" x1="422" y1="214" x2="434" y2="214"/>
+              <rect class="f-amb s-amb" x="417" y="160" width="22" height="36" rx="3" fill-opacity=".25"/><line class="s-amb" x1="417" y1="180" x2="439" y2="180" stroke-width="2.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="badge badge-sky">Education analytics</span></div>
+          <h3 class="case-title">Student Performance Analysis</h3>
+          <p class="case-summary">An end-to-end analysis pipeline examining what drives student performance across demographics, study habits and parental background.</p>
+          <dl class="case-points">
+            <div><dt>Question</dt><dd>Which factors — demographic, behavioural or family — move student performance the most?</dd></div>
+            <div><dt>Approach</dt><dd>Cleaned and encoded the data, then compared performance across factor groups using statistical methods.</dd></div>
+            <div><dt>Outcome</dt><dd>A reproducible pipeline with visual factor-by-factor breakdowns of student performance.</dd></div>
+          </dl>
+          <div class="case-foot">
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Matplotlib</li></ul>
+            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/student-performance-prediction" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Student Performance Analysis)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
+      </article>
 
-        <!-- Movie Recommendation System -->
-        <div class="project-card fade-in-up">
-          <div class="card-inner-glow"></div>
-          <div class="project-visual" style="background:linear-gradient(135deg,#0d1224,#170f2e);">
-            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
-              <defs><radialGradient id="proj-g8" cx="50%" cy="40%" r="65%"><stop offset="0%" stop-color="#a78bfa" stop-opacity="0.16"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/></radialGradient></defs>
-              <rect width="320" height="175" fill="url(#proj-g8)"/>
-              <text x="22" y="22" fill="#94a3b8" font-size="8" font-family="Arial" font-weight="700" opacity="0.6">Hybrid Recommender · Top Picks</text>
-              <rect x="24" y="34" width="46" height="64" rx="5" fill="#a78bfa" fill-opacity="0.14" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.42"/>
-              <rect x="80" y="34" width="46" height="64" rx="5" fill="#60a5fa" fill-opacity="0.14" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.42"/>
-              <rect x="136" y="34" width="46" height="64" rx="5" fill="#22d3ee" fill-opacity="0.14" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.42"/>
-              <path d="M43 60 l10 6 -10 6 z" fill="#a78bfa" opacity="0.7"/>
-              <path d="M99 60 l10 6 -10 6 z" fill="#60a5fa" opacity="0.7"/>
-              <path d="M155 60 l10 6 -10 6 z" fill="#22d3ee" opacity="0.7"/>
-              <text x="26" y="112" fill="#22d3ee" font-size="9" font-family="Arial" opacity="0.85">★★★★★</text>
-              <text x="82" y="112" fill="#22d3ee" font-size="9" font-family="Arial" opacity="0.85">★★★★☆</text>
-              <text x="138" y="112" fill="#22d3ee" font-size="9" font-family="Arial" opacity="0.85">★★★★★</text>
-              <text x="210" y="42" fill="#94a3b8" font-size="7" font-family="Arial" opacity="0.5">cosine similarity</text>
-              <rect x="210" y="50" width="86" height="6" rx="3" fill="#a78bfa" opacity="0.55"/>
-              <rect x="210" y="64" width="70" height="6" rx="3" fill="#60a5fa" opacity="0.5"/>
-              <rect x="210" y="78" width="54" height="6" rx="3" fill="#22d3ee" opacity="0.5"/>
-              <rect x="210" y="92" width="40" height="6" rx="3" fill="#94a3b8" opacity="0.32"/>
-              <rect x="210" y="116" width="52" height="15" rx="7.5" fill="none" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.45"/>
-              <text x="218" y="126" fill="#60a5fa" font-size="7.5" font-family="Arial" opacity="0.72">TMDB API</text>
-            </svg>
-            <div class="project-badge badge-llm">ML · Recommender</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Movie Recommendation System</div>
-            <div class="project-problem">Problem: Endless catalogues bury the few titles a viewer will actually love — relevance drives engagement.</div>
-            <div class="project-role">Hybrid Engine · Content + Collaborative Filtering · TMDB API</div>
-            <div class="project-desc">Hybrid recommendation engine combining TF-IDF content-based filtering with collaborative filtering; integrated the TMDB API for live movie metadata and deployed the whole thing as a full-stack web application.</div>
-            <div class="project-outcome">Full-stack recommender serving personalised top-N movie suggestions</div>
-            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Flask</span><span class="project-tag">Scikit-learn</span><span class="project-tag">Pandas</span><span class="project-tag">TMDB API</span></div>
-            <div class="project-footer"><a href="https://github.com/SameeulKhondokerJisan/movie-recommendation-system" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
-          </div>
-        </div>
-
-        <!-- Core Banking & Digital Wallet System -->
-        <div class="project-card fade-in-up">
-          <div class="card-inner-glow"></div>
-          <div class="project-visual" style="background:linear-gradient(135deg,#06101f,#0b1a33);">
-            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
-              <defs><radialGradient id="proj-g10" cx="45%" cy="45%" r="60%"><stop offset="0%" stop-color="#60a5fa" stop-opacity="0.2"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/></radialGradient></defs>
-              <rect width="320" height="175" fill="url(#proj-g10)"/>
-              <rect x="24" y="20" width="112" height="24" rx="6" fill="rgba(96,165,250,0.14)" stroke="#60a5fa" stroke-width="1" opacity="0.85"/>
-              <text x="80" y="36" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial" font-weight="700" opacity="0.85">Controller</text>
-              <line x1="80" y1="44" x2="80" y2="54" stroke="#60a5fa" stroke-width="1" opacity="0.5"/>
-              <rect x="24" y="54" width="112" height="24" rx="6" fill="rgba(96,165,250,0.1)" stroke="#60a5fa" stroke-width="1" opacity="0.7"/>
-              <text x="80" y="70" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial" font-weight="700" opacity="0.75">Service</text>
-              <line x1="80" y1="78" x2="80" y2="88" stroke="#60a5fa" stroke-width="1" opacity="0.5"/>
-              <rect x="24" y="88" width="112" height="24" rx="6" fill="rgba(34,211,238,0.1)" stroke="#22d3ee" stroke-width="1" opacity="0.7"/>
-              <text x="80" y="104" text-anchor="middle" fill="#22d3ee" font-size="9" font-family="Arial" font-weight="700" opacity="0.75">Repository</text>
-              <line x1="80" y1="112" x2="80" y2="124" stroke="#22d3ee" stroke-width="1" opacity="0.5"/>
-              <path d="M50 130v18c0 3.3 13.4 6 30 6s30-2.7 30-6v-18" fill="rgba(34,211,238,0.08)" stroke="#22d3ee" stroke-width="1" opacity="0.7"/>
-              <ellipse cx="80" cy="130" rx="30" ry="6" fill="rgba(34,211,238,0.12)" stroke="#22d3ee" stroke-width="1" opacity="0.8"/>
-              <text x="80" y="149" text-anchor="middle" fill="#22d3ee" font-size="8.5" font-family="Arial" font-weight="700" opacity="0.7">MySQL</text>
-              <rect x="176" y="48" width="120" height="62" rx="9" fill="rgba(96,165,250,0.1)" stroke="#60a5fa" stroke-width="1.2" opacity="0.8"/>
-              <rect x="190" y="61" width="18" height="13" rx="2.5" fill="#22d3ee" opacity="0.55"/>
-              <rect x="190" y="88" width="70" height="5" rx="2.5" fill="#60a5fa" opacity="0.45"/>
-              <rect x="190" y="97" width="42" height="5" rx="2.5" fill="#60a5fa" opacity="0.3"/>
-              <circle cx="266" cy="67" r="8" fill="#60a5fa" opacity="0.35"/><circle cx="276" cy="67" r="8" fill="#22d3ee" opacity="0.35"/>
-              <circle cx="190" cy="142" r="10" fill="rgba(96,165,250,0.12)" stroke="#60a5fa" stroke-width="1" opacity="0.8"/>
-              <text x="190" y="145.5" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial" font-weight="700" opacity="0.85">A</text>
-              <circle cx="282" cy="142" r="10" fill="rgba(34,211,238,0.12)" stroke="#22d3ee" stroke-width="1" opacity="0.8"/>
-              <text x="282" y="145.5" text-anchor="middle" fill="#22d3ee" font-size="9" font-family="Arial" font-weight="700" opacity="0.85">B</text>
-              <line x1="202" y1="142" x2="266" y2="142" stroke="#22d3ee" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.7"/>
-              <polygon points="266,138 273,142 266,146" fill="#22d3ee" opacity="0.8"/>
-              <text x="236" y="132" text-anchor="middle" fill="#94a3b8" font-size="7" font-family="Arial" opacity="0.6">@Transactional</text>
-            </svg>
-            <div class="project-badge badge-se">Backend · Java</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Core Banking &amp; Digital Wallet System</div>
-            <div class="project-problem">Problem: A banking backend must move money between accounts and wallets without ever leaving a transfer half-done.</div>
-            <div class="project-role">Backend System · Spring Boot · REST API · MySQL</div>
-            <div class="project-desc">Enterprise-style banking backend covering customers, bank accounts, a digital wallet, deposits, withdrawals, and account-to-account transfers. Each transfer runs as a single @Transactional unit with balance checks, and every movement is written to a transaction ledger — on a layered Controller → Service → Repository architecture with Spring Data JPA over MySQL.</div>
-            <div class="project-outcome">Layered REST backend for accounts, wallets, and atomic transfers with a full transaction ledger</div>
-            <div class="project-tags"><span class="project-tag">Java</span><span class="project-tag">Spring Boot</span><span class="project-tag">Spring Data JPA</span><span class="project-tag">MySQL</span><span class="project-tag">REST API</span><span class="project-tag">Maven</span></div>
-            <div class="project-footer"><a href="https://github.com/SameeulKhondokerJisan/core-banking-digital-wallet-system" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
-          </div>
-        </div>
-
-        <!-- AI Financial Risk & Compliance System -->
-        <div class="project-card fade-in-up">
-          <div class="card-inner-glow"></div>
-          <div class="project-visual" style="background:linear-gradient(135deg,#140d06,#1f1408);">
-            <svg class="proj-art" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
-              <defs><radialGradient id="proj-g12" cx="50%" cy="45%" r="60%"><stop offset="0%" stop-color="#fbbf24" stop-opacity="0.16"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/></radialGradient></defs>
-              <rect width="320" height="175" fill="url(#proj-g12)"/>
-              <text x="22" y="24" fill="#94a3b8" font-size="8" font-family="Arial" font-weight="700" opacity="0.6">Transaction Monitor · Risk Score</text>
-              <polyline points="22,120 50,112 78,118 106,104 134,110 150,56 166,108 194,100 222,106 250,96" fill="none" stroke="#fbbf24" stroke-width="1.6" opacity="0.7"/>
-              <circle cx="150" cy="56" r="5" fill="#fb7185" opacity="0.9"/>
-              <circle cx="150" cy="56" r="11" fill="none" stroke="#fb7185" stroke-width="1" opacity="0.45"/>
-              <rect x="72" y="40" width="64" height="20" rx="5" fill="rgba(251,113,133,0.12)" stroke="#fb7185" stroke-width="1" opacity="0.8"/>
-              <text x="104" y="53" text-anchor="middle" fill="#fb7185" font-size="8" font-family="Arial" font-weight="700" opacity="0.9">FRAUD ALERT</text>
-              <line x1="22" y1="140" x2="250" y2="140" stroke="#fbbf24" stroke-width="0.8" opacity="0.25"/>
-              <rect x="30" y="146" width="14" height="6" rx="2" fill="#fbbf24" opacity="0.3"/><rect x="50" y="146" width="22" height="6" rx="2" fill="#fbbf24" opacity="0.45"/><rect x="78" y="146" width="10" height="6" rx="2" fill="#fbbf24" opacity="0.3"/>
-              <path d="M282 52l22 8v20c0 16-10 26-22 31-12-5-22-15-22-31V60z" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1.3" opacity="0.8"/>
-              <polyline points="273,80 280,87 292,73" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-              <rect x="258" y="124" width="48" height="15" rx="7.5" fill="none" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.5"/>
-              <text x="282" y="134.5" text-anchor="middle" fill="#fbbf24" font-size="7.5" font-family="Arial" opacity="0.75">Python ML</text>
-            </svg>
-            <div class="project-badge badge-fin">Backend · AI</div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">AI Financial Risk &amp; Compliance System</div>
-            <div class="project-problem">Problem: Financial institutions must flag suspicious transactions and prove compliance without slowing down legitimate payments.</div>
-            <div class="project-role">Spring Boot Backend · Python Risk Module · Fraud Detection</div>
-            <div class="project-desc">Enterprise Spring Boot system for transaction monitoring, customer risk profiles, fraud alerts, compliance reporting, and financial audit logging. The Java service layer calls out to a Python risk-analysis module to score transactions — a production-style backend and an analytical model working as one system.</div>
-            <div class="project-outcome">Where both halves of my work meet: a Java backend with an integrated Python risk-scoring module</div>
-            <div class="project-tags"><span class="project-tag">Java 17</span><span class="project-tag">Spring Boot</span><span class="project-tag">Hibernate</span><span class="project-tag">MySQL</span><span class="project-tag">Python</span><span class="project-tag">REST API</span></div>
-            <div class="project-footer"><a href="https://github.com/SameeulKhondokerJisan/ai-financial-risk-compliance-system" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a></div>
-          </div>
-        </div>
-
-      </div>
-      <div class="projects-more fade-in-up">
-        <a href="https://github.com/SameeulKhondokerJisan?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-          More on GitHub — Spring Boot APIs, C systems &amp; web apps
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
+    </div>
+    <div class="more-row reveal">
+      <a href="https://github.com/SameeulKhondokerJisan?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        More projects on GitHub
+      </a>
     </div>
   </div>
 </section>
 
 <!-- Experience -->
-<section id="experience">
-  <div class="section-wrap">
-    <div class="section-inner">
-      <div class="section-eyebrow">05 · Career Path</div>
-      <h2 class="section-title">Experience &amp; <span class="line-accent">Credentials</span></h2>
-      <div class="experience-grid">
-        <div class="fade-in-up">
-          <div class="exp-col-title">Work Experience</div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
-              <div class="timeline-content">
-                <div class="timeline-title">Data Science Intern</div>
-                <div class="timeline-org"><a class="inline-link" href="https://codioaisolution.com/" target="_blank" rel="noopener noreferrer">Codio AI Solution</a></div>
-                <div class="timeline-date">May 2026 – Present · Dhaka, Bangladesh</div>
-                <div class="timeline-desc">Designing and maintaining Python-based ETL pipelines for multi-source data ingestion; building predictive models and BI dashboards that track KPIs for product and business decisions. Applying feature selection, statistical analysis, and model evaluation to surface actionable patterns from production datasets, and documenting findings for stakeholder review.</div>
+<section id="experience" class="section section-alt" aria-labelledby="experienceTitle">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">04</span>Experience</p>
+      <h2 class="section-title" id="experienceTitle">Where I’ve put <span class="hl">data to work</span></h2>
+    </header>
+    <div class="exp-grid">
+      <ol class="timeline">
+        <li class="tl-item is-current reveal">
+          <article class="card tl-card">
+            <header class="tl-head">
+              <div>
+                <h3 class="tl-role">Data Analyst Intern</h3>
+                <p class="tl-org"><a href="https://codioaisolution.com/" target="_blank" rel="noopener noreferrer">Codio AI Solution</a> · Dhaka, Bangladesh</p>
               </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M2 15h2M2 9h2M15 20v2M9 20v2M20 15h2M20 9h2"/></svg></div>
-              <div class="timeline-content">
-                <div class="timeline-title">Data Science Intern</div>
-                <div class="timeline-org"><a class="inline-link" href="https://saiketsystems.in/" target="_blank" rel="noopener noreferrer">SaiKet Systems</a></div>
-                <div class="timeline-date">Apr 2026 – May 2026 · Dhaka, Bangladesh</div>
-                <div class="timeline-desc">Processed 50,000+ records with Python, Pandas, and NumPy, cutting preprocessing time 40% with automated missing-data imputation, outlier detection, and data-quality workflows. Deployed three models to production via REST API and Docker and set up performance monitoring, raising reporting accuracy 30% — evaluated with precision-recall, F1-score, and ROC-AUC.</div>
+              <span class="tl-date">May 2026 – Present <span class="tl-now">Current</span></span>
+            </header>
+            <ul class="tl-points">
+              <li>Design Python-based ETL pipelines for multi-source data ingestion, and build BI dashboards tracking product and business KPIs for stakeholder decision-making.</li>
+              <li>Conduct statistical analysis, feature selection and EDA to surface actionable patterns from production datasets; prepare data-driven reports.</li>
+            </ul>
+            <ul class="metrics" aria-label="Focus">
+              <li class="metric"><b>ETL</b>multi-source pipelines</li>
+              <li class="metric"><b>BI</b>KPI dashboards</li>
+              <li class="metric"><b>EDA</b>production data</li>
+            </ul>
+          </article>
+        </li>
+        <li class="tl-item reveal">
+          <article class="card tl-card">
+            <header class="tl-head">
+              <div>
+                <h3 class="tl-role">Data Analyst Intern</h3>
+                <p class="tl-org"><a href="https://saiketsystems.in/" target="_blank" rel="noopener noreferrer">SaiKet Systems</a> · Dhaka, Bangladesh</p>
               </div>
-            </div>
-            <div class="timeline-item timeline-minor">
-              <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-              <div class="timeline-content">
-                <div class="timeline-title">Content Creator &amp; Engagement Analyst</div>
-                <div class="timeline-org"><a class="inline-link" href="https://goedu.ac/" target="_blank" rel="noopener noreferrer">GoEdu</a></div>
-                <div class="timeline-date">Feb 2025 – Feb 2026 · Remote</div>
-                <div class="timeline-desc">Applied A/B testing methodology across 50+ educational videos to compare content formats and identify retention drivers; viewership grew 25%, reaching 10,000+ learners.</div>
+              <span class="tl-date">Apr 2026 – May 2026</span>
+            </header>
+            <ul class="tl-points">
+              <li>Processed 50,000+ records using Python, Pandas and NumPy; cut preprocessing time 40% with automated imputation, outlier detection and data-quality workflows.</li>
+              <li>Improved reporting accuracy 30% through pipeline optimization; evaluated models using precision-recall, F1-score and ROC-AUC.</li>
+            </ul>
+            <ul class="metrics" aria-label="Results">
+              <li class="metric"><b>50,000+</b>records</li>
+              <li class="metric down"><b>−40%</b>preprocessing time</li>
+              <li class="metric up"><b>+30%</b>reporting accuracy</li>
+            </ul>
+          </article>
+        </li>
+        <li class="tl-item reveal">
+          <article class="card tl-card">
+            <header class="tl-head">
+              <div>
+                <h3 class="tl-role">Content &amp; Engagement Analyst</h3>
+                <p class="tl-org"><a href="https://goedu.ac/" target="_blank" rel="noopener noreferrer">GoEdu</a> · Remote</p>
               </div>
-            </div>
-            <div class="timeline-item timeline-minor">
-              <div class="timeline-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-              <div class="timeline-content">
-                <div class="timeline-title">Data Entry Operator</div>
-                <div class="timeline-org"><a class="inline-link" href="https://www.ghitbd.com/" target="_blank" rel="noopener noreferrer">Golden Harvest InfoTech Limited</a></div>
-                <div class="timeline-date">Jan 2022 – Dec 2022 · Dhaka, Bangladesh</div>
-                <div class="timeline-desc">Managed 100,000+ records at 99.8% accuracy; redesigned validation checklists, cutting processing time 20%.</div>
+              <span class="tl-date">Feb 2025 – Feb 2026</span>
+            </header>
+            <ul class="tl-points">
+              <li>Analyzed engagement metrics across 50+ videos using A/B testing; identified the retention drivers that grew viewership 25%, reaching 10,000+ learners.</li>
+            </ul>
+            <ul class="metrics" aria-label="Results">
+              <li class="metric"><b>50+</b>videos A/B tested</li>
+              <li class="metric up"><b>+25%</b>viewership</li>
+              <li class="metric up"><b>10,000+</b>learners</li>
+            </ul>
+          </article>
+        </li>
+        <li class="tl-item reveal">
+          <article class="card tl-card">
+            <header class="tl-head">
+              <div>
+                <h3 class="tl-role">Data Entry Operator</h3>
+                <p class="tl-org"><a href="https://www.ghitbd.com/" target="_blank" rel="noopener noreferrer">Golden Harvest InfoTech Limited</a> · Dhaka, Bangladesh</p>
               </div>
-            </div>
-          </div>
-        </div>
+              <span class="tl-date">Jan 2022 – Dec 2022</span>
+            </header>
+            <ul class="tl-points">
+              <li>Managed 100,000+ records at 99.8% accuracy; redesigned validation checklists, cutting processing time 20%.</li>
+            </ul>
+            <ul class="metrics" aria-label="Results">
+              <li class="metric"><b>100,000+</b>records</li>
+              <li class="metric up"><b>99.8%</b>accuracy</li>
+              <li class="metric down"><b>−20%</b>processing time</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
 
-        <div class="exp-right fade-in-up">
-          <div class="exp-subsection">
-            <div class="exp-col-title">Awards, Leadership &amp; Activities</div>
-            <div class="awards-grid">
-              <div class="award-chip">CDC Career Ambassador 2025 — Certificate of Achievement, DIU</div>
-              <div class="award-chip">GoEdu Campus Ambassador — Feb–Jul 2025, Certificate of Appreciation</div>
-              <div class="award-chip">UIU CSE FEST 2025 Project Show — Represented DIU as Team Castle Victorious</div>
-              <div class="award-chip">National Robotics Championship 2025 — National-level Competitor, BUBT, Feb 2025</div>
-              <div class="award-chip">DIU Job Utsob 2024 &amp; 2025 — Volunteer: Organizing, Logistics &amp; Transport Teams</div>
-            </div>
-          </div>
-        </div>
+      <div class="side-stack">
+        <article class="card side-card reveal">
+          <h3 class="side-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education</h3>
+          <p class="edu-degree">B.Sc. in Software Engineering, Major in Data Science</p>
+          <p class="edu-school"><a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> · Dhaka</p>
+          <div class="pills"><span class="pill">CGPA 3.55 / 4.00</span><span class="pill pill-plain">Expected Dec 2026</span></div>
+          <p class="mini-label">Coursework</p>
+          <ul class="chips">
+            <li class="chip">Data Mining</li><li class="chip">Statistical Analysis</li><li class="chip">Database Systems</li><li class="chip">Algorithm Design</li>
+          </ul>
+          <ul class="edu-prev">
+            <li><span>HSC (Science) · <a class="accent" href="https://dic.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International College</a></span><span>GPA 4.33 / 5.00 · 2021</span></li>
+            <li><span>SSC (Science) · <a class="accent" href="https://aahs.edu.bd/" target="_blank" rel="noopener noreferrer">Agargaon Adarsha High School</a></span><span>GPA 3.89 / 5.00 · 2019</span></li>
+          </ul>
+        </article>
+        <article class="card side-card reveal">
+          <h3 class="side-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Leadership &amp; activities</h3>
+          <ul class="activity-list">
+            <li><strong>CDC Career Ambassador 2025</strong> — Certificate of Achievement, DIU</li>
+            <li><strong>GoEdu Campus Ambassador</strong> — Feb–Jul 2025, Certificate of Appreciation</li>
+            <li><strong>UIU CSE FEST 2025 Project Show</strong> — represented DIU as Team Castle Victorious</li>
+            <li><strong>National Robotics Championship 2025</strong> — national-level competitor, BUBT</li>
+            <li><strong>DIU Job Utsob 2024 &amp; 2025</strong> — volunteer: organizing, logistics &amp; transport</li>
+          </ul>
+        </article>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Certifications -->
-      <div class="certs-block fade-in-up">
-        <div class="exp-col-title">Certifications</div>
-        <div class="cert-grid">
-          <a class="cert-card" href="https://coursera.org/verify/professional-cert/HZVMOPEAHRS6" target="_blank" rel="noopener noreferrer" title="Verify on Coursera">
-            <div class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="3"/><circle cx="12" cy="12" r="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
-            <div class="cert-body">
-              <div class="cert-title">IBM AI Engineering Professional Certificate</div>
-              <div class="cert-issuer">IBM · Coursera · May 2026 · 13 courses</div>
-            </div>
-            <svg class="cert-ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-          <a class="cert-card" href="https://coursera.org/verify/professional-cert/9FL2EW331MBX" target="_blank" rel="noopener noreferrer" title="Verify on Coursera">
-            <div class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.6L18.3 9.3l-4.6 1.7L12 15.6l-1.7-4.6L5.7 9.3l4.6-1.7z"/><path d="M19 14l0.9 2.4L22.3 17.3l-2.4 0.9L19 20.6l-0.9-2.4-2.4-0.9 2.4-0.9z"/><path d="M5 15l0.7 1.8L7.5 17.5l-1.8 0.7L5 20l-0.7-1.8L2.5 17.5l1.8-0.7z"/></svg></div>
-            <div class="cert-body">
-              <div class="cert-title">IBM Generative AI Engineering Professional Certificate</div>
-              <div class="cert-issuer">IBM · Coursera · May 2026 · 16 courses</div>
-            </div>
-            <svg class="cert-ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-          <a class="cert-card" href="https://coursera.org/verify/professional-cert/34TJ036HZQMA" target="_blank" rel="noopener noreferrer" title="Verify on Coursera">
-            <div class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M2 15h2M2 9h2M15 20v2M9 20v2M20 15h2M20 9h2"/></svg></div>
-            <div class="cert-body">
-              <div class="cert-title">IBM Machine Learning Professional Certificate</div>
-              <div class="cert-issuer">IBM · Coursera · Jul 2026 · 6 courses</div>
-            </div>
-            <svg class="cert-ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-          <a class="cert-card" href="https://coursera.org/verify/professional-cert/ADJH1ZK9SSUK" target="_blank" rel="noopener noreferrer" title="Verify on Coursera">
-            <div class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 100 16A8 8 0 0012 2z"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg></div>
-            <div class="cert-body">
-              <div class="cert-title">IBM Deep Learning with PyTorch, Keras &amp; TensorFlow</div>
-              <div class="cert-issuer">IBM · Coursera · May 2026 · 5 courses</div>
-            </div>
-            <svg class="cert-ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-          <a class="cert-card" href="https://coursera.org/verify/professional-cert/OOKWP56I7MGP" target="_blank" rel="noopener noreferrer" title="Verify on Coursera">
-            <div class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-            <div class="cert-body">
-              <div class="cert-title">IBM Data Science Professional Certificate</div>
-              <div class="cert-issuer">IBM · Coursera · Mar 2026</div>
-            </div>
-            <svg class="cert-ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-          <a class="cert-card" href="https://coursera.org/verify/professional-cert/Z9B4IMTTBUZ6" target="_blank" rel="noopener noreferrer" title="Verify on Coursera">
-            <div class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
-            <div class="cert-body">
-              <div class="cert-title">IBM Data Analyst Professional Certificate</div>
-              <div class="cert-issuer">IBM · Coursera · Mar 2026</div>
-            </div>
-            <svg class="cert-ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-        </div>
-        <div class="training-list">
-          <div class="training-row">
-            <span class="training-name"><a class="inline-link" href="https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb" target="_blank" rel="noopener noreferrer" title="Verify on Udemy">Complete 2026 Python Bootcamp: Learn Python from Scratch</a></span>
-            <span class="training-org">Udemy · Mar 2026</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">GenAI &amp; Prompt Engineering — Certificate of Excellence</span>
-            <span class="training-org">Grameenphone Academy · Jun 2026</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">AI Workflows and Agents — Certificate of Excellence</span>
-            <span class="training-org">Grameenphone Academy · Jun 2026</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">Zero-Code App @ Vibe Coding — Certificate of Excellence</span>
-            <span class="training-org">Grameenphone Academy · Jun 2026</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">AI+Superpresentations — Certificate of Excellence</span>
-            <span class="training-org">Grameenphone Academy · Jun 2026</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name"><a class="inline-link" href="https://10minuteschool.com/certificate/67863ee3542fd" target="_blank" rel="noopener noreferrer" title="Verify certificate">Microsoft Excel</a> · <a class="inline-link" href="https://10minuteschool.com/certificate/67766165a0740" target="_blank" rel="noopener noreferrer" title="Verify certificate">PowerPoint</a> · <a class="inline-link" href="https://10minuteschool.com/certificate/63f48949a08d0" target="_blank" rel="noopener noreferrer" title="Verify certificate">Word</a></span>
-            <span class="training-org">10 Minute School · 2023–2025</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">Google Sheets: Formulas &amp; Functions · Video Editing with Camtasia (with distinction)</span>
-            <span class="training-org">GoEdu · Apr 2025</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">Data Entry and Freelancing (3-month course)</span>
-            <span class="training-org">Perpetual IT World · May 2022</span>
-          </div>
-          <div class="training-row">
-            <span class="training-name">Spoken English &amp; Phonetics (80%) · Foundation Grammar &amp; Writing (72%)</span>
-            <span class="training-org">Mentors' · 2022</span>
-          </div>
-        </div>
-      </div>
-
+<!-- Credentials -->
+<section id="credentials" class="section" aria-labelledby="credentialsTitle">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">05</span>Credentials</p>
+      <h2 class="section-title" id="credentialsTitle">Certified, and <span class="hl">still learning</span></h2>
+      <p class="section-sub">Professional certificates from IBM, each verifiable on Coursera — the Data Analyst and Data Science tracks are the core of my work.</p>
+    </header>
+    <div class="cert-grid">
+      <a class="card cert is-core reveal" href="https://coursera.org/verify/professional-cert/Z9B4IMTTBUZ6" target="_blank" rel="noopener noreferrer">
+        <span class="cert-logo" aria-hidden="true">IBM</span>
+        <span class="cert-body"><span class="cert-title">IBM Data Analyst Professional Certificate</span><span class="cert-meta">Coursera · Mar 2026 · Core</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+      </a>
+      <a class="card cert is-core reveal" href="https://coursera.org/verify/professional-cert/OOKWP56I7MGP" target="_blank" rel="noopener noreferrer">
+        <span class="cert-logo" aria-hidden="true">IBM</span>
+        <span class="cert-body"><span class="cert-title">IBM Data Science Professional Certificate</span><span class="cert-meta">Coursera · Mar 2026 · Core</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+      </a>
+      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/9FL2EW331MBX" target="_blank" rel="noopener noreferrer">
+        <span class="cert-logo" aria-hidden="true">IBM</span>
+        <span class="cert-body"><span class="cert-title">IBM Generative AI Engineering Professional Certificate</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+      </a>
+      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/34TJ036HZQMA" target="_blank" rel="noopener noreferrer">
+        <span class="cert-logo" aria-hidden="true">IBM</span>
+        <span class="cert-body"><span class="cert-title">IBM Machine Learning Professional Certificate</span><span class="cert-meta">Coursera · Jul 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+      </a>
+      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/HZVMOPEAHRS6" target="_blank" rel="noopener noreferrer">
+        <span class="cert-logo" aria-hidden="true">IBM</span>
+        <span class="cert-body"><span class="cert-title">IBM AI Engineering Professional Certificate</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+      </a>
+      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/ADJH1ZK9SSUK" target="_blank" rel="noopener noreferrer">
+        <span class="cert-logo" aria-hidden="true">IBM</span>
+        <span class="cert-body"><span class="cert-title">IBM Deep Learning with PyTorch, Keras &amp; TensorFlow</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+      </a>
+    </div>
+    <div class="card training reveal">
+      <h3 class="training-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Courses &amp; training</h3>
+      <ul>
+        <li><span class="training-name"><a href="https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb" target="_blank" rel="noopener noreferrer">Complete 2026 Python Bootcamp</a></span><span class="training-org">Udemy · Mar 2026</span></li>
+        <li><span class="training-name"><a href="https://10minuteschool.com/certificate/67863ee3542fd" target="_blank" rel="noopener noreferrer">Microsoft Excel</a> · <a href="https://10minuteschool.com/certificate/67766165a0740" target="_blank" rel="noopener noreferrer">PowerPoint</a> · <a href="https://10minuteschool.com/certificate/63f48949a08d0" target="_blank" rel="noopener noreferrer">Word</a></span><span class="training-org">10 Minute School · 2023–2025</span></li>
+        <li><span class="training-name">Google Sheets: Formulas &amp; Functions</span><span class="training-org">GoEdu · Apr 2025</span></li>
+        <li><span class="training-name">GenAI &amp; Prompt Engineering · AI Workflows and Agents · Zero-Code App (Vibe Coding) · AI + Superpresentations</span><span class="training-org">Grameenphone Academy · Jun 2026</span></li>
+        <li><span class="training-name">Data Entry and Freelancing (3-month course)</span><span class="training-org">Perpetual IT World · May 2022</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
-<section id="contact">
-  <div class="section-wrap">
-    <div class="section-inner">
-      <div class="contact-header fade-in-up">
-        <div class="section-eyebrow">06 · Let's Connect</div>
-        <h2 class="contact-title">Let's Make Your Data <span class="line-accent">Speak</span></h2>
-        <p class="contact-desc">Open to data scientist, data analyst, software engineering, and ML engineering roles, internships, and freelance work — or just a good conversation about data and code. I reply to every message.</p>
+<section id="contact" class="section section-alt" aria-labelledby="contactTitle">
+  <div class="container">
+    <header class="section-head contact-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">06</span>Contact</p>
+      <h2 class="section-title" id="contactTitle">Have data that needs a story? <span class="hl">Let’s talk.</span></h2>
+      <p class="section-sub">Open to Data Analyst roles, internships and freelance analysis work. I reply to every message.</p>
+    </header>
+    <div class="avail reveal"><p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>Available for opportunities</p></div>
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <button type="button" class="card contact-card is-wide" data-copy-email title="Copy email address">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <span class="cc-text"><span class="cc-title">Email · tap to copy</span><span class="cc-val">mrkhondoker.prof@gmail.com</span></span>
+        </button>
+        <a href="https://www.linkedin.com/in/mrkhondoker/" target="_blank" rel="noopener noreferrer me" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></span>
+          <span class="cc-text"><span class="cc-title">LinkedIn</span><span class="cc-val">in/mrkhondoker</span></span>
+        </a>
+        <a href="https://github.com/SameeulKhondokerJisan" target="_blank" rel="noopener noreferrer me" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></span>
+          <span class="cc-text"><span class="cc-title">GitHub</span><span class="cc-val">SameeulKhondokerJisan</span></span>
+        </a>
+        <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1-.5 2c-4 .5-9.5-5-9-9l2-.5 1 2z"/></svg></span>
+          <span class="cc-text"><span class="cc-title">WhatsApp</span><span class="cc-val">Chat on WhatsApp</span></span>
+        </a>
+        <a href="https://www.instagram.com/mrkhondoker040/" target="_blank" rel="noopener noreferrer" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
+          <span class="cc-text"><span class="cc-title">Instagram</span><span class="cc-val">@mrkhondoker040</span></span>
+        </a>
+        <a href="https://x.com/mr_khondoker040" target="_blank" rel="noopener noreferrer" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.7 16H20L8.3 4H4z"/><path d="M4 20l6.8-6.8M13.2 10.8L20 4"/></svg></span>
+          <span class="cc-text"><span class="cc-title">X / Twitter</span><span class="cc-val">@mr_khondoker040</span></span>
+        </a>
+        <a href="https://www.facebook.com/MrKhondoker440" target="_blank" rel="noopener noreferrer" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span>
+          <span class="cc-text"><span class="cc-title">Facebook</span><span class="cc-val">MrKhondoker440</span></span>
+        </a>
+        <a href="https://www.threads.com/@mrkhondoker040" target="_blank" rel="noopener noreferrer" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7.5a7 7 0 00-7-5.5C7.477 2 4 6.248 4 12s3.477 10 8 10c4.418 0 7.75-3.582 8-8"/><path d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4"/><path d="M20 2l-2 2 2 2"/></svg></span>
+          <span class="cc-text"><span class="cc-title">Threads</span><span class="cc-val">@mrkhondoker040</span></span>
+        </a>
+        <a href="Sameeul_Khondoker_Jisan_Resume.pdf" download="Sameeul Khondoker Jisan - Resume.pdf" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg></span>
+          <span class="cc-text"><span class="cc-title">Resume</span><span class="cc-val">PDF · 1 page</span></span>
+        </a>
       </div>
-      <div class="contact-avail fade-in-up">
-        <div class="avail-pill">
-          <span class="dot"></span>
-          Currently Available for Opportunities
-        </div>
-      </div>
-      <div class="contact-body">
-        <div class="fade-in-up">
-          <div class="contact-links">
-            <div class="contact-link" role="button" tabindex="0" onclick="copyEmail()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyEmail();}" style="cursor:pointer;" title="Click to copy email address">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-              <div><div class="contact-link-title">Gmail</div><div class="contact-link-val">mrkhondoker.prof@gmail.com</div></div>
+
+      <div class="card form-card reveal">
+        <h3 class="form-title">Send a message</h3>
+        <p class="form-note">It goes straight to my inbox — I usually reply within a day.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" class="input" placeholder="Full name" autocomplete="name" required />
             </div>
-            <a href="https://www.linkedin.com/in/mrkhondoker/" target="_blank" rel="noopener noreferrer me" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></div>
-              <div><div class="contact-link-title">LinkedIn</div><div class="contact-link-val">in/mrkhondoker</div></div>
-            </a>
-            <a href="https://github.com/SameeulKhondokerJisan" target="_blank" rel="noopener noreferrer me" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
-              <div><div class="contact-link-title">GitHub</div><div class="contact-link-val">SameeulKhondokerJisan</div></div>
-            </a>
-            <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/></svg></div>
-              <div><div class="contact-link-title">WhatsApp</div><div class="contact-link-val">Chat on WhatsApp</div></div>
-            </a>
-            <a href="https://www.instagram.com/mrkhondoker040/" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-              <div><div class="contact-link-title">Instagram</div><div class="contact-link-val">@mrkhondoker040</div></div>
-            </a>
-            <a href="https://x.com/mr_khondoker040" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></div>
-              <div><div class="contact-link-title">X / Twitter</div><div class="contact-link-val">@mr_khondoker040</div></div>
-            </a>
-            <a href="https://www.facebook.com/MrKhondoker440" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
-              <div><div class="contact-link-title">Facebook</div><div class="contact-link-val">MrKhondoker440</div></div>
-            </a>
-            <a href="https://www.threads.com/@mrkhondoker040" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="contact-link-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7.5a7 7 0 00-7-5.5C7.477 2 4 6.248 4 12s3.477 10 8 10c4.418 0 7.75-3.582 8-8"/><path d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4"/><path d="M20 2l-2 2 2 2"/></svg></div>
-              <div><div class="contact-link-title">Threads</div><div class="contact-link-val">@mrkhondoker040</div></div>
-            </a>
+            <div class="field">
+              <label for="cf-email">Your email</label>
+              <input id="cf-email" name="email" type="email" class="input" placeholder="you@company.com" autocomplete="email" inputmode="email" required />
+            </div>
+            <div class="field is-full">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text" class="input" placeholder="Data Analyst role / freelance analysis / collaboration" autocomplete="off" />
+            </div>
+            <div class="field is-full">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" class="input" placeholder="Tell me about the role, the project or the dataset…" required></textarea>
+            </div>
           </div>
-        </div>
-        <div class="fade-in-up">
-          <div class="contact-form">
-            <h3 class="contact-form-title">Send a Message</h3>
-            <p class="contact-form-note">Sends straight to my inbox — I usually reply within a day.</p>
-            <form id="contactForm" novalidate>
-              <div class="form-row">
-                <label class="form-label" for="cf-name">Your Name</label>
-                <input id="cf-name" name="name" type="text" class="form-input" placeholder="Your full name" autocomplete="name" required />
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="cf-email">Your Email</label>
-                <input id="cf-email" name="email" type="email" class="form-input" placeholder="you@company.com" autocomplete="email" required />
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="cf-subject">Subject</label>
-                <input id="cf-subject" name="subject" type="text" class="form-input" placeholder="Job opportunity / Freelance project / Collaboration" autocomplete="off" />
-              </div>
-              <div class="form-row form-row-grow">
-                <label class="form-label" for="cf-message">Message</label>
-                <textarea id="cf-message" name="message" class="form-textarea" placeholder="Tell me about the role, project, or dataset..." required></textarea>
-              </div>
-              <!-- Spam honeypot: hidden from humans, bots fill it in and get rejected -->
-              <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
-              <button type="submit" class="form-submit" id="formSubmitBtn">Send Message ✈</button>
-              <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-            </form>
-          </div>
-        </div>
+          <!-- Spam honeypot: hidden from humans, bots fill it in and get rejected -->
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">Send message</button>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
   </div>
@@ -1022,27 +704,36 @@
 </main>
 
 <!-- Footer -->
-<footer>
-  <div class="footer-logo">Sameeul Khondoker Jisan</div>
-  <div class="footer-tagline">Data Scientist · Data Analyst · Software Engineer · ML Engineer</div>
-  <div class="footer-socials">
-    <span class="social-btn" role="button" tabindex="0" onclick="copyEmail()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyEmail();}" title="Gmail — click to copy email" aria-label="Gmail — click to copy email" style="cursor:pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-    <a href="https://www.linkedin.com/in/mrkhondoker/" target="_blank" rel="noopener noreferrer me" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></a>
-    <a href="https://github.com/SameeulKhondokerJisan" target="_blank" rel="noopener noreferrer me" class="social-btn" title="GitHub" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
-    <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/></svg></a>
-    <a href="https://www.instagram.com/mrkhondoker040/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-    <a href="https://x.com/mr_khondoker040" target="_blank" rel="noopener noreferrer" class="social-btn" title="X / Twitter" aria-label="X / Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
-    <a href="https://www.facebook.com/MrKhondoker440" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-    <a href="https://www.threads.com/@mrkhondoker040" target="_blank" rel="noopener noreferrer" class="social-btn" title="Threads" aria-label="Threads"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7.5a7 7 0 00-7-5.5C7.477 2 4 6.248 4 12s3.477 10 8 10c4.418 0 7.75-3.582 8-8"/><path d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4"/><path d="M20 2l-2 2 2 2"/></svg></a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <p class="footer-name">Sameeul Khondoker Jisan</p>
+        <p class="footer-tag">Data Analyst · Python · SQL · Excel · Power BI · Tableau</p>
+      </div>
+      <div class="socials">
+        <button type="button" class="social" data-copy-email title="Copy email address" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></button>
+        <a href="https://www.linkedin.com/in/mrkhondoker/" target="_blank" rel="noopener noreferrer me" class="social" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></a>
+        <a href="https://github.com/SameeulKhondokerJisan" target="_blank" rel="noopener noreferrer me" class="social" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+        <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1-.5 2c-4 .5-9.5-5-9-9l2-.5 1 2z"/></svg></a>
+        <a href="https://www.instagram.com/mrkhondoker040/" target="_blank" rel="noopener noreferrer" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://x.com/mr_khondoker040" target="_blank" rel="noopener noreferrer" class="social" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.7 16H20L8.3 4H4z"/><path d="M4 20l6.8-6.8M13.2 10.8L20 4"/></svg></a>
+        <a href="https://www.facebook.com/MrKhondoker440" target="_blank" rel="noopener noreferrer" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://www.threads.com/@mrkhondoker040" target="_blank" rel="noopener noreferrer" class="social" aria-label="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7.5a7 7 0 00-7-5.5C7.477 2 4 6.248 4 12s3.477 10 8 10c4.418 0 7.75-3.582 8-8"/><path d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4"/><path d="M20 2l-2 2 2 2"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr">2026</span> Sameeul Khondoker Jisan · Dhaka, Bangladesh</span>
+      <span>Turning raw data into clear decisions.</span>
+    </div>
   </div>
-  <div class="footer-copy">© <span id="yr"></span> Sameeul Khondoker Jisan · Dhaka, Bangladesh · Built with passion for Data Science &amp; Software Engineering</div>
 </footer>
 
-<button id="backToTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/main.js"></script>
-<div id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

@@ -1,8 +1,8 @@
 # Resume
 
 The live resume is **`../Sameeul_Khondoker_Jisan_Resume.pdf`** in the repo root —
-that is the file the site's **Download Resume** button serves (`js/main.js`
-always requests that exact path).
+that is the file every **Resume** / **Download Resume** link on the site
+points at (plain `download` links in `index.html`).
 
 `Sameeul_Khondoker_Jisan_Resume.tex` in this folder is the **source of that PDF**.
 Edit the `.tex`, rebuild, and copy the PDF to the repo root under the same filename.

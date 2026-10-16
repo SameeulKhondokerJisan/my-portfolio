@@ -1,6 +1,6 @@
 # Sameeul Khondoker Jisan — Portfolio
 
-Personal portfolio of **Sameeul Khondoker Jisan** — Data Scientist · Data Analyst · Software Engineer · Machine Learning Engineer. B.Sc. in Software Engineering (Major in Data Science), Daffodil International University; IBM-certified ×6 (Data Science, Data Analytics, Machine Learning, Deep Learning, AI Engineering, Generative AI Engineering).
+Personal portfolio of **Sameeul Khondoker Jisan** — **Data Analyst**. B.Sc. in Software Engineering (Major in Data Science), Daffodil International University; IBM-certified Data Analyst and Data Scientist. Python · SQL · Excel · Power BI · Tableau.
 
 🔗 **Live:** https://sameeulkhondokerjisan.github.io/my-portfolio/
 
@@ -11,9 +11,9 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 | Layer | Technology |
 |-------|------------|
 | Markup | HTML5 (semantic) |
-| Styling | CSS3 — custom properties, grid, flexbox, light/dark theming |
-| Behaviour | Vanilla JavaScript (ES6) — theme toggle, scroll reveals, copy-to-clipboard, resume download, contact form |
-| Fonts | Google Fonts (Space Grotesk, Inter, JetBrains Mono) |
+| Styling | CSS3 — design tokens (custom properties), grid, flexbox, light/dark theming, mobile-first breakpoints |
+| Behaviour | Vanilla JavaScript (ES6) — theme toggle, mobile menu, scroll reveals, KPI counters, copy-to-clipboard, contact form |
+| Fonts | Google Fonts (Bricolage Grotesque, Inter, IBM Plex Mono) |
 | Hosting | GitHub Pages |
 
 ## Project Structure
@@ -22,9 +22,9 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 .
 ├── index.html          # Page structure / content (markup only)
 ├── css/
-│   └── styles.css      # All styling (theme variables, layout, components, light/dark)
+│   └── styles.css      # All styling ("Insight" design tokens, layout, components, light/dark)
 ├── js/
-│   └── main.js         # All interactivity (theme, nav, reveals, download, clipboard, contact form)
+│   └── main.js         # All interactivity (theme, nav, reveals, counters, clipboard, contact form)
 ├── resume/
 │   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the resume PDF
 ├── Sameeul_Khondoker_Jisan_Resume.pdf       # served by the Download Resume button
@@ -40,10 +40,10 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 ## Features
 
 - **Light & dark themes** with OS-preference detection and a manual toggle (persisted in `localStorage`)
-- **Responsive** layout (desktop → tablet → mobile)
-- **Resume download** — one click, no redirects
+- **Responsive** layout, checked from 320px phones up to 1920px desktops — no sideways scroll, no overlapping elements
+- **Resume download** — plain `download` links, so they work even without JavaScript
 - **Working contact form** — messages are relayed straight to my Gmail inbox by [FormSubmit](https://formsubmit.co) (no API key, no account). Falls back to a pre-filled Gmail compose link if the relay is unreachable. One-time setup: submit the form once after deploying and click the confirmation email FormSubmit sends.
-- **Sections:** Hero · About · Skills · Career Roadmap · Projects (data science + software engineering) · Experience & Certifications · Contact
+- **Sections:** Hero (analyst snapshot dashboard) · About · Skills · Projects (analysis case studies) · Experience · Credentials · Contact
 - **Resume-driven content** — the site mirrors `resume/Sameeul_Khondoker_Jisan_Resume.tex`; update both together
 - Accessible, keyboard-navigable, reduced-motion friendly
 
