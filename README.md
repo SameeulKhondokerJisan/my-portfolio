@@ -28,9 +28,12 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 ├── resume/
 │   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the resume PDF
 ├── Sameeul_Khondoker_Jisan_Resume.pdf       # served by the Download Resume button
+├── icons/
+│   ├── favicon-32.png, favicon-192.png, apple-touch-icon.png   # browser-tab / home-screen icons
+│   └── logo-body.png, logo-bar.png   # J logo split into two masks, recoloured per theme in CSS
 ├── jisan_portfolio.png  # 1200×630 social share card (Open Graph / Twitter)
 ├── Profile pic.png
-├── jisan-logo.png
+├── jisan-logo.png       # original logo artwork (source for the icons)
 ├── robots.txt
 └── sitemap.xml
 ```
@@ -43,8 +46,8 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 - **Responsive** layout, checked from 320px phones up to 1920px desktops — no sideways scroll, no overlapping elements
 - **Resume download** — plain `download` links, so they work even without JavaScript
 - **Working contact form** — messages are relayed straight to my Gmail inbox by [FormSubmit](https://formsubmit.co) (no API key, no account). Falls back to a pre-filled Gmail compose link if the relay is unreachable. One-time setup: submit the form once after deploying and click the confirmation email FormSubmit sends.
-- **Sections:** Hero (analyst snapshot dashboard) · About · Skills · Projects (analysis case studies) · Experience · Credentials · Contact
-- **Resume-driven content** — the site mirrors `resume/Sameeul_Khondoker_Jisan_Resume.tex`; update both together
+- **Sections** follow the resume: Hero (analyst snapshot dashboard) · About · Skills · Experience & Education · Projects · Certifications · Contact
+- **Resume-driven content** — every fact on the site comes from the resume (`resume/Sameeul_Khondoker_Jisan_Resume.tex`); update both together
 - Accessible, keyboard-navigable, reduced-motion friendly
 
 ## Local Development

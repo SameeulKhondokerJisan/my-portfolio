@@ -54,8 +54,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="jisan-logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="jisan-logo.png" />
+  <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="icons/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Set the theme before first paint (no flash of the wrong theme).
        Stored choice wins; otherwise follow the OS preference. -->
@@ -78,15 +79,15 @@
 <header class="site-header" id="siteHeader">
   <div class="container nav">
     <a href="#home" class="brand" aria-label="Sameeul Khondoker Jisan — back to top">
-      <img src="jisan-logo.png" alt="" width="21" height="30" />
+      <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-text"><span class="brand-name">Jisan</span><span class="brand-role">Data Analyst</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
-      <a href="#credentials">Credentials</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
@@ -108,9 +109,9 @@
   <nav class="container" aria-label="Mobile">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
-    <a href="#credentials">Credentials</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
     <a class="btn btn-primary" href="Sameeul_Khondoker_Jisan_Resume.pdf" download="Sameeul Khondoker Jisan - Resume.pdf">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -150,7 +151,7 @@
       <div class="panel-bar" aria-hidden="true">
         <span class="panel-dots"><i></i><i></i><i></i></span>
         <span class="panel-name">analyst_snapshot.pbix</span>
-        <span class="panel-live"><span class="pulse-dot"></span>live</span>
+        <span class="panel-live">2022 – 2026</span>
       </div>
       <div class="panel-body">
         <div class="panel-top">
@@ -209,20 +210,20 @@
     </header>
     <div class="about-grid">
       <div class="about-copy reveal">
-        <p>I'm a <strong>Data Analyst</strong> finishing a B.Sc. in Software Engineering with a major in Data Science at <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> — CGPA 3.55/4.00, graduating December 2026. I'm IBM-certified as both a Data Analyst and a Data Scientist.</p>
-        <p>Right now I'm a Data Analyst Intern at <a href="https://codioaisolution.com/" target="_blank" rel="noopener noreferrer">Codio AI Solution</a>, designing Python-based ETL pipelines for multi-source data and building BI dashboards that track product and business KPIs. Before that, at <a href="https://saiketsystems.in/" target="_blank" rel="noopener noreferrer">SaiKet Systems</a>, I processed <strong>50,000+ records</strong> and automated imputation, outlier detection and data-quality checks — cutting preprocessing time <strong>40%</strong> and improving reporting accuracy <strong>30%</strong>.</p>
-        <p>The software engineering background shows in how I work: reproducible pipelines, version-controlled notebooks, and quality checks that catch bad data before it reaches a dashboard.</p>
-        <blockquote class="pull-quote">Good analysis isn’t the chart — it’s the decision the chart makes obvious.</blockquote>
+        <p>I'm a <strong>Data Analyst</strong> with a Software Engineering background — studying for a B.Sc. in Software Engineering with a major in Data Science at <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> (CGPA 3.55/4.00, graduating December 2026). I'm an <strong>IBM-certified Data Analyst and Data Scientist</strong>.</p>
+        <p>My hands-on experience covers EDA, statistical analysis, ETL pipelines, BI dashboard development, KPI tracking and data-driven reporting — working in Python, SQL, Pandas, Excel, Power BI and Tableau.</p>
+        <p>Right now I'm a Data Analyst Intern at <a href="https://codioaisolution.com/" target="_blank" rel="noopener noreferrer">Codio AI Solution</a>, designing Python-based ETL pipelines for multi-source data ingestion and building BI dashboards that track product and business KPIs. Before that, at <a href="https://saiketsystems.in/" target="_blank" rel="noopener noreferrer">SaiKet Systems</a>, I processed <strong>50,000+ records</strong> and built automated data-quality workflows that cut preprocessing time <strong>40%</strong> and improved reporting accuracy <strong>30%</strong>.</p>
       </div>
       <aside class="card fact-card reveal" aria-label="Quick facts">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Quick facts</h3>
         <dl class="facts">
-          <div><dt>Based in</dt><dd>Mirpur, Dhaka, Bangladesh</dd></div>
+          <div><dt>Based in</dt><dd><a href="https://maps.google.com/?q=Mirpur,+Dhaka,+Bangladesh" target="_blank" rel="noopener noreferrer">Mirpur, Dhaka, Bangladesh</a></dd></div>
           <div><dt>Now</dt><dd>Data Analyst Intern · Codio AI Solution</dd></div>
           <div><dt>Degree</dt><dd>B.Sc. Software Engineering, Major in Data Science — DIU</dd></div>
           <div><dt>CGPA</dt><dd>3.55 / 4.00 · Expected Dec 2026</dd></div>
           <div><dt>Certified</dt><dd>IBM Data Analyst · IBM Data Science</dd></div>
-          <div><dt>Email</dt><dd><button type="button" class="copy-email" data-copy-email title="Copy email address">mrkhondoker.prof@gmail.com</button></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:mrkhondoker.prof@gmail.com">mrkhondoker.prof<wbr>@gmail.com</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+8801767766680">+880 1767-766680</a></dd></div>
         </dl>
       </aside>
     </div>
@@ -287,179 +288,14 @@
         </ul>
       </article>
     </div>
-    <div class="learning reveal">
-      <span class="learning-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Currently sharpening</span>
-      <ul class="chips">
-        <li class="chip is-next">Advanced SQL (window functions)</li><li class="chip is-next">Time-series forecasting</li>
-        <li class="chip is-next">Cohort &amp; retention analysis</li><li class="chip is-next">Causal inference</li>
-        <li class="chip is-next">dbt</li><li class="chip is-next">BigQuery</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="section" aria-labelledby="projectsTitle">
-  <div class="container">
-    <header class="section-head reveal">
-      <p class="eyebrow"><span class="eyebrow-num">03</span>Projects</p>
-      <h2 class="section-title" id="projectsTitle">Analysis <span class="hl">case studies</span></h2>
-      <p class="section-sub">Each project written up the way I'd brief a stakeholder: the question, how I approached it, and what came out of it.</p>
-    </header>
-    <div class="cases">
-
-      <!-- Finzy -->
-      <article class="card case case-featured reveal">
-        <div class="case-visual">
-          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
-            <rect class="pnl" x="16" y="16" width="140" height="62" rx="10"/>
-            <text class="lbl" x="30" y="38">SPENT</text>
-            <rect class="f-acc" x="30" y="50" width="80" height="14" rx="4" fill-opacity=".9"/>
-            <rect class="pnl" x="170" y="16" width="140" height="62" rx="10"/>
-            <text class="lbl" x="184" y="38">BUDGET LEFT</text>
-            <rect class="f-ln" x="184" y="54" width="112" height="7" rx="3.5"/>
-            <rect class="f-amb" x="184" y="54" width="72" height="7" rx="3.5"/>
-            <rect class="pnl" x="324" y="16" width="140" height="62" rx="10"/>
-            <text class="lbl" x="338" y="38">RECEIPTS · OCR</text>
-            <rect class="f-sky" x="338" y="50" width="62" height="14" rx="4" fill-opacity=".85"/>
-            <rect class="pnl" x="16" y="92" width="170" height="162" rx="10"/>
-            <text class="lbl" x="30" y="114">BY CATEGORY</text>
-            <g class="nf" stroke-width="16" transform="rotate(-90 101 184)">
-              <circle class="s-acc" cx="101" cy="184" r="40" stroke-dasharray="92.5 158.83"/>
-              <circle class="s-amb" cx="101" cy="184" r="40" stroke-dasharray="62.3 189.03" stroke-dashoffset="-95.5"/>
-              <circle class="s-sky" cx="101" cy="184" r="40" stroke-dasharray="47.3 204.03" stroke-dashoffset="-160.8"/>
-              <circle class="s-cor" cx="101" cy="184" r="40" stroke-dasharray="37.2 214.13" stroke-dashoffset="-211.1"/>
-            </g>
-            <rect class="pnl" x="198" y="92" width="266" height="162" rx="10"/>
-            <text class="lbl" x="212" y="114">MONTHLY SPEND</text>
-            <text class="lbl" x="450" y="143" text-anchor="end">budget</text>
-            <line class="s-amb" x1="212" y1="150" x2="450" y2="150" stroke-dasharray="4 4" stroke-width="1.5"/>
-            <line class="s-ln" x1="212" y1="230" x2="450" y2="230"/>
-            <rect class="f-acc" x="222" y="174" width="20" height="56" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="255" y="160" width="20" height="70" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="288" y="182" width="20" height="48" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="321" y="156" width="20" height="74" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="354" y="168" width="20" height="62" rx="4" fill-opacity=".85"/>
-            <rect class="f-amb" x="387" y="136" width="20" height="94" rx="4"/>
-            <rect class="f-acc" x="420" y="164" width="20" height="66" rx="4" fill-opacity=".85"/>
-            <text class="lbl" x="232" y="246" text-anchor="middle">J</text><text class="lbl" x="265" y="246" text-anchor="middle">F</text><text class="lbl" x="298" y="246" text-anchor="middle">M</text><text class="lbl" x="331" y="246" text-anchor="middle">A</text><text class="lbl" x="364" y="246" text-anchor="middle">M</text><text class="lbl" x="397" y="246" text-anchor="middle">J</text><text class="lbl" x="430" y="246" text-anchor="middle">J</text>
-          </svg>
-        </div>
-        <div class="case-body">
-          <div class="case-meta"><span class="badge">Analytics dashboard</span><span class="badge badge-plain">Featured</span></div>
-          <h3 class="case-title">Finzy — Personal Finance Analytics Dashboard</h3>
-          <p class="case-summary">A finance analytics platform with automated expense categorization, receipt OCR, real-time spending analytics, budget tracking and interactive dashboards.</p>
-          <dl class="case-points">
-            <div><dt>Question</dt><dd>Where is the money actually going each month — and which categories push spending over budget?</dd></div>
-            <div><dt>Approach</dt><dd>Receipt OCR and automated categorization turn raw expenses into clean, structured records in PostgreSQL / Supabase, served to the dashboard through a REST API.</dd></div>
-            <div><dt>Outcome</dt><dd>Real-time spending analytics with budget tracking and interactive category and trend views.</dd></div>
-          </dl>
-          <div class="case-foot">
-            <ul class="tags" aria-label="Tools"><li>Python</li><li>PostgreSQL</li><li>Supabase</li><li>REST API</li></ul>
-            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/finzyy-ai-assisted-expense-management-system" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Finzy)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Heart Failure -->
-      <article class="card case reveal">
-        <div class="case-visual">
-          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
-            <rect class="pnl" x="16" y="16" width="214" height="238" rx="10"/>
-            <text class="lbl" x="30" y="38">CORRELATION MAP</text>
-            <g>
-              <rect class="f-acc" x="35" y="56" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="71" y="56" width="32" height="32" rx="4" fill-opacity=".56"/><rect class="f-cor" x="107" y="56" width="32" height="32" rx="4" fill-opacity=".45"/><rect class="f-acc" x="143" y="56" width="32" height="32" rx="4" fill-opacity=".7"/><rect class="f-cor" x="179" y="56" width="32" height="32" rx="4" fill-opacity=".3"/>
-              <rect class="f-acc" x="35" y="92" width="32" height="32" rx="4" fill-opacity=".56"/><rect class="f-acc" x="71" y="92" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="107" y="92" width="32" height="32" rx="4" fill-opacity=".36"/><rect class="f-acc" x="143" y="92" width="32" height="32" rx="4" fill-opacity=".44"/><rect class="f-cor" x="179" y="92" width="32" height="32" rx="4" fill-opacity=".5"/>
-              <rect class="f-cor" x="35" y="128" width="32" height="32" rx="4" fill-opacity=".45"/><rect class="f-acc" x="71" y="128" width="32" height="32" rx="4" fill-opacity=".36"/><rect class="f-acc" x="107" y="128" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-cor" x="143" y="128" width="32" height="32" rx="4" fill-opacity=".35"/><rect class="f-acc" x="179" y="128" width="32" height="32" rx="4" fill-opacity=".6"/>
-              <rect class="f-acc" x="35" y="164" width="32" height="32" rx="4" fill-opacity=".7"/><rect class="f-acc" x="71" y="164" width="32" height="32" rx="4" fill-opacity=".44"/><rect class="f-cor" x="107" y="164" width="32" height="32" rx="4" fill-opacity=".35"/><rect class="f-acc" x="143" y="164" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="179" y="164" width="32" height="32" rx="4" fill-opacity=".4"/>
-              <rect class="f-cor" x="35" y="200" width="32" height="32" rx="4" fill-opacity=".3"/><rect class="f-cor" x="71" y="200" width="32" height="32" rx="4" fill-opacity=".5"/><rect class="f-acc" x="107" y="200" width="32" height="32" rx="4" fill-opacity=".6"/><rect class="f-acc" x="143" y="200" width="32" height="32" rx="4" fill-opacity=".4"/><rect class="f-acc" x="179" y="200" width="32" height="32" rx="4" fill-opacity=".95"/>
-            </g>
-            <rect class="pnl" x="242" y="16" width="222" height="110" rx="10"/>
-            <text class="lbl" x="256" y="38">CLINICAL SIGNAL</text>
-            <polyline class="s-cor nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="256,88 292,88 300,88 308,62 316,110 324,88 352,88 360,76 368,98 376,88 404,88 412,56 420,112 428,88 450,88"/>
-            <rect class="pnl" x="242" y="138" width="222" height="116" rx="10"/>
-            <text class="lbl" x="256" y="160">DISTRIBUTION</text>
-            <line class="s-ln" x1="256" y1="240" x2="450" y2="240"/>
-            <rect class="f-sky" x="256" y="226" width="18" height="14" rx="3" fill-opacity=".75"/><rect class="f-sky" x="278" y="212" width="18" height="28" rx="3" fill-opacity=".75"/><rect class="f-sky" x="300" y="194" width="18" height="46" rx="3" fill-opacity=".75"/><rect class="f-sky" x="322" y="180" width="18" height="60" rx="3" fill-opacity=".75"/><rect class="f-sky" x="344" y="172" width="18" height="68" rx="3" fill-opacity=".75"/><rect class="f-sky" x="366" y="184" width="18" height="56" rx="3" fill-opacity=".75"/><rect class="f-sky" x="388" y="200" width="18" height="40" rx="3" fill-opacity=".75"/><rect class="f-sky" x="410" y="216" width="18" height="24" rx="3" fill-opacity=".75"/><rect class="f-sky" x="432" y="228" width="18" height="12" rx="3" fill-opacity=".75"/>
-            <polyline class="s-acc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="265,224 287,210 309,192 331,178 353,170 375,182 397,198 419,214 441,226"/>
-          </svg>
-        </div>
-        <div class="case-body">
-          <div class="case-meta"><span class="badge badge-amber">Healthcare EDA</span></div>
-          <h3 class="case-title">Heart Failure Data Analysis</h3>
-          <p class="case-summary">Exploratory analysis of a clinical dataset to find which patient features carry the strongest heart-failure risk signal.</p>
-          <dl class="case-points">
-            <div><dt>Question</dt><dd>Which of 12 clinical features are the clearest risk factors for heart failure?</dd></div>
-            <div><dt>Approach</dt><dd>EDA across all 12 features — distribution profiling, correlation mapping and statistical analysis.</dd></div>
-            <div><dt>Outcome</dt><dd>Key risk factors identified, backed by an interpretable Logistic Regression baseline at 84% accuracy.</dd></div>
-          </dl>
-          <div class="case-foot">
-            <ul class="tags" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>Scikit-learn</li></ul>
-            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/heart-failure-prediction" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Heart Failure Data Analysis)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Student Performance -->
-      <article class="card case reveal">
-        <div class="case-visual">
-          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
-            <rect class="pnl" x="16" y="16" width="286" height="238" rx="10"/>
-            <text class="lbl" x="30" y="38">SCORE BY FACTOR GROUP</text>
-            <line class="s-ln" x1="30" y1="112" x2="288" y2="112" stroke-dasharray="3 4"/>
-            <line class="s-ln" x1="30" y1="152" x2="288" y2="152" stroke-dasharray="3 4"/>
-            <line class="s-ln" x1="30" y1="192" x2="288" y2="192" stroke-dasharray="3 4"/>
-            <line class="s-ln" x1="30" y1="232" x2="288" y2="232"/>
-            <rect class="f-acc" x="36" y="162" width="22" height="70" rx="4" fill-opacity=".85"/><rect class="f-amb" x="62" y="178" width="22" height="54" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="102" y="136" width="22" height="96" rx="4" fill-opacity=".85"/><rect class="f-amb" x="128" y="154" width="22" height="78" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="168" y="114" width="22" height="118" rx="4" fill-opacity=".85"/><rect class="f-amb" x="194" y="140" width="22" height="92" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="234" y="100" width="22" height="132" rx="4" fill-opacity=".85"/><rect class="f-amb" x="260" y="128" width="22" height="104" rx="4" fill-opacity=".85"/>
-            <rect class="f-acc" x="200" y="52" width="9" height="9" rx="2"/><text class="lbl" x="214" y="60">math</text>
-            <rect class="f-amb" x="250" y="52" width="9" height="9" rx="2"/><text class="lbl" x="264" y="60">read</text>
-            <rect class="pnl" x="314" y="16" width="150" height="238" rx="10"/>
-            <text class="lbl" x="328" y="38">SPREAD</text>
-            <line class="s-ln" x1="328" y1="232" x2="450" y2="232"/>
-            <g stroke-width="1.5" stroke-linecap="round">
-              <line class="s-sky" x1="350" y1="120" x2="350" y2="210"/><line class="s-sky" x1="344" y1="120" x2="356" y2="120"/><line class="s-sky" x1="344" y1="210" x2="356" y2="210"/>
-              <rect class="f-sky s-sky" x="339" y="146" width="22" height="40" rx="3" fill-opacity=".25"/><line class="s-sky" x1="339" y1="168" x2="361" y2="168" stroke-width="2.5"/>
-              <line class="s-acc" x1="389" y1="96" x2="389" y2="200"/><line class="s-acc" x1="383" y1="96" x2="395" y2="96"/><line class="s-acc" x1="383" y1="200" x2="395" y2="200"/>
-              <rect class="f-acc s-acc" x="378" y="124" width="22" height="46" rx="3" fill-opacity=".25"/><line class="s-acc" x1="378" y1="146" x2="400" y2="146" stroke-width="2.5"/>
-              <line class="s-amb" x1="428" y1="136" x2="428" y2="214"/><line class="s-amb" x1="422" y1="136" x2="434" y2="136"/><line class="s-amb" x1="422" y1="214" x2="434" y2="214"/>
-              <rect class="f-amb s-amb" x="417" y="160" width="22" height="36" rx="3" fill-opacity=".25"/><line class="s-amb" x1="417" y1="180" x2="439" y2="180" stroke-width="2.5"/>
-            </g>
-          </svg>
-        </div>
-        <div class="case-body">
-          <div class="case-meta"><span class="badge badge-sky">Education analytics</span></div>
-          <h3 class="case-title">Student Performance Analysis</h3>
-          <p class="case-summary">An end-to-end analysis pipeline examining what drives student performance across demographics, study habits and parental background.</p>
-          <dl class="case-points">
-            <div><dt>Question</dt><dd>Which factors — demographic, behavioural or family — move student performance the most?</dd></div>
-            <div><dt>Approach</dt><dd>Cleaned and encoded the data, then compared performance across factor groups using statistical methods.</dd></div>
-            <div><dt>Outcome</dt><dd>A reproducible pipeline with visual factor-by-factor breakdowns of student performance.</dd></div>
-          </dl>
-          <div class="case-foot">
-            <ul class="tags" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Matplotlib</li></ul>
-            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/student-performance-prediction" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Student Performance Analysis)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-    <div class="more-row reveal">
-      <a href="https://github.com/SameeulKhondokerJisan?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-        More projects on GitHub
-      </a>
-    </div>
   </div>
 </section>
 
 <!-- Experience -->
-<section id="experience" class="section section-alt" aria-labelledby="experienceTitle">
+<section id="experience" class="section" aria-labelledby="experienceTitle">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow"><span class="eyebrow-num">04</span>Experience</p>
+      <p class="eyebrow"><span class="eyebrow-num">03</span>Experience</p>
       <h2 class="section-title" id="experienceTitle">Where I’ve put <span class="hl">data to work</span></h2>
     </header>
     <div class="exp-grid">
@@ -544,78 +380,203 @@
         </li>
       </ol>
 
-      <div class="side-stack">
-        <article class="card side-card reveal">
-          <h3 class="side-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education</h3>
-          <p class="edu-degree">B.Sc. in Software Engineering, Major in Data Science</p>
-          <p class="edu-school"><a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> · Dhaka</p>
-          <div class="pills"><span class="pill">CGPA 3.55 / 4.00</span><span class="pill pill-plain">Expected Dec 2026</span></div>
-          <p class="mini-label">Coursework</p>
-          <ul class="chips">
-            <li class="chip">Data Mining</li><li class="chip">Statistical Analysis</li><li class="chip">Database Systems</li><li class="chip">Algorithm Design</li>
-          </ul>
-          <ul class="edu-prev">
-            <li><span>HSC (Science) · <a class="accent" href="https://dic.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International College</a></span><span>GPA 4.33 / 5.00 · 2021</span></li>
-            <li><span>SSC (Science) · <a class="accent" href="https://aahs.edu.bd/" target="_blank" rel="noopener noreferrer">Agargaon Adarsha High School</a></span><span>GPA 3.89 / 5.00 · 2019</span></li>
-          </ul>
-        </article>
-        <article class="card side-card reveal">
-          <h3 class="side-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Leadership &amp; activities</h3>
-          <ul class="activity-list">
-            <li><strong>CDC Career Ambassador 2025</strong> — Certificate of Achievement, DIU</li>
-            <li><strong>GoEdu Campus Ambassador</strong> — Feb–Jul 2025, Certificate of Appreciation</li>
-            <li><strong>UIU CSE FEST 2025 Project Show</strong> — represented DIU as Team Castle Victorious</li>
-            <li><strong>National Robotics Championship 2025</strong> — national-level competitor, BUBT</li>
-            <li><strong>DIU Job Utsob 2024 &amp; 2025</strong> — volunteer: organizing, logistics &amp; transport</li>
-          </ul>
-        </article>
-      </div>
+      <aside class="card side-card edu-card reveal" aria-labelledby="eduTitle">
+        <h3 class="side-title" id="eduTitle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education</h3>
+        <p class="edu-degree">B.Sc. in Software Engineering, Major in Data Science</p>
+        <p class="edu-school"><a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">Daffodil International University</a> · Dhaka, Bangladesh</p>
+        <div class="pills"><span class="pill">CGPA 3.55 / 4.00</span><span class="pill pill-plain">Expected Dec 2026</span></div>
+        <p class="mini-label">Coursework</p>
+        <ul class="chips">
+          <li class="chip">Data Mining</li><li class="chip">Statistical Analysis</li><li class="chip">Database Systems</li><li class="chip">Algorithm Design</li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- Credentials -->
-<section id="credentials" class="section" aria-labelledby="credentialsTitle">
+<!-- Projects -->
+<section id="projects" class="section section-alt" aria-labelledby="projectsTitle">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow"><span class="eyebrow-num">05</span>Credentials</p>
-      <h2 class="section-title" id="credentialsTitle">Certified, and <span class="hl">still learning</span></h2>
-      <p class="section-sub">Professional certificates from IBM, each verifiable on Coursera — the Data Analyst and Data Science tracks are the core of my work.</p>
+      <p class="eyebrow"><span class="eyebrow-num">04</span>Projects</p>
+      <h2 class="section-title" id="projectsTitle">Analysis <span class="hl">case studies</span></h2>
+      <p class="section-sub">The projects on my resume — the data behind each one, how I analyzed it, and what it delivers.</p>
+    </header>
+    <div class="cases">
+
+      <!-- Finzy -->
+      <article class="card case case-featured reveal">
+        <div class="case-visual">
+          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
+            <rect class="pnl" x="16" y="16" width="140" height="62" rx="10"/>
+            <text class="lbl" x="30" y="38">SPENT</text>
+            <rect class="f-acc" x="30" y="50" width="80" height="14" rx="4" fill-opacity=".9"/>
+            <rect class="pnl" x="170" y="16" width="140" height="62" rx="10"/>
+            <text class="lbl" x="184" y="38">BUDGET LEFT</text>
+            <rect class="f-ln" x="184" y="54" width="112" height="7" rx="3.5"/>
+            <rect class="f-amb" x="184" y="54" width="72" height="7" rx="3.5"/>
+            <rect class="pnl" x="324" y="16" width="140" height="62" rx="10"/>
+            <text class="lbl" x="338" y="38">RECEIPTS · OCR</text>
+            <rect class="f-sky" x="338" y="50" width="62" height="14" rx="4" fill-opacity=".85"/>
+            <rect class="pnl" x="16" y="92" width="170" height="162" rx="10"/>
+            <text class="lbl" x="30" y="114">BY CATEGORY</text>
+            <g class="nf" stroke-width="16" transform="rotate(-90 101 184)">
+              <circle class="s-acc" cx="101" cy="184" r="40" stroke-dasharray="92.5 158.83"/>
+              <circle class="s-amb" cx="101" cy="184" r="40" stroke-dasharray="62.3 189.03" stroke-dashoffset="-95.5"/>
+              <circle class="s-sky" cx="101" cy="184" r="40" stroke-dasharray="47.3 204.03" stroke-dashoffset="-160.8"/>
+              <circle class="s-cor" cx="101" cy="184" r="40" stroke-dasharray="37.2 214.13" stroke-dashoffset="-211.1"/>
+            </g>
+            <rect class="pnl" x="198" y="92" width="266" height="162" rx="10"/>
+            <text class="lbl" x="212" y="114">MONTHLY SPEND</text>
+            <text class="lbl" x="450" y="143" text-anchor="end">budget</text>
+            <line class="s-amb" x1="212" y1="150" x2="450" y2="150" stroke-dasharray="4 4" stroke-width="1.5"/>
+            <line class="s-ln" x1="212" y1="230" x2="450" y2="230"/>
+            <rect class="f-acc" x="222" y="174" width="20" height="56" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="255" y="160" width="20" height="70" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="288" y="182" width="20" height="48" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="321" y="156" width="20" height="74" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="354" y="168" width="20" height="62" rx="4" fill-opacity=".85"/>
+            <rect class="f-amb" x="387" y="136" width="20" height="94" rx="4"/>
+            <rect class="f-acc" x="420" y="164" width="20" height="66" rx="4" fill-opacity=".85"/>
+            <text class="lbl" x="232" y="246" text-anchor="middle">J</text><text class="lbl" x="265" y="246" text-anchor="middle">F</text><text class="lbl" x="298" y="246" text-anchor="middle">M</text><text class="lbl" x="331" y="246" text-anchor="middle">A</text><text class="lbl" x="364" y="246" text-anchor="middle">M</text><text class="lbl" x="397" y="246" text-anchor="middle">J</text><text class="lbl" x="430" y="246" text-anchor="middle">J</text>
+          </svg>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="badge">Analytics dashboard</span><span class="badge badge-plain">Featured</span></div>
+          <h3 class="case-title">Finzy — Personal Finance Analytics Dashboard</h3>
+          <p class="case-summary">Finance analytics platform: automated expense categorization, receipt OCR, real-time spending analytics, budget tracking and interactive dashboards.</p>
+          <dl class="case-points">
+            <div><dt>Data in</dt><dd>Receipt OCR and automated expense categorization, stored in PostgreSQL / Supabase behind a REST API.</dd></div>
+            <div><dt>Analysis</dt><dd>Real-time spending analytics and budget tracking.</dd></div>
+            <div><dt>Output</dt><dd>Interactive dashboards.</dd></div>
+          </dl>
+          <div class="case-foot">
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>PostgreSQL</li><li>Supabase</li><li>REST API</li></ul>
+            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/finzyy-ai-assisted-expense-management-system" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Finzy)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Heart Failure -->
+      <article class="card case reveal">
+        <div class="case-visual">
+          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
+            <rect class="pnl" x="16" y="16" width="214" height="238" rx="10"/>
+            <text class="lbl" x="30" y="38">CORRELATION MAP</text>
+            <g>
+              <rect class="f-acc" x="35" y="56" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="71" y="56" width="32" height="32" rx="4" fill-opacity=".56"/><rect class="f-cor" x="107" y="56" width="32" height="32" rx="4" fill-opacity=".45"/><rect class="f-acc" x="143" y="56" width="32" height="32" rx="4" fill-opacity=".7"/><rect class="f-cor" x="179" y="56" width="32" height="32" rx="4" fill-opacity=".3"/>
+              <rect class="f-acc" x="35" y="92" width="32" height="32" rx="4" fill-opacity=".56"/><rect class="f-acc" x="71" y="92" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="107" y="92" width="32" height="32" rx="4" fill-opacity=".36"/><rect class="f-acc" x="143" y="92" width="32" height="32" rx="4" fill-opacity=".44"/><rect class="f-cor" x="179" y="92" width="32" height="32" rx="4" fill-opacity=".5"/>
+              <rect class="f-cor" x="35" y="128" width="32" height="32" rx="4" fill-opacity=".45"/><rect class="f-acc" x="71" y="128" width="32" height="32" rx="4" fill-opacity=".36"/><rect class="f-acc" x="107" y="128" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-cor" x="143" y="128" width="32" height="32" rx="4" fill-opacity=".35"/><rect class="f-acc" x="179" y="128" width="32" height="32" rx="4" fill-opacity=".6"/>
+              <rect class="f-acc" x="35" y="164" width="32" height="32" rx="4" fill-opacity=".7"/><rect class="f-acc" x="71" y="164" width="32" height="32" rx="4" fill-opacity=".44"/><rect class="f-cor" x="107" y="164" width="32" height="32" rx="4" fill-opacity=".35"/><rect class="f-acc" x="143" y="164" width="32" height="32" rx="4" fill-opacity=".95"/><rect class="f-acc" x="179" y="164" width="32" height="32" rx="4" fill-opacity=".4"/>
+              <rect class="f-cor" x="35" y="200" width="32" height="32" rx="4" fill-opacity=".3"/><rect class="f-cor" x="71" y="200" width="32" height="32" rx="4" fill-opacity=".5"/><rect class="f-acc" x="107" y="200" width="32" height="32" rx="4" fill-opacity=".6"/><rect class="f-acc" x="143" y="200" width="32" height="32" rx="4" fill-opacity=".4"/><rect class="f-acc" x="179" y="200" width="32" height="32" rx="4" fill-opacity=".95"/>
+            </g>
+            <rect class="pnl" x="242" y="16" width="222" height="110" rx="10"/>
+            <text class="lbl" x="256" y="38">CLINICAL SIGNAL</text>
+            <polyline class="s-cor nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="256,88 292,88 300,88 308,62 316,110 324,88 352,88 360,76 368,98 376,88 404,88 412,56 420,112 428,88 450,88"/>
+            <rect class="pnl" x="242" y="138" width="222" height="116" rx="10"/>
+            <text class="lbl" x="256" y="160">DISTRIBUTION</text>
+            <line class="s-ln" x1="256" y1="240" x2="450" y2="240"/>
+            <rect class="f-sky" x="256" y="226" width="18" height="14" rx="3" fill-opacity=".75"/><rect class="f-sky" x="278" y="212" width="18" height="28" rx="3" fill-opacity=".75"/><rect class="f-sky" x="300" y="194" width="18" height="46" rx="3" fill-opacity=".75"/><rect class="f-sky" x="322" y="180" width="18" height="60" rx="3" fill-opacity=".75"/><rect class="f-sky" x="344" y="172" width="18" height="68" rx="3" fill-opacity=".75"/><rect class="f-sky" x="366" y="184" width="18" height="56" rx="3" fill-opacity=".75"/><rect class="f-sky" x="388" y="200" width="18" height="40" rx="3" fill-opacity=".75"/><rect class="f-sky" x="410" y="216" width="18" height="24" rx="3" fill-opacity=".75"/><rect class="f-sky" x="432" y="228" width="18" height="12" rx="3" fill-opacity=".75"/>
+            <polyline class="s-acc nf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="265,224 287,210 309,192 331,178 353,170 375,182 397,198 419,214 441,226"/>
+          </svg>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="badge badge-amber">Healthcare EDA</span></div>
+          <h3 class="case-title">Heart Failure Data Analysis</h3>
+          <p class="case-summary">EDA on 12 clinical features; identified risk factors through statistical analysis, correlation mapping and distribution profiling.</p>
+          <dl class="case-points">
+            <div><dt>Data</dt><dd>12 clinical features.</dd></div>
+            <div><dt>Methods</dt><dd>Statistical analysis, correlation mapping and distribution profiling.</dd></div>
+            <div><dt>Result</dt><dd>Heart-failure risk factors identified.</dd></div>
+          </dl>
+          <div class="case-foot">
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>Scikit-learn</li></ul>
+            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/heart-failure-prediction" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Heart Failure Data Analysis)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Student Performance -->
+      <article class="card case reveal">
+        <div class="case-visual">
+          <svg class="viz" viewBox="0 0 480 270" aria-hidden="true" focusable="false">
+            <rect class="pnl" x="16" y="16" width="286" height="238" rx="10"/>
+            <text class="lbl" x="30" y="38">SCORE BY FACTOR GROUP</text>
+            <line class="s-ln" x1="30" y1="112" x2="288" y2="112" stroke-dasharray="3 4"/>
+            <line class="s-ln" x1="30" y1="152" x2="288" y2="152" stroke-dasharray="3 4"/>
+            <line class="s-ln" x1="30" y1="192" x2="288" y2="192" stroke-dasharray="3 4"/>
+            <line class="s-ln" x1="30" y1="232" x2="288" y2="232"/>
+            <rect class="f-acc" x="36" y="162" width="22" height="70" rx="4" fill-opacity=".85"/><rect class="f-amb" x="62" y="178" width="22" height="54" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="102" y="136" width="22" height="96" rx="4" fill-opacity=".85"/><rect class="f-amb" x="128" y="154" width="22" height="78" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="168" y="114" width="22" height="118" rx="4" fill-opacity=".85"/><rect class="f-amb" x="194" y="140" width="22" height="92" rx="4" fill-opacity=".85"/>
+            <rect class="f-acc" x="234" y="100" width="22" height="132" rx="4" fill-opacity=".85"/><rect class="f-amb" x="260" y="128" width="22" height="104" rx="4" fill-opacity=".85"/>
+            <rect class="pnl" x="314" y="16" width="150" height="238" rx="10"/>
+            <text class="lbl" x="328" y="38">SPREAD</text>
+            <line class="s-ln" x1="328" y1="232" x2="450" y2="232"/>
+            <g stroke-width="1.5" stroke-linecap="round">
+              <line class="s-sky" x1="350" y1="120" x2="350" y2="210"/><line class="s-sky" x1="344" y1="120" x2="356" y2="120"/><line class="s-sky" x1="344" y1="210" x2="356" y2="210"/>
+              <rect class="f-sky s-sky" x="339" y="146" width="22" height="40" rx="3" fill-opacity=".25"/><line class="s-sky" x1="339" y1="168" x2="361" y2="168" stroke-width="2.5"/>
+              <line class="s-acc" x1="389" y1="96" x2="389" y2="200"/><line class="s-acc" x1="383" y1="96" x2="395" y2="96"/><line class="s-acc" x1="383" y1="200" x2="395" y2="200"/>
+              <rect class="f-acc s-acc" x="378" y="124" width="22" height="46" rx="3" fill-opacity=".25"/><line class="s-acc" x1="378" y1="146" x2="400" y2="146" stroke-width="2.5"/>
+              <line class="s-amb" x1="428" y1="136" x2="428" y2="214"/><line class="s-amb" x1="422" y1="136" x2="434" y2="136"/><line class="s-amb" x1="422" y1="214" x2="434" y2="214"/>
+              <rect class="f-amb s-amb" x="417" y="160" width="22" height="36" rx="3" fill-opacity=".25"/><line class="s-amb" x1="417" y1="180" x2="439" y2="180" stroke-width="2.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="badge badge-sky">Education analytics</span></div>
+          <h3 class="case-title">Student Performance Analysis</h3>
+          <p class="case-summary">End-to-end analysis pipeline examining student performance factors across demographics, study habits and parental background using statistical methods.</p>
+          <dl class="case-points">
+            <div><dt>Factors</dt><dd>Demographics, study habits and parental background.</dd></div>
+            <div><dt>Methods</dt><dd>Statistical methods in an end-to-end analysis pipeline.</dd></div>
+          </dl>
+          <div class="case-foot">
+            <ul class="tags" aria-label="Tools"><li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Matplotlib</li></ul>
+            <a class="case-link" href="https://github.com/SameeulKhondokerJisan/student-performance-prediction" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (Student Performance Analysis)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div class="more-row reveal">
+      <a href="https://github.com/SameeulKhondokerJisan?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        More projects on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="section" aria-labelledby="certificationsTitle">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-num">05</span>Certifications</p>
+      <h2 class="section-title" id="certificationsTitle">Certified, and <span class="hl">still learning</span></h2>
+      <p class="section-sub">The certifications on my resume. Each IBM professional certificate can be verified on Coursera.</p>
     </header>
     <div class="cert-grid">
       <a class="card cert is-core reveal" href="https://coursera.org/verify/professional-cert/Z9B4IMTTBUZ6" target="_blank" rel="noopener noreferrer">
         <span class="cert-logo" aria-hidden="true">IBM</span>
-        <span class="cert-body"><span class="cert-title">IBM Data Analyst Professional Certificate</span><span class="cert-meta">Coursera · Mar 2026 · Core</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+        <span class="cert-body"><span class="cert-title">IBM Data Analyst Professional Certificate</span><span class="cert-meta">Coursera · Mar 2026</span><span class="cert-verify">Verify on Coursera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
       </a>
       <a class="card cert is-core reveal" href="https://coursera.org/verify/professional-cert/OOKWP56I7MGP" target="_blank" rel="noopener noreferrer">
         <span class="cert-logo" aria-hidden="true">IBM</span>
-        <span class="cert-body"><span class="cert-title">IBM Data Science Professional Certificate</span><span class="cert-meta">Coursera · Mar 2026 · Core</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+        <span class="cert-body"><span class="cert-title">IBM Data Science Professional Certificate</span><span class="cert-meta">Coursera · Mar 2026</span><span class="cert-verify">Verify on Coursera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
       </a>
       <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/9FL2EW331MBX" target="_blank" rel="noopener noreferrer">
         <span class="cert-logo" aria-hidden="true">IBM</span>
-        <span class="cert-body"><span class="cert-title">IBM Generative AI Engineering Professional Certificate</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
-      </a>
-      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/34TJ036HZQMA" target="_blank" rel="noopener noreferrer">
-        <span class="cert-logo" aria-hidden="true">IBM</span>
-        <span class="cert-body"><span class="cert-title">IBM Machine Learning Professional Certificate</span><span class="cert-meta">Coursera · Jul 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
-      </a>
-      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/HZVMOPEAHRS6" target="_blank" rel="noopener noreferrer">
-        <span class="cert-logo" aria-hidden="true">IBM</span>
-        <span class="cert-body"><span class="cert-title">IBM AI Engineering Professional Certificate</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
-      </a>
-      <a class="card cert reveal" href="https://coursera.org/verify/professional-cert/ADJH1ZK9SSUK" target="_blank" rel="noopener noreferrer">
-        <span class="cert-logo" aria-hidden="true">IBM</span>
-        <span class="cert-body"><span class="cert-title">IBM Deep Learning with PyTorch, Keras &amp; TensorFlow</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
+        <span class="cert-body"><span class="cert-title">IBM Generative AI Engineering Professional Certificate</span><span class="cert-meta">Coursera · May 2026</span><span class="cert-verify">Verify on Coursera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></span>
       </a>
     </div>
     <div class="card training reveal">
       <h3 class="training-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Courses &amp; training</h3>
       <ul>
-        <li><span class="training-name"><a href="https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb" target="_blank" rel="noopener noreferrer">Complete 2026 Python Bootcamp</a></span><span class="training-org">Udemy · Mar 2026</span></li>
-        <li><span class="training-name"><a href="https://10minuteschool.com/certificate/67863ee3542fd" target="_blank" rel="noopener noreferrer">Microsoft Excel</a> · <a href="https://10minuteschool.com/certificate/67766165a0740" target="_blank" rel="noopener noreferrer">PowerPoint</a> · <a href="https://10minuteschool.com/certificate/63f48949a08d0" target="_blank" rel="noopener noreferrer">Word</a></span><span class="training-org">10 Minute School · 2023–2025</span></li>
-        <li><span class="training-name">Google Sheets: Formulas &amp; Functions</span><span class="training-org">GoEdu · Apr 2025</span></li>
-        <li><span class="training-name">GenAI &amp; Prompt Engineering · AI Workflows and Agents · Zero-Code App (Vibe Coding) · AI + Superpresentations</span><span class="training-org">Grameenphone Academy · Jun 2026</span></li>
-        <li><span class="training-name">Data Entry and Freelancing (3-month course)</span><span class="training-org">Perpetual IT World · May 2022</span></li>
+        <li><span class="training-name"><a href="https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb" target="_blank" rel="noopener noreferrer">Python Bootcamp</a></span><span class="training-org">Udemy</span></li>
+        <li><span class="training-name"><a href="https://10minuteschool.com/certificate/67863ee3542fd" target="_blank" rel="noopener noreferrer">Microsoft Excel</a></span><span class="training-org"><a href="https://10minuteschool.com/" target="_blank" rel="noopener noreferrer">10 Minute School</a></span></li>
+        <li><span class="training-name">Google Sheets</span><span class="training-org"><a href="https://goedu.ac/" target="_blank" rel="noopener noreferrer">GoEdu</a></span></li>
+        <li><span class="training-name">GenAI &amp; Prompt Engineering · AI Workflows and Agents · Zero-Code App (Vibe Coding) · AI + Superpresentations</span><span class="training-org"><a href="https://www.grameenphone.academy/" target="_blank" rel="noopener noreferrer">Grameenphone Academy</a> · Jun 2026</span></li>
       </ul>
     </div>
   </div>
@@ -632,10 +593,21 @@
     <div class="avail reveal"><p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>Available for opportunities</p></div>
     <div class="contact-grid">
       <div class="contact-cards reveal">
-        <button type="button" class="card contact-card is-wide" data-copy-email title="Copy email address">
-          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-          <span class="cc-text"><span class="cc-title">Email · tap to copy</span><span class="cc-val">mrkhondoker.prof@gmail.com</span></span>
-        </button>
+        <div class="card contact-card email-card is-wide">
+          <a class="email-main" href="mailto:mrkhondoker.prof@gmail.com">
+            <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <span class="cc-text"><span class="cc-title">Email</span><span class="cc-val">mrkhondoker.prof<wbr>@gmail.com</span></span>
+          </a>
+          <button type="button" class="copy-btn" data-copy-email aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span class="copy-label">Copy</span></button>
+        </div>
+        <a href="tel:+8801767766680" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></span>
+          <span class="cc-text"><span class="cc-title">Phone</span><span class="cc-val">+880 1767-766680</span></span>
+        </a>
+        <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="card contact-card">
+          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1-.5 2c-4 .5-9.5-5-9-9l2-.5 1 2z"/></svg></span>
+          <span class="cc-text"><span class="cc-title">WhatsApp</span><span class="cc-val">Chat on WhatsApp</span></span>
+        </a>
         <a href="https://www.linkedin.com/in/mrkhondoker/" target="_blank" rel="noopener noreferrer me" class="card contact-card">
           <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></span>
           <span class="cc-text"><span class="cc-title">LinkedIn</span><span class="cc-val">in/mrkhondoker</span></span>
@@ -643,10 +615,6 @@
         <a href="https://github.com/SameeulKhondokerJisan" target="_blank" rel="noopener noreferrer me" class="card contact-card">
           <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></span>
           <span class="cc-text"><span class="cc-title">GitHub</span><span class="cc-val">SameeulKhondokerJisan</span></span>
-        </a>
-        <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="card contact-card">
-          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1-.5 2c-4 .5-9.5-5-9-9l2-.5 1 2z"/></svg></span>
-          <span class="cc-text"><span class="cc-title">WhatsApp</span><span class="cc-val">Chat on WhatsApp</span></span>
         </a>
         <a href="https://www.instagram.com/mrkhondoker040/" target="_blank" rel="noopener noreferrer" class="card contact-card">
           <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
@@ -663,10 +631,6 @@
         <a href="https://www.threads.com/@mrkhondoker040" target="_blank" rel="noopener noreferrer" class="card contact-card">
           <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7.5a7 7 0 00-7-5.5C7.477 2 4 6.248 4 12s3.477 10 8 10c4.418 0 7.75-3.582 8-8"/><path d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4"/><path d="M20 2l-2 2 2 2"/></svg></span>
           <span class="cc-text"><span class="cc-title">Threads</span><span class="cc-val">@mrkhondoker040</span></span>
-        </a>
-        <a href="Sameeul_Khondoker_Jisan_Resume.pdf" download="Sameeul Khondoker Jisan - Resume.pdf" class="card contact-card">
-          <span class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg></span>
-          <span class="cc-text"><span class="cc-title">Resume</span><span class="cc-val">PDF · 1 page</span></span>
         </a>
       </div>
 
@@ -685,7 +649,7 @@
             </div>
             <div class="field is-full">
               <label for="cf-subject">Subject</label>
-              <input id="cf-subject" name="subject" type="text" class="input" placeholder="Data Analyst role / freelance analysis / collaboration" autocomplete="off" />
+              <input id="cf-subject" name="subject" type="text" class="input" placeholder="e.g. Data Analyst role" autocomplete="off" />
             </div>
             <div class="field is-full">
               <label for="cf-message">Message</label>
@@ -712,7 +676,7 @@
         <p class="footer-tag">Data Analyst · Python · SQL · Excel · Power BI · Tableau</p>
       </div>
       <div class="socials">
-        <button type="button" class="social" data-copy-email title="Copy email address" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></button>
+        <a href="mailto:mrkhondoker.prof@gmail.com" class="social" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
         <a href="https://www.linkedin.com/in/mrkhondoker/" target="_blank" rel="noopener noreferrer me" class="social" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 015 0V17M12 10v7"/></svg></a>
         <a href="https://github.com/SameeulKhondokerJisan" target="_blank" rel="noopener noreferrer me" class="social" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
         <a href="https://wa.me/qr/7YTWEOGODNYLG1" target="_blank" rel="noopener noreferrer" class="social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.003 2.003a9.997 9.997 0 00-8.497 15.26L2 22l4.875-1.479A9.997 9.997 0 1012.003 2.003z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1-.5 2c-4 .5-9.5-5-9-9l2-.5 1 2z"/></svg></a>
