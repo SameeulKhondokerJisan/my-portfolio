@@ -1,6 +1,6 @@
 # Sameeul Khondoker Jisan — Portfolio
 
-Personal portfolio of **Sameeul Khondoker Jisan** — **Data Analyst**. B.Sc. in Software Engineering (Major in Data Science), Daffodil International University; IBM-certified Data Analyst and Data Scientist. Python · SQL · Excel · Power BI · Tableau.
+Personal portfolio of **Sameeul Khondoker Jisan**, **Data Analyst** and aspiring postgraduate researcher. B.Sc. in Software Engineering (Major in Data Science), Daffodil International University; six IBM Professional Certificates. Python · SQL · Excel · Power BI · Tableau.
 
 🔗 **Live:** https://sameeulkhondokerjisan.github.io/my-portfolio/
 
@@ -12,7 +12,7 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 |-------|------------|
 | Markup | HTML5 (semantic) |
 | Styling | CSS3 — design tokens (custom properties), grid, flexbox, light/dark theming, mobile-first breakpoints |
-| Behaviour | Vanilla JavaScript (ES6) — theme toggle, mobile menu, scroll reveals, KPI counters, copy-to-clipboard, contact form |
+| Behaviour | Vanilla JavaScript (ES6): theme toggle, mobile menu, scroll reveals, KPI counters, project filters, copy-to-clipboard, contact form |
 | Fonts | Google Fonts (Bricolage Grotesque, Inter, IBM Plex Mono) |
 | Hosting | GitHub Pages |
 
@@ -24,10 +24,13 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 ├── css/
 │   └── styles.css      # All styling ("Insight" design tokens, layout, components, light/dark)
 ├── js/
-│   └── main.js         # All interactivity (theme, nav, reveals, counters, clipboard, contact form)
+│   └── main.js         # All interactivity (theme, nav, reveals, counters, project filters, clipboard, contact form)
+├── img/
+│   └── projects/       # 960×540 WebP previews of each case study's Power BI / Tableau dashboard
 ├── resume/
-│   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the resume PDF
-├── Sameeul_Khondoker_Jisan_Resume.pdf       # served by the Download Resume button
+│   ├── README.md       # where the resume PDF comes from
+│   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the earlier one-page resume (Oct 2026)
+├── Sameeul_Khondoker_Jisan_Resume.pdf       # current resume (Nov 2026), served by the Download Resume button
 ├── icons/
 │   ├── favicon-32.png, favicon-192.png, icon-512.png, apple-touch-icon.png   # browser-tab / home-screen icons
 │   └── logo-body.png, logo-bar.png   # J logo split into two masks, recoloured per theme in CSS
@@ -48,8 +51,9 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 - **Responsive** layout, checked from 320px phones up to 1920px desktops — no sideways scroll, no overlapping elements
 - **Resume download** — plain `download` links, so they work even without JavaScript
 - **Working contact form** — messages are relayed straight to my Gmail inbox by [FormSubmit](https://formsubmit.co) (no API key, no account). Falls back to a pre-filled Gmail compose link if the relay is unreachable. One-time setup: submit the form once after deploying and click the confirmation email FormSubmit sends.
-- **Sections** follow the resume: Hero (analyst snapshot dashboard) · About · Skills · Experience & Education · Projects · Certifications · Contact
-- **Resume-driven content** — every fact on the site comes from the resume (`resume/Sameeul_Khondoker_Jisan_Resume.tex`); update both together
+- **Sections:** Hero (analyst snapshot dashboard) · About · Projects · Experience & Education · Research · Skills · Certifications & Awards · Contact
+- **Projects:** six case studies with dashboard previews, data, method and result for each, filterable by tool (Power BI, Tableau) and method (causal inference, machine learning); earlier projects below
+- **Verified content:** facts come from the current resume (`Sameeul_Khondoker_Jisan_Resume.pdf`), the project repositories' READMEs and results, and the Coursera certificates (each card links to its verification page). Update them together
 - Accessible, keyboard-navigable, reduced-motion friendly
 
 ## Local Development

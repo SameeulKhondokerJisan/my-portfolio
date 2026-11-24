@@ -188,6 +188,38 @@
   }
   document.querySelectorAll('[data-copy-email]').forEach(el => el.addEventListener('click', copyEmail));
 
+  /* ── Project filters: show the case studies that match a tool or method ── */
+  (function () {
+    const buttons = document.querySelectorAll('.filter[data-filter]');
+    const cards   = document.querySelectorAll('.cases-main .case[data-tags]');
+    const status  = document.getElementById('filterStatus');
+    if (!buttons.length || !cards.length) return;
+
+    function apply(filter, announce) {
+      let shown = 0;
+      buttons.forEach(b => {
+        const on = b.dataset.filter === filter;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.tags.split(' ').indexOf(filter) !== -1;
+        card.hidden = !match;
+        if (match) {
+          shown++;
+          card.classList.add('is-visible'); /* skip the scroll reveal for cards brought back by a filter */
+        }
+      });
+      if (status && announce) status.textContent = shown + (shown === 1 ? ' project' : ' projects') + ' shown';
+    }
+
+    buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter, true)));
+    /* Links from the Research section point at specific cards: make sure they are visible */
+    document.querySelectorAll('a[href^="#p-"]').forEach(a => {
+      a.addEventListener('click', () => apply('all', false));
+    });
+  })();
+
   /* ------------------------------------------------------------------
      Contact form — delivers the message straight to my Gmail inbox.
 
