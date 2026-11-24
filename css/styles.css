@@ -145,6 +145,7 @@ body.menu-open .site-header{background:var(--bg);}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4rem);align-items:center;}
 .status-pill{display:inline-flex;align-items:center;gap:.55rem;max-width:100%;padding:.4rem .85rem;margin-bottom:1.4rem;border:1px solid var(--accent-line);background:var(--accent-soft);color:var(--accent);border-radius:999px;font-family:var(--font-m);font-size:.74rem;font-weight:500;line-height:1.4;}
 .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:ping 2.2s infinite;}
+.pill-loc{white-space:nowrap;}
 @keyframes ping{0%{box-shadow:0 0 0 0 var(--accent-line);}70%{box-shadow:0 0 0 8px transparent;}100%{box-shadow:0 0 0 0 transparent;}}
 .hero-hello{font-size:1.05rem;color:var(--muted);margin-bottom:.55rem;}
 .hero-hello strong{color:var(--text);font-weight:600;}
