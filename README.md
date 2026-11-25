@@ -1,6 +1,6 @@
 # Sameeul Khondoker Jisan — Portfolio
 
-Personal portfolio of **Sameeul Khondoker Jisan**, **Data Analyst** and aspiring postgraduate researcher. B.Sc. in Software Engineering (Major in Data Science), Daffodil International University; six IBM Professional Certificates. Python · SQL · Excel · Power BI · Tableau.
+Personal portfolio of **Sameeul Khondoker Jisan**: data analytics, data science and software engineering. Data Science Intern at Codio AI Solution; B.Sc. in Software Engineering (Major in Data Science), Daffodil International University; six IBM Professional Certificates. Python · SQL · Excel · Power BI · Tableau · Java.
 
 🔗 **Live:** https://sameeulkhondokerjisan.github.io/my-portfolio/
 
@@ -29,8 +29,8 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 │   └── projects/       # 960×540 WebP previews of each case study's Power BI / Tableau dashboard
 ├── resume/
 │   ├── README.md       # where the resume PDF comes from
-│   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the earlier one-page resume (Oct 2026)
-├── Sameeul_Khondoker_Jisan_Resume.pdf       # current resume (Nov 2026), served by the Download Resume button
+│   └── Sameeul_Khondoker_Jisan_Resume.tex   # LaTeX source of the current resume
+├── Sameeul_Khondoker_Jisan_Resume.pdf       # current resume (built from that source), served by the Download Resume button
 ├── icons/
 │   ├── favicon-32.png, favicon-192.png, icon-512.png, apple-touch-icon.png   # browser-tab / home-screen icons
 │   └── logo-body.png, logo-bar.png   # J logo split into two masks, recoloured per theme in CSS
@@ -52,7 +52,7 @@ A hand-built, dependency-free **static web stack** (no framework, no build step)
 - **Resume download** — plain `download` links, so they work even without JavaScript
 - **Working contact form** — messages are relayed straight to my Gmail inbox by [FormSubmit](https://formsubmit.co) (no API key, no account). Falls back to a pre-filled Gmail compose link if the relay is unreachable. One-time setup: submit the form once after deploying and click the confirmation email FormSubmit sends.
 - **Sections:** Hero (analyst snapshot dashboard) · About · Projects · Experience & Education · Research · Skills · Certifications & Awards · Contact
-- **Projects:** six case studies with dashboard previews, data, method and result for each, filterable by tool (Power BI, Tableau) and method (causal inference, machine learning); earlier projects below
+- **Projects:** six case studies with dashboard previews, data, method and result for each, filterable by tool (Power BI, Tableau) and method (causal inference, machine learning); machine learning and software engineering projects below
 - **Verified content:** facts come from the current resume (`Sameeul_Khondoker_Jisan_Resume.pdf`), the project repositories' READMEs and results, and the Coursera certificates (each card links to its verification page). Update them together
 - Accessible, keyboard-navigable, reduced-motion friendly
 

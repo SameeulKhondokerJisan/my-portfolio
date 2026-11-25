@@ -1,145 +1,354 @@
-%% Sameeul Khondoker Jisan — Resume (Data Analyst)
-%% Build:  pdflatex Sameeul_Khondoker_Jisan_Resume.tex
-%% Then copy the PDF to the site root so the Download Resume button serves it.
-\documentclass[letterpaper,10pt]{article}
+%==============================================================================
+% Sameeul Khondoker Jisan | Resume (Data Analytics, Data Science, Software Eng.)
+% Compile with: pdflatex Sameeul_Khondoker_Jisan_Resume.tex (twice)
+% Facts come from the master profile (profile.yaml)
+%==============================================================================
+\documentclass[10pt, letterpaper]{article}
 
-\usepackage[left=0.5in,right=0.5in,top=0.4in,bottom=0.4in]{geometry}
+\usepackage[top=0.45in, bottom=0.45in, left=0.55in, right=0.55in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{lmodern}     % scalable Type 1 fonts, so the PDF text layer is searchable
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
-
-% Map every glyph to Unicode so applicant-tracking systems and copy/paste
-% read the text back exactly (ligatures such as "fi" otherwise extract badly).
-\input{glyphtounicode}
-\pdfgentounicode=1
-
-\definecolor{linkblue}{HTML}{2140B0}
-\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,
-  pdftitle={Sameeul Khondoker Jisan — Resume},
-  pdfauthor={Sameeul Khondoker Jisan},
-  pdfsubject={Data Analyst},
-  pdfkeywords={Data Analyst, Data Analysis, SQL, Python, Excel, Power BI, Tableau, EDA, ETL, KPI Reporting}}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-% No hyphenation: split keywords ("Engi-neering") break ATS keyword matching.
-% The emergency stretch absorbs the looser justified lines.
-\hyphenpenalty=10000 \exhyphenpenalty=10000
-\setlength{\emergencystretch}{1.5em}
 
-% Section heading: bold caps, with a full-width rule beneath (base LaTeX only,
-% so this file compiles on a minimal TeX install with no extra packages).
-\newcommand{\rsection}[1]{%
-  \vspace{0.3ex}{\normalsize\bfseries\MakeUppercase{#1}}\par\vspace{-0.6em}%
-  \rule{\textwidth}{0.6pt}\par\vspace{0.2ex}}
+% No hyphenation: a split word such as "classifi-cation" breaks ATS keyword matching
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
 
-% Tight bullet list without enumitem
-\newenvironment{tight}{%
-  \begin{list}{$\bullet$}{%
-    \setlength{\leftmargin}{1.3em}\setlength{\labelwidth}{0.9em}%
-    \setlength{\labelsep}{0.4em}\setlength{\itemsep}{0pt}%
-    \setlength{\parsep}{0pt}\setlength{\topsep}{0.15em}%
-    \setlength{\partopsep}{0pt}\setlength{\rightmargin}{0pt}}%
-}{\end{list}}
+% Map ligatures (fi, ff, fl) to plain letters so ATS parsers read words correctly
+\input{glyphtounicode}
+\pdfgentounicode=1
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = {blue!60!black},
+    linkcolor  = {blue!60!black},
+    pdftitle   = {Sameeul Khondoker Jisan - Resume},
+    pdfauthor  = {Sameeul Khondoker Jisan},
+    pdfsubject = {Data Analytics, Data Science, Software Engineering},
+    pdfkeywords= {Data Analyst, Data Scientist, Software Engineer, Python, SQL, Excel, Power BI, Tableau, Machine Learning, Java, Spring Boot}
+}
 
-% Company heading:  #1 URL, #2 bold blue name (linked), #3 plain right
-\newcommand{\orgline}[3]{\textbf{\href{#1}{#2}}\hfill #3\par}
-% Role line: #1 italic left, #2 italic right
-\newcommand{\roleline}[2]{\textit{#1}\hfill \textit{\small #2}\par\vspace{0.1em}}
-% Project heading: #1 URL, #2 bold blue title (linked), #3 italic stack
-\newcommand{\projline}[3]{\textbf{\href{#1}{#2}} \,$\vert$\, \textit{\small #3}\par}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+\setlist[itemize]{
+    leftmargin = 1.3em,
+    topsep     = 1pt,
+    itemsep    = 1pt,
+    parsep     = 0pt,
+    label      = \textbullet
+}
+
+% \workentry{Company}{Location}{Title}{Dates}
+\newcommand{\workentry}[4]{%
+    \textbf{#1} \hfill {\small #2}\\[-1pt]%
+    \textit{#3} \hfill {\small\textit{#4}}%
+}
+
+% \project{Title}{URL}{Tools}
+\newcommand{\project}[3]{%
+    \textbf{\href{#2}{#1}} \,\textbar\, {\small\textit{#3}}%
+}
+
+% \subhead{Text}: small label inside a section
+\newcommand{\subhead}[1]{%
+    {\small\bfseries\scshape #1}\par\vspace{1pt}%
+}
 
 \begin{document}
 
-%% ---------------- Header ----------------
+%==============================================================================
+% HEADER
+%==============================================================================
 \begin{center}
-  {\LARGE\bfseries Sameeul Khondoker Jisan}\\[0.2em]
-  {\normalsize Data Analyst}\\[0.15em]
-  {\small \href{https://maps.google.com/?q=Mirpur,+Dhaka,+Bangladesh}{Mirpur, Dhaka, Bangladesh} $\vert$
-  \href{mailto:mrkhondoker.prof@gmail.com}{mrkhondoker.prof@gmail.com} $\vert$
-  \href{tel:+8801767766680}{+880\,1767-766680} $\vert$
-  \href{https://www.linkedin.com/in/mrkhondoker/}{LinkedIn} $\vert$
-  \href{https://github.com/SameeulKhondokerJisan}{GitHub} $\vert$
-  \href{https://sameeulkhondokerjisan.github.io/my-portfolio/}{Portfolio}}
+    {\huge\bfseries Sameeul Khondoker Jisan}\\[4pt]
+    {\large Data Analytics \,\textbar\, Data Science \,\textbar\, Software Engineering}\\[4pt]
+    {\small
+        Mirpur, Dhaka, Bangladesh
+        \,\textbar\,
+        \href{mailto:mrkhondoker.prof@gmail.com}{mrkhondoker.prof@gmail.com}
+        \,\textbar\,
+        \href{tel:+8801767766680}{+880 1767-766680}
+    }\\[2pt]
+    {\small
+        \href{https://sameeulkhondokerjisan.github.io/my-portfolio/}{sameeulkhondokerjisan.github.io/my-portfolio}
+        \,\textbar\,
+        \href{https://www.linkedin.com/in/mrkhondoker/}{linkedin.com/in/mrkhondoker}
+        \,\textbar\,
+        \href{https://github.com/SameeulKhondokerJisan}{github.com/SameeulKhondokerJisan}
+    }
 \end{center}
-\vspace{-0.6em}
 
-%% ---------------- Summary ----------------
-\rsection{Professional Summary}
-Data Analyst with a Software Engineering background (CGPA 3.55/4.00, graduating Dec 2026). IBM-certified Data Analyst
-and Data Scientist with hands-on experience in EDA, statistical analysis, ETL pipelines, BI dashboard development, KPI
-tracking, and data-driven reporting. Proficient in Python, SQL, Pandas, Excel, Power BI, and Tableau. Processed 50,000+
-records and built automated data-quality workflows that cut preprocessing time 40\%.
+%==============================================================================
+% SUMMARY
+%==============================================================================
+\section{Summary}
 
-%% ---------------- Technical Skills ----------------
-\rsection{Technical Skills}
-\textbf{Analytics \& Visualization:} Data Analysis, Statistical Analysis, EDA, Hypothesis Testing, A/B Testing, Data Cleaning,
-Data Quality Assurance, KPI Tracking, Reporting, Data Storytelling, Excel, Power BI, Tableau, Matplotlib, Seaborn, Plotly\par\vspace{0.1em}
-\textbf{Programming \& Data Engineering:} Python, SQL, R, Pandas, NumPy, ETL Pipeline Design, Data Wrangling, Feature
-Engineering, Git/GitHub, Jupyter Notebook\par\vspace{0.1em}
-\textbf{Databases \& Predictive Analytics:} PostgreSQL, MySQL, Google Cloud, Scikit-learn, Logistic Regression, Random
-Forest, Cross-Validation, ROC-AUC, SHAP
+Final-year Software Engineering student majoring in Data Science (Daffodil International University,
+CGPA 3.55/4.00, graduating December 2026) and Data Science Intern at Codio AI Solution. Works across the
+data workflow: SQL and Python for cleaning and analysis, statistics and machine learning for prediction,
+Excel, Power BI and Tableau for reporting, and Java, Flask and JavaScript for the applications built on the
+results. Six IBM Professional Certificates in data analysis, data science, machine learning and AI
+engineering.
 
-%% ---------------- Work Experience ----------------
-\rsection{Work Experience}
-\orgline{https://codioaisolution.com/}{Codio AI Solution}{Dhaka, Bangladesh}
-\roleline{Data Analyst Intern}{May 2026 -- Present}
-\begin{tight}
-  \item Design Python-based ETL pipelines for multi-source data ingestion; build BI dashboards tracking product and business KPIs for stakeholder decision-making.
-  \item Conduct statistical analysis, feature selection, and EDA to surface actionable patterns from production datasets; prepare data-driven reports.
-\end{tight}
-\vspace{0.15em}
+%==============================================================================
+% TECHNICAL SKILLS
+%==============================================================================
+\section{Technical Skills}
 
-\orgline{https://saiketsystems.in}{SaiKet Systems}{Dhaka, Bangladesh}
-\roleline{Data Analyst Intern}{Apr 2026 -- May 2026}
-\begin{tight}
-  \item Processed 50,000+ records using Python, Pandas, and NumPy; cut preprocessing time 40\% with automated imputation, outlier detection, and data-quality workflows.
-  \item Improved reporting accuracy 30\% through pipeline optimization; evaluated models using precision-recall, F1-score, and ROC-AUC.
-\end{tight}
-\vspace{0.15em}
+\textbf{Data Analytics:} SQL (PostgreSQL, MySQL, DuckDB), Excel (formulas, pivot tables, scenario models),
+Power BI (DAX), Tableau, exploratory data analysis, data cleaning, A/B testing, KPI reporting
 
-\orgline{https://goedu.ac}{GoEdu}{Remote}
-\roleline{Content \& Engagement Analyst}{Feb 2025 -- Feb 2026}
-\begin{tight}
-  \item Analyzed engagement metrics across 50+ videos using A/B testing; identified retention drivers that grew viewership 25\%, reaching 10,000+ learners.
-\end{tight}
-\vspace{0.15em}
+\smallskip
+\textbf{Data Science \& ML:} Python (Pandas, NumPy, Scikit-learn, statsmodels, SciPy), hypothesis testing,
+regression, classification, forecasting, LightGBM, CatBoost, Random Forest, cross-validation, Matplotlib, Seaborn
 
-\orgline{https://www.ghitbd.com}{Golden Harvest InfoTech Limited}{Dhaka, Bangladesh}
-\roleline{Data Entry Operator}{Jan 2022 -- Dec 2022}
-\begin{tight}
-  \item Managed 100,000+ records at 99.8\% accuracy; redesigned validation checklists, cutting processing time 20\%.
-\end{tight}
+\smallskip
+\textbf{Software Engineering:} Java (Spring Boot, Spring Data JPA), C, JavaScript (Next.js, React), HTML/CSS,
+Flask, REST APIs, object-oriented programming, Docker, Git/GitHub, Postman
 
-%% ---------------- Projects ----------------
-\rsection{Projects}
-\projline{https://github.com/SameeulKhondokerJisan/finzy-personal-finance-analytics-dashboard}{Finzy -- Personal Finance Analytics Dashboard}{Python, PostgreSQL, Supabase, REST API}
-Finance analytics platform: automated expense categorization, receipt OCR, real-time spending analytics, budget tracking,
-and interactive dashboards.\par\vspace{0.15em}
+\smallskip
+\textbf{Certificate coursework:} PyTorch, Keras/TensorFlow, Hugging Face Transformers, LangChain, RAG
 
-\projline{https://github.com/SameeulKhondokerJisan/heart-failure-data-analysis}{Heart Failure Data Analysis}{Python, Pandas, Matplotlib, Seaborn, Scikit-learn}
-EDA on 12 clinical features; identified risk factors through statistical analysis, correlation mapping, and distribution profiling.\par\vspace{0.15em}
+%==============================================================================
+% EXPERIENCE
+%==============================================================================
+\section{Experience}
 
-\projline{https://github.com/SameeulKhondokerJisan/student-performance-analysis}{Student Performance Analysis}{Python, Pandas, Scikit-learn, Matplotlib}
-End-to-end analysis pipeline examining student performance factors across demographics, study habits, and parental
-background using statistical methods.
+\workentry{\href{https://codioaisolution.com/}{Codio AI Solution}}{Dhaka, Bangladesh}%
+{Data Science Intern}{May 2026 -- Present}
+\begin{itemize}
+    \item Design and maintain Python ETL pipelines for multi-source data, and build BI dashboards that track
+          product and business KPIs.
+    \item Run statistical analysis, feature selection and exploratory data analysis on production datasets
+          and report findings to business and product teams.
+\end{itemize}
 
-%% ---------------- Education ----------------
-\rsection{Education}
-\textbf{B.Sc. in Software Engineering, Major in Data Science}\hfill \textit{\small Expected Dec 2026}\par
-\href{https://daffodilvarsity.edu.bd}{Daffodil International University} $\vert$ CGPA: 3.55\,/\,4.00 \hfill Dhaka, Bangladesh\par
-\textit{Coursework:} Data Mining, Statistical Analysis, Database Systems, Algorithm Design
+\vspace{3pt}
+\workentry{\href{https://saiketsystems.in}{SaiKet Systems}}{Dhaka, Bangladesh}%
+{Data Science Intern}{Apr 2026 -- May 2026}
+\begin{itemize}
+    \item Processed 50,000+ records with Python, Pandas and NumPy; cut preprocessing time 40\% by automating
+          missing-value imputation, outlier detection and data-quality checks.
+    \item Improved reporting accuracy 30\% through pipeline fixes; evaluated models with precision, recall,
+          F1-score and ROC-AUC.
+\end{itemize}
 
-%% ---------------- Certifications ----------------
-\rsection{Certifications}
-\begin{tight}
-  \item \href{https://coursera.org/verify/professional-cert/Z9B4IMTTBUZ6}{IBM Data Analyst Professional Certificate} $\vert$ \href{https://coursera.org/verify/professional-cert/OOKWP56I7MGP}{IBM Data Science Professional Certificate} -- \href{https://www.coursera.org}{Coursera}, Mar 2026
-  \item \href{https://coursera.org/verify/professional-cert/9FL2EW331MBX}{IBM Generative AI Engineering Professional Certificate} -- Coursera, May 2026
-  \item \href{https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb}{Python Bootcamp} -- Udemy $\vert$ \href{https://10minuteschool.com/certificate/67863ee3542fd}{Microsoft Excel} -- \href{https://10minuteschool.com}{10 Minute School} $\vert$ Google Sheets -- \href{https://goedu.ac}{GoEdu}
-  \item GenAI \& Prompt Engineering; AI Workflows and Agents; Zero-Code App (Vibe Coding); AI + Superpresentations -- \href{https://www.grameenphone.academy/}{Grameenphone Academy}, Jun 2026
-\end{tight}
+\vspace{3pt}
+\workentry{\href{https://goedu.ac}{GoEdu}}{Remote}%
+{Photographer, Videographer \& Content Creator}{Feb 2025 -- Feb 2026}
+\begin{itemize}
+    \item Produced 50+ educational videos reaching 10,000+ learners; analyzed viewership and engagement with
+          A/B tests and identified the retention drivers that grew viewership 25\%.
+\end{itemize}
+
+\vspace{3pt}
+\workentry{\href{https://www.ghitbd.com}{Golden Harvest InfoTech Limited}}{Dhaka, Bangladesh}%
+{Data Entry Operator}{Jan 2022 -- Dec 2022}
+\begin{itemize}
+    \item Managed 100,000+ records at 99.8\% accuracy; redesigned validation checklists, cutting processing
+          time 20\%.
+\end{itemize}
+
+%==============================================================================
+% PROJECTS
+%==============================================================================
+\section{Projects}
+
+\subhead{Data Analytics and Data Science}
+
+\project{Walmart M5 Demand Forecasting \& Inventory Policy}%
+{https://github.com/SameeulKhondokerJisan/walmart-demand-forecasting-inventory}%
+{SQL (DuckDB), Python, LightGBM, Excel, Power BI}
+\begin{itemize}
+    \item Forecast daily sales for 30,490 item-store series with a global LightGBM model, cutting error 26\%
+          against the seasonal-naive baseline (0.625 vs.\ 0.847 WRMSSE) in rolling-origin backtests.
+    \item Set safety stock from the forecast errors so each ABC class met its service target; built an Excel
+          inventory model and a Power BI report.
+\end{itemize}
+
+\vspace{3pt}
+\project{E-mail Campaign A/B Test \& Uplift Targeting}%
+{https://github.com/SameeulKhondokerJisan/email-campaign-ab-test-uplift}%
+{SQL, Python (statsmodels, LightGBM), Excel, Tableau}
+\begin{itemize}
+    \item Analyzed a randomized test on 64,000 customers with confidence intervals and Holm correction; the
+          men's merchandise e-mail added \$0.77 spend and \$0.21 net profit per customer in an Excel P\&L model.
+    \item An uplift model did not beat mailing everyone on held-out data, so the recommendation was the
+          blanket send.
+\end{itemize}
+
+\vspace{3pt}
+\project{Olist E-commerce Retention \& Customer Lifetime Value}%
+{https://github.com/SameeulKhondokerJisan/olist-ecommerce-retention-analytics}%
+{SQL (DuckDB), Python, Excel, Power BI}
+\begin{itemize}
+    \item Built a star-schema warehouse from 98,198 orders; found that 97\% of customers buy once and late
+          deliveries cut average reviews from 4.29 to 2.27 stars.
+    \item Forecast customer lifetime value with BG/NBD and Gamma-Gamma models (+3.3\% holdout error) and
+          segmented customers in Power BI.
+\end{itemize}
+
+\vspace{3pt}
+\project{US Airline Delay Propagation Analytics}%
+{https://github.com/SameeulKhondokerJisan/airline-delay-propagation-analytics}%
+{SQL (DuckDB), Python, LightGBM, Excel, Tableau}
+\begin{itemize}
+    \item Linked 14.1M flights to each aircraft's previous flight; late-arriving aircraft caused 39.5\% of
+          delay minutes.
+    \item Trained a LightGBM model that flags high-risk flights from schedule data (AUC 0.721 on a later
+          period); an Excel model showed a blanket 15-minute turn buffer costs airlines \$268M a year net.
+\end{itemize}
+
+\vspace{3pt}
+\project{Student Performance Analysis \& Prediction App}%
+{https://github.com/SameeulKhondokerJisan/student-performance-analysis}%
+{Python, Scikit-learn, CatBoost, Flask, Docker}
+\begin{itemize}
+    \item Explored scores of 1,000 students and built a CatBoost regression pipeline served by a Flask app in Docker.
+\end{itemize}
+
+\vspace{2pt}
+{\small\textbf{Also:}
+\href{https://github.com/SameeulKhondokerJisan/nyc-congestion-pricing-impact}{NYC Congestion Pricing Impact}
+(difference-in-differences, 271M trips, Tableau);
+\href{https://github.com/SameeulKhondokerJisan/hmda-mortgage-approval-fair-lending}{HMDA Fair-Lending Analysis}
+(regression, 3.1M applications, Power BI);
+\href{https://github.com/SameeulKhondokerJisan/heart-failure-data-analysis}{Heart Failure Analysis}
+(logistic regression, 84\% accuracy);
+\href{https://github.com/SameeulKhondokerJisan/movie-recommendation-system}{Movie Recommender}
+(content-based, Flask).}
+
+\vspace{6pt}
+\subhead{Software Engineering}
+
+\project{Finzy: AI-Assisted Personal Finance Dashboard}%
+{https://github.com/SameeulKhondokerJisan/finzy-personal-finance-analytics-dashboard}%
+{Next.js, React, Prisma, PostgreSQL (Supabase), Gemini API}
+\begin{itemize}
+    \item Full-stack expense tracker: Gemini reads receipts into transactions, budgets trigger e-mail alerts,
+          and monthly reports chart spending; Next.js API routes, Prisma ORM, Inngest jobs, Arcjet rate limits.
+\end{itemize}
+
+\vspace{3pt}
+\project{Core Banking \& Digital Wallet REST API}%
+{https://github.com/SameeulKhondokerJisan/core-banking-digital-wallet-system}%
+{Java, Spring Boot, Spring Data JPA, MySQL, Postman}
+\begin{itemize}
+    \item Layered REST API (controller, service, repository) for accounts, wallets, deposits, withdrawals and
+          transfers with a transaction ledger. Also built Spring Boot APIs for a
+          \href{https://github.com/SameeulKhondokerJisan/springboot-super-shop-api}{retail shop} and an
+          \href{https://github.com/SameeulKhondokerJisan/enterprise-erp-system}{ERP backend}.
+\end{itemize}
+
+\vspace{3pt}
+\project{ANSI C Management Systems (10 university projects)}%
+{https://github.com/SameeulKhondokerJisan/university-academic-research-management-system}%
+{C, binary file storage}
+\begin{itemize}
+    \item Console apps (university records, hospital, banking, airline bookings) with login, binary-file storage and logs.
+\end{itemize}
+
+\vspace{3pt}
+\project{QRCraft Pro: QR Code Generator and Scanner}%
+{https://sameeulkhondokerjisan.github.io/qr-code-generator/}%
+{HTML, CSS, JavaScript}
+\begin{itemize}
+    \item Browser app that creates and scans QR codes; also a
+          \href{https://sameeulkhondokerjisan.github.io/todo-list-webapp/}{to-do app} and a
+          \href{https://sameeulkhondokerjisan.github.io/my-portfolio/}{portfolio site}, all on GitHub Pages.
+\end{itemize}
+
+%==============================================================================
+% RESEARCH
+%==============================================================================
+\section{Research}
+
+\textbf{Bachelor's thesis (OralShift):} \textit{Cross-Dataset Generalization and Image-Quality Shift in
+Smartphone-Based Oral Lesion Screening: A Patient-Grouped Benchmark of CNN, Transformer and Hybrid Models}
+\hfill {\small\textit{2026}}
+
+%==============================================================================
+% EDUCATION
+%==============================================================================
+\section{Education}
+
+\textbf{B.Sc.\ in Software Engineering, Major in Data Science} \hfill {\small\textit{Expected Dec 2026}}\\[-1pt]
+\href{https://daffodilvarsity.edu.bd}{Daffodil International University}, Dhaka \,\textbar\, CGPA 3.55/4.00\\[1pt]
+{\small\textit{Relevant coursework:} Machine Learning, Data Mining, Statistical Analysis, Database Systems,
+Algorithm Design, OOP}
+
+\vspace{3pt}
+\textbf{HSC, Science}, \href{https://dic.edu.bd}{Daffodil International College}, Dhaka \,\textbar\, GPA 4.33/5.00
+\hfill {\small\textit{2021}}\\[1pt]
+\textbf{SSC, Science}, \href{https://aahs.edu.bd}{Agargaon Adarsha High School}, Dhaka \,\textbar\, GPA 3.89/5.00
+\hfill {\small\textit{2019}}
+
+%==============================================================================
+% CERTIFICATIONS
+%==============================================================================
+\section{Certifications}
+
+\subhead{IBM Professional Certificates, Coursera}
+\begin{itemize}[topsep=0pt]
+    \item \href{https://coursera.org/verify/professional-cert/Z9B4IMTTBUZ6}{IBM Data Analyst} (11 courses)
+          \hfill {\small Mar 2026}
+    \item \href{https://coursera.org/verify/professional-cert/OOKWP56I7MGP}{IBM Data Science} (12 courses)
+          \hfill {\small Mar 2026}
+    \item \href{https://coursera.org/verify/professional-cert/ADJH1ZK9SSUK}{IBM Deep Learning with PyTorch,
+          Keras and TensorFlow} (5 courses) \hfill {\small May 2026}
+    \item \href{https://coursera.org/verify/professional-cert/HZVMOPEAHRS6}{IBM AI Engineering} (13 courses)
+          \hfill {\small May 2026}
+    \item \href{https://coursera.org/verify/professional-cert/9FL2EW331MBX}{IBM Generative AI Engineering}
+          (16 courses) \hfill {\small May 2026}
+    \item \href{https://coursera.org/verify/professional-cert/34TJ036HZQMA}{IBM Machine Learning} (6 courses)
+          \hfill {\small Jul 2026}
+\end{itemize}
+
+\vspace{2pt}
+\subhead{Other Training}
+\begin{itemize}[topsep=0pt]
+    \item \href{https://ude.my/UC-f0d7f8c6-6825-4c0c-990d-250c439679bb}{Complete 2026 Python Bootcamp: Learn
+          Python from Scratch}, Udemy \hfill {\small Mar 2026}
+    \item GenAI \& Prompt Engineering; AI Workflows and Agents; Zero-Code App (Vibe Coding); AI +
+          Superpresentations, \href{https://www.grameenphone.academy/}{Grameenphone Academy} (Jun 2026)
+    \item Google Sheets: Working with Formulas and Functions; Video Editing with Camtasia, GoEdu (distinction)
+          \hfill {\small Apr 2025}
+    \item Microsoft \href{https://10minuteschool.com/certificate/67863ee3542fd}{Excel} and
+          \href{https://10minuteschool.com/certificate/67766165a0740}{PowerPoint} (Jan 2025),
+          \href{https://10minuteschool.com/certificate/63f48949a08d0}{Word} (Feb 2023), 10 Minute School
+    \item Data Entry and Freelancing (3-month course), Perpetual IT World \hfill {\small May 2022}
+\end{itemize}
+
+%==============================================================================
+% LEADERSHIP & ACTIVITIES
+%==============================================================================
+\section{Leadership \& Activities}
+
+\begin{itemize}
+    \item CDC Career Ambassador 2025, Career Development Center, Daffodil International University
+          (Certificate of Achievement)
+    \item Campus Ambassador, GoEdu, Feb--Jul 2025 (Certificate of Appreciation)
+    \item Participant, UIU CSE FEST 2025 Project Show (Team Castle Victorious, for DIU) and National Robotics
+          Championship 2025 (BUBT, Feb 2025); volunteer, DIU Job Utsob career fair, 2024 and 2025
+\end{itemize}
+
+%==============================================================================
+% LANGUAGES
+%==============================================================================
+\section{Languages}
+
+\textbf{English:} professional working proficiency; Spoken English \& Phonetics and Foundation Grammar \&
+Writing (Mentors', 2022), Spoken English (National Institute of Science and Technology, 2022)
+\,\textbar\, \textbf{Bengali:} native
 
 \end{document}
